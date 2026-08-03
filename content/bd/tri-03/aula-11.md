@@ -4,7 +4,7 @@ mes_numero: 3
 numero_sequencial: 23
 duracao_minutos: 25
 tipo_sandbox: sql
-publicado: true
+publicado: false
 exercicio_inicial: |
   -- Projeto Integrador — Parte 4: MANUTENCAO
   -- Um banco vivo muda todo dia. Vamos cuidar do nosso.
@@ -32,81 +32,81 @@ quiz:
       tipo: multipla_escolha
       enunciado: "O que é integridade de dados?"
       opcoes:
-        - { id: a, texto: "A garantia de que os dados são corretos, consistentes e sem contradições" }
-        - { id: b, texto: "O tamanho do banco em megabytes" }
-        - { id: c, texto: "A velocidade das consultas" }
-        - { id: d, texto: "A quantidade de tabelas" }
-      resposta_correta: a
+        - { id: a, texto: "O tamanho do banco em megabytes" }
+        - { id: b, texto: "A garantia de que os dados são corretos, consistentes e sem contradições" }
+        - { id: c, texto: "A quantidade de tabelas" }
+        - { id: d, texto: "A velocidade das consultas" }
+      resposta_correta: b
       explicacao: "Chaves, tipos e restrições existem justamente para proteger a integridade."
     - id: q2
       tipo: multipla_escolha
       enunciado: "Ao corrigir o preço de um jogo, o que acontece com os relatórios das views?"
       opcoes:
-        - { id: a, texto: "Passam a usar o valor novo automaticamente, porque a view calcula na hora" }
-        - { id: b, texto: "Continuam com o valor antigo" }
+        - { id: a, texto: "Os relatórios são apagados" }
+        - { id: b, texto: "Passam a usar o valor novo automaticamente, porque a view calcula na hora" }
         - { id: c, texto: "As views precisam ser recriadas" }
-        - { id: d, texto: "Os relatórios são apagados" }
-      resposta_correta: a
+        - { id: d, texto: "Continuam com o valor antigo" }
+      resposta_correta: b
       explicacao: "É a vantagem de calcular na consulta em vez de guardar o total em coluna fixa."
     - id: q3
       tipo: multipla_escolha
       enunciado: "Qual é o risco de apagar um cliente que tem locações registradas?"
       opcoes:
-        - { id: a, texto: "As locações ficam apontando para um cliente inexistente, quebrando o relacionamento" }
-        - { id: b, texto: "Nenhum risco" }
-        - { id: c, texto: "O banco apaga tudo sozinho" }
-        - { id: d, texto: "As locações viram clientes" }
-      resposta_correta: a
+        - { id: a, texto: "O banco apaga tudo sozinho" }
+        - { id: b, texto: "As locações ficam apontando para um cliente inexistente, quebrando o relacionamento" }
+        - { id: c, texto: "As locações viram clientes" }
+        - { id: d, texto: "Nenhum risco" }
+      resposta_correta: b
       explicacao: "São os chamados registros órfãos — some do INNER JOIN e o histórico se perde."
     - id: q4
       tipo: multipla_escolha
       enunciado: "Como resolver corretamente um cliente com dois telefones?"
       opcoes:
         - { id: a, texto: "Com uma tabela de telefones ligada por FK, uma linha por número" }
-        - { id: b, texto: "Colocando os dois separados por vírgula no mesmo campo" }
-        - { id: c, texto: "Criando telefone1 e telefone2" }
-        - { id: d, texto: "Guardando apenas o primeiro" }
+        - { id: b, texto: "Criando telefone1 e telefone2" }
+        - { id: c, texto: "Guardando apenas o primeiro" }
+        - { id: d, texto: "Colocando os dois separados por vírgula no mesmo campo" }
       resposta_correta: a
       explicacao: "É a 1ª Forma Normal: cada campo guarda um valor atômico."
     - id: q5
       tipo: multipla_escolha
       enunciado: "Por que fazer um SELECT antes de um DELETE?"
       opcoes:
-        - { id: a, texto: "Para ver exatamente quais linhas serão afetadas, sem alterar nada" }
-        - { id: b, texto: "Porque o DELETE exige isso" }
-        - { id: c, texto: "Para deixar o comando mais rápido" }
-        - { id: d, texto: "Não é necessário" }
-      resposta_correta: a
+        - { id: a, texto: "Não é necessário" }
+        - { id: b, texto: "Para deixar o comando mais rápido" }
+        - { id: c, texto: "Para ver exatamente quais linhas serão afetadas, sem alterar nada" }
+        - { id: d, texto: "Porque o DELETE exige isso" }
+      resposta_correta: c
       explicacao: "Não existe desfazer: conferir antes é a única proteção."
     - id: q6
       tipo: multipla_escolha
       enunciado: "Ao adicionar uma tabela nova em um banco já em uso, o que acontece com os dados existentes?"
       opcoes:
-        - { id: a, texto: "Nada — as tabelas antigas continuam intactas" }
-        - { id: b, texto: "São apagados" }
+        - { id: a, texto: "Viram parte da tabela nova" }
+        - { id: b, texto: "Nada — as tabelas antigas continuam intactas" }
         - { id: c, texto: "Precisam ser recadastrados" }
-        - { id: d, texto: "Viram parte da tabela nova" }
-      resposta_correta: a
+        - { id: d, texto: "São apagados" }
+      resposta_correta: b
       explicacao: "Um banco relacional é feito para evoluir sem perder o que já existe."
     - id: q7
       tipo: multipla_escolha
       enunciado: "Por que o valor total das locações NÃO deve ser guardado em uma coluna fixa?"
       opcoes:
-        - { id: a, texto: "Porque ficaria desatualizado se a diária mudasse, gerando inconsistência" }
-        - { id: b, texto: "Porque ocuparia muito espaço" }
-        - { id: c, texto: "Porque o SQL não permite" }
-        - { id: d, texto: "Deveria ser guardado sim" }
-      resposta_correta: a
+        - { id: a, texto: "Porque ocuparia muito espaço" }
+        - { id: b, texto: "Deveria ser guardado sim" }
+        - { id: c, texto: "Porque ficaria desatualizado se a diária mudasse, gerando inconsistência" }
+        - { id: d, texto: "Porque o SQL não permite" }
+      resposta_correta: c
       explicacao: "Dado que pode ser calculado a partir de outros normalmente não se armazena."
     - id: q8
       tipo: multipla_escolha
       enunciado: "O que caracteriza um banco de dados bem mantido?"
       opcoes:
-        - { id: a, texto: "Dados corretos, relacionamentos íntegros e alterações sempre filtradas por WHERE" }
-        - { id: b, texto: "Muitas tabelas" }
-        - { id: c, texto: "Nenhuma alteração desde a criação" }
-        - { id: d, texto: "Consultas sem WHERE" }
-      resposta_correta: a
+        - { id: a, texto: "Consultas sem WHERE" }
+        - { id: b, texto: "Dados corretos, relacionamentos íntegros e alterações sempre filtradas por WHERE" }
+        - { id: c, texto: "Muitas tabelas" }
+        - { id: d, texto: "Nenhuma alteração desde a criação" }
+      resposta_correta: b
       explicacao: "Manutenção cuidadosa é o que mantém o banco confiável ao longo do tempo."
 ---
 

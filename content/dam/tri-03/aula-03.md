@@ -4,7 +4,7 @@ mes_numero: 3
 numero_sequencial: 17
 duracao_minutos: 25
 tipo_sandbox: android
-publicado: true
+publicado: false
 layout_inicial: |
   <LinearLayout
       xmlns:android="http://schemas.android.com/apk/res/android"
@@ -59,81 +59,81 @@ quiz:
       tipo: multipla_escolha
       enunciado: "O que é acessibilidade em aplicativos?"
       opcoes:
-        - { id: a, texto: "Garantir que pessoas com diferentes capacidades consigam usar o app" }
-        - { id: b, texto: "Deixar o app disponível na loja" }
-        - { id: c, texto: "Fazer o app abrir rápido" }
+        - { id: a, texto: "Deixar o app disponível na loja" }
+        - { id: b, texto: "Fazer o app abrir rápido" }
+        - { id: c, texto: "Garantir que pessoas com diferentes capacidades consigam usar o app" }
         - { id: d, texto: "Permitir usar sem internet" }
-      resposta_correta: a
+      resposta_correta: c
       explicacao: "Inclui quem enxerga pouco, quem não enxerga, quem tem dificuldade motora e muito mais."
     - id: q2
       tipo: multipla_escolha
       enunciado: "Por que o contraste entre texto e fundo é importante?"
       opcoes:
-        - { id: a, texto: "Texto de cor parecida com o fundo fica ilegível, principalmente para quem enxerga pouco ou está no sol" }
+        - { id: a, texto: "Contraste deixa o app mais rápido" }
         - { id: b, texto: "Contraste só afeta a estética" }
-        - { id: c, texto: "Contraste deixa o app mais rápido" }
-        - { id: d, texto: "Não tem importância" }
-      resposta_correta: a
+        - { id: c, texto: "Não tem importância" }
+        - { id: d, texto: "Texto de cor parecida com o fundo fica ilegível, principalmente para quem enxerga pouco ou está no sol" }
+      resposta_correta: d
       explicacao: "É um dos problemas de acessibilidade mais comuns e mais fáceis de corrigir."
     - id: q3
       tipo: multipla_escolha
       enunciado: "O que é um leitor de tela?"
       opcoes:
-        - { id: a, texto: "Um recurso que lê em voz alta o conteúdo da tela para quem não pode vê-la" }
+        - { id: a, texto: "Uma ferramenta de depuração" }
         - { id: b, texto: "Um aplicativo de leitura de livros" }
-        - { id: c, texto: "Um tipo de sensor" }
-        - { id: d, texto: "Uma ferramenta de depuração" }
-      resposta_correta: a
+        - { id: c, texto: "Um recurso que lê em voz alta o conteúdo da tela para quem não pode vê-la" }
+        - { id: d, texto: "Um tipo de sensor" }
+      resposta_correta: c
       explicacao: "No Android ele se chama TalkBack, e depende das descrições que o desenvolvedor fornece."
     - id: q4
       tipo: multipla_escolha
       enunciado: "Para que serve o atributo android:contentDescription?"
       opcoes:
-        - { id: a, texto: "Descrever, para o leitor de tela, o que um elemento sem texto representa" }
-        - { id: b, texto: "Mudar o texto visível do botão" }
-        - { id: c, texto: "Definir a cor do elemento" }
-        - { id: d, texto: "Aumentar a fonte" }
-      resposta_correta: a
+        - { id: a, texto: "Aumentar a fonte" }
+        - { id: b, texto: "Definir a cor do elemento" }
+        - { id: c, texto: "Descrever, para o leitor de tela, o que um elemento sem texto representa" }
+        - { id: d, texto: "Mudar o texto visível do botão" }
+      resposta_correta: c
       explicacao: "É essencial em ícones e imagens: sem ele, o leitor anuncia apenas 'botão'."
     - id: q5
       tipo: multipla_escolha
       enunciado: "Por que o app não deve fixar o tamanho da fonte em valores muito pequenos?"
       opcoes:
-        - { id: a, texto: "Porque muitas pessoas aumentam a fonte do sistema e o texto precisa acompanhar" }
-        - { id: b, texto: "Porque fonte pequena não existe no Android" }
-        - { id: c, texto: "Porque consome mais bateria" }
-        - { id: d, texto: "Não há problema" }
-      resposta_correta: a
+        - { id: a, texto: "Não há problema" }
+        - { id: b, texto: "Porque consome mais bateria" }
+        - { id: c, texto: "Porque fonte pequena não existe no Android" }
+        - { id: d, texto: "Porque muitas pessoas aumentam a fonte do sistema e o texto precisa acompanhar" }
+      resposta_correta: d
       explicacao: "Ignorar a preferência do usuário torna o app inutilizável para muita gente."
     - id: q6
       tipo: multipla_escolha
       enunciado: "Qual mensagem de erro é mais acessível?"
       opcoes:
-        - { id: a, texto: "\"Digite seu e-mail para continuar\"" }
-        - { id: b, texto: "\"Erro 422\"" }
-        - { id: c, texto: "\"Falha\"" }
-        - { id: d, texto: "Nenhuma mensagem, apenas a borda do campo em vermelho" }
-      resposta_correta: a
+        - { id: a, texto: "\"Falha\"" }
+        - { id: b, texto: "Nenhuma mensagem, apenas a borda do campo em vermelho" }
+        - { id: c, texto: "\"Digite seu e-mail para continuar\"" }
+        - { id: d, texto: "\"Erro 422\"" }
+      resposta_correta: c
       explicacao: "Ela diz o que houve E o que fazer. Cor sozinha não serve para quem não distingue cores."
     - id: q7
       tipo: multipla_escolha
       enunciado: "Por que sinalizar um erro APENAS com a cor vermelha é problemático?"
       opcoes:
-        - { id: a, texto: "Porque quem não distingue cores não percebe o erro; é preciso texto junto" }
-        - { id: b, texto: "Porque vermelho é uma cor feia" }
-        - { id: c, texto: "Porque o Android não permite vermelho" }
-        - { id: d, texto: "Não é problemático" }
-      resposta_correta: a
+        - { id: a, texto: "Não é problemático" }
+        - { id: b, texto: "Porque o Android não permite vermelho" }
+        - { id: c, texto: "Porque quem não distingue cores não percebe o erro; é preciso texto junto" }
+        - { id: d, texto: "Porque vermelho é uma cor feia" }
+      resposta_correta: c
       explicacao: "A regra é: nunca use cor como o único meio de transmitir uma informação."
     - id: q8
       tipo: multipla_escolha
       enunciado: "Por que botões devem ter área de toque confortável?"
       opcoes:
-        - { id: a, texto: "Porque o dedo é impreciso, e alvos pequenos são difíceis para todos, especialmente com limitação motora" }
-        - { id: b, texto: "Para o app ficar bonito" }
-        - { id: c, texto: "Por exigência do compilador" }
-        - { id: d, texto: "Não é relevante" }
-      resposta_correta: a
+        - { id: a, texto: "Por exigência do compilador" }
+        - { id: b, texto: "Porque o dedo é impreciso, e alvos pequenos são difíceis para todos, especialmente com limitação motora" }
+        - { id: c, texto: "Não é relevante" }
+        - { id: d, texto: "Para o app ficar bonito" }
+      resposta_correta: b
       explicacao: "A recomendação do Material Design é de pelo menos 48dp de área tocável."
 ---
 

@@ -4,7 +4,7 @@ mes_numero: 3
 numero_sequencial: 18
 duracao_minutos: 25
 tipo_sandbox: sql
-publicado: true
+publicado: false
 exercicio_inicial: |
   -- Aula 5 — reescrevendo um script bagunçado.
   -- Copie o script ruim do material e reescreva com boas praticas.
@@ -30,50 +30,50 @@ quiz:
       enunciado: "Por que nomes de tabelas e colunas devem ser descritivos?"
       opcoes:
         - { id: a, texto: "Porque o script é lido muitas vezes, por você e por outras pessoas" }
-        - { id: b, texto: "Porque nomes curtos não funcionam" }
+        - { id: b, texto: "Não faz diferença" }
         - { id: c, texto: "Porque deixa a consulta mais rápida" }
-        - { id: d, texto: "Não faz diferença" }
+        - { id: d, texto: "Porque nomes curtos não funcionam" }
       resposta_correta: a
       explicacao: "Um nome como 'n' obriga quem lê a adivinhar. 'nome_completo' se explica sozinho."
     - id: q2
       tipo: multipla_escolha
       enunciado: "Qual é a convenção mais comum para nomes em SQL?"
       opcoes:
-        - { id: a, texto: "Tudo em minúsculo, com underscore separando palavras (snake_case)" }
-        - { id: b, texto: "Tudo em MAIÚSCULO com espaços" }
-        - { id: c, texto: "Sempre com acentos e cedilha" }
-        - { id: d, texto: "Cada um escolhe na hora, sem padrão" }
-      resposta_correta: a
+        - { id: a, texto: "Cada um escolhe na hora, sem padrão" }
+        - { id: b, texto: "Sempre com acentos e cedilha" }
+        - { id: c, texto: "Tudo em MAIÚSCULO com espaços" }
+        - { id: d, texto: "Tudo em minúsculo, com underscore separando palavras (snake_case)" }
+      resposta_correta: d
       explicacao: "nome_completo, data_nascimento. Evite acentos, espaços e maiúsculas em nomes."
     - id: q3
       tipo: multipla_escolha
       enunciado: "Por que evitar acentos e espaços em nomes de colunas?"
       opcoes:
-        - { id: a, texto: "Porque causam problemas de compatibilidade e obrigam a usar aspas o tempo todo" }
+        - { id: a, texto: "Porque deixam o banco maior" }
         - { id: b, texto: "Porque o SQL não aceita letras" }
-        - { id: c, texto: "Porque deixam o banco maior" }
-        - { id: d, texto: "Não é preciso evitar" }
-      resposta_correta: a
+        - { id: c, texto: "Não é preciso evitar" }
+        - { id: d, texto: "Porque causam problemas de compatibilidade e obrigam a usar aspas o tempo todo" }
+      resposta_correta: d
       explicacao: "Um nome como \"Data de Nascimento\" exige aspas em toda consulta. data_nascimento não."
     - id: q4
       tipo: multipla_escolha
       enunciado: "Qual a vantagem de escrever as palavras-chave do SQL em MAIÚSCULO?"
       opcoes:
         - { id: a, texto: "Destaca visualmente os comandos e separa do que é nome de tabela ou coluna" }
-        - { id: b, texto: "É obrigatório, senão dá erro" }
-        - { id: c, texto: "Faz a consulta rodar mais rápido" }
-        - { id: d, texto: "Nenhuma vantagem" }
+        - { id: b, texto: "Faz a consulta rodar mais rápido" }
+        - { id: c, texto: "Nenhuma vantagem" }
+        - { id: d, texto: "É obrigatório, senão dá erro" }
       resposta_correta: a
       explicacao: "SELECT, FROM e WHERE em maiúsculo ficam evidentes no meio do script."
     - id: q5
       tipo: multipla_escolha
       enunciado: "Para que servem comentários em um script SQL?"
       opcoes:
-        - { id: a, texto: "Explicar a intenção de trechos que não são óbvios, e separar as seções do script" }
-        - { id: b, texto: "Fazer o script rodar" }
-        - { id: c, texto: "Aumentar o tamanho do arquivo" }
-        - { id: d, texto: "Não existem comentários em SQL" }
-      resposta_correta: a
+        - { id: a, texto: "Não existem comentários em SQL" }
+        - { id: b, texto: "Aumentar o tamanho do arquivo" }
+        - { id: c, texto: "Explicar a intenção de trechos que não são óbvios, e separar as seções do script" }
+        - { id: d, texto: "Fazer o script rodar" }
+      resposta_correta: c
       explicacao: "Em SQL o comentário de linha começa com dois hifens."
     - id: q6
       tipo: multipla_escolha
@@ -81,29 +81,29 @@ quiz:
       opcoes:
         - { id: a, texto: "Porque cada cláusula em sua linha torna a estrutura visível e o erro fácil de achar" }
         - { id: b, texto: "Porque o SQL exige uma linha por cláusula" }
-        - { id: c, texto: "Para o arquivo ficar maior" }
-        - { id: d, texto: "Não há motivo" }
+        - { id: c, texto: "Não há motivo" }
+        - { id: d, texto: "Para o arquivo ficar maior" }
       resposta_correta: a
       explicacao: "SELECT, FROM, WHERE e ORDER BY cada um em sua linha é o padrão profissional."
     - id: q7
       tipo: multipla_escolha
       enunciado: "Qual é o problema de usar SELECT * em um relatório definitivo?"
       opcoes:
-        - { id: a, texto: "Traz colunas desnecessárias e quebra o relatório se a tabela mudar" }
-        - { id: b, texto: "Não funciona em views" }
+        - { id: a, texto: "Não há problema" }
+        - { id: b, texto: "Traz colunas desnecessárias e quebra o relatório se a tabela mudar" }
         - { id: c, texto: "É proibido em SQL" }
-        - { id: d, texto: "Não há problema" }
-      resposta_correta: a
+        - { id: d, texto: "Não funciona em views" }
+      resposta_correta: b
       explicacao: "Em testes o * é ótimo; em código definitivo, liste as colunas que você realmente quer."
     - id: q8
       tipo: multipla_escolha
       enunciado: "Qual é a ordem recomendada das seções em um script completo?"
       opcoes:
-        - { id: a, texto: "Criação das tabelas, inserção dos dados e por fim as consultas" }
-        - { id: b, texto: "Consultas primeiro, tabelas depois" }
-        - { id: c, texto: "Tudo misturado, sem ordem" }
-        - { id: d, texto: "Só as consultas importam" }
-      resposta_correta: a
+        - { id: a, texto: "Só as consultas importam" }
+        - { id: b, texto: "Tudo misturado, sem ordem" }
+        - { id: c, texto: "Consultas primeiro, tabelas depois" }
+        - { id: d, texto: "Criação das tabelas, inserção dos dados e por fim as consultas" }
+      resposta_correta: d
       explicacao: "Assim o script pode ser executado de cima para baixo por qualquer pessoa."
 ---
 

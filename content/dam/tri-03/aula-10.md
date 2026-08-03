@@ -4,7 +4,7 @@ mes_numero: 3
 numero_sequencial: 24
 duracao_minutos: 25
 tipo_sandbox: none
-publicado: true
+publicado: false
 quiz:
   titulo: "Quiz — Segurança"
   nota_minima_aprovacao: 60
@@ -13,81 +13,81 @@ quiz:
       tipo: multipla_escolha
       enunciado: "O que é o princípio do menor privilégio?"
       opcoes:
-        - { id: a, texto: "Pedir apenas as permissões estritamente necessárias para o app funcionar" }
-        - { id: b, texto: "Pedir todas as permissões de uma vez, por garantia" }
-        - { id: c, texto: "Não pedir permissão nenhuma" }
-        - { id: d, texto: "Dar privilégios de administrador ao app" }
-      resposta_correta: a
+        - { id: a, texto: "Dar privilégios de administrador ao app" }
+        - { id: b, texto: "Não pedir permissão nenhuma" }
+        - { id: c, texto: "Pedir apenas as permissões estritamente necessárias para o app funcionar" }
+        - { id: d, texto: "Pedir todas as permissões de uma vez, por garantia" }
+      resposta_correta: c
       explicacao: "Cada permissão a mais é um risco a mais e uma desconfiança a mais do usuário."
     - id: q2
       tipo: multipla_escolha
       enunciado: "Quando é o melhor momento para pedir uma permissão ao usuário?"
       opcoes:
-        - { id: a, texto: "No momento em que o recurso vai ser usado, explicando o motivo" }
-        - { id: b, texto: "Todas juntas na primeira abertura" }
-        - { id: c, texto: "Só depois de o app já ter usado o recurso" }
-        - { id: d, texto: "Nunca" }
-      resposta_correta: a
+        - { id: a, texto: "Nunca" }
+        - { id: b, texto: "Só depois de o app já ter usado o recurso" }
+        - { id: c, texto: "Todas juntas na primeira abertura" }
+        - { id: d, texto: "No momento em que o recurso vai ser usado, explicando o motivo" }
+      resposta_correta: d
       explicacao: "Pedir no contexto certo aumenta muito a chance de o usuário aceitar."
     - id: q3
       tipo: multipla_escolha
       enunciado: "O que são dados sensíveis?"
       opcoes:
         - { id: a, texto: "Informações que causam dano se vazarem: senhas, CPF, localização, dados de saúde" }
-        - { id: b, texto: "Qualquer texto do app" }
-        - { id: c, texto: "Apenas imagens" }
-        - { id: d, texto: "O código-fonte" }
+        - { id: b, texto: "O código-fonte" }
+        - { id: c, texto: "Qualquer texto do app" }
+        - { id: d, texto: "Apenas imagens" }
       resposta_correta: a
       explicacao: "A LGPD trata justamente da proteção desse tipo de informação."
     - id: q4
       tipo: multipla_escolha
       enunciado: "Por que NUNCA se deve guardar senha em texto puro?"
       opcoes:
-        - { id: a, texto: "Porque quem acessar o banco lê todas as senhas diretamente" }
-        - { id: b, texto: "Porque ocupa muito espaço" }
-        - { id: c, texto: "Porque deixa o app lento" }
-        - { id: d, texto: "Pode guardar, sem problema" }
-      resposta_correta: a
+        - { id: a, texto: "Porque ocupa muito espaço" }
+        - { id: b, texto: "Porque quem acessar o banco lê todas as senhas diretamente" }
+        - { id: c, texto: "Pode guardar, sem problema" }
+        - { id: d, texto: "Porque deixa o app lento" }
+      resposta_correta: b
       explicacao: "Senhas devem passar por hash — uma transformação que não pode ser revertida."
     - id: q5
       tipo: multipla_escolha
       enunciado: "Por que não se deve deixar chaves de API escritas dentro do código do app?"
       opcoes:
-        - { id: a, texto: "Porque o APK pode ser aberto e a chave extraída por qualquer pessoa" }
-        - { id: b, texto: "Porque chaves não funcionam em Android" }
-        - { id: c, texto: "Porque ocupam muito espaço" }
-        - { id: d, texto: "Pode deixar, é seguro" }
-      resposta_correta: a
+        - { id: a, texto: "Porque ocupam muito espaço" }
+        - { id: b, texto: "Pode deixar, é seguro" }
+        - { id: c, texto: "Porque chaves não funcionam em Android" }
+        - { id: d, texto: "Porque o APK pode ser aberto e a chave extraída por qualquer pessoa" }
+      resposta_correta: d
       explicacao: "Um app instalado está na mão do usuário — nada dentro dele é secreto."
     - id: q6
       tipo: multipla_escolha
       enunciado: "Qual a diferença entre HTTP e HTTPS?"
       opcoes:
-        - { id: a, texto: "O HTTPS criptografa a comunicação; no HTTP os dados trafegam legíveis" }
-        - { id: b, texto: "O HTTPS é mais rápido" }
-        - { id: c, texto: "Não há diferença real" }
-        - { id: d, texto: "O HTTP é mais moderno" }
-      resposta_correta: a
+        - { id: a, texto: "Não há diferença real" }
+        - { id: b, texto: "O HTTP é mais moderno" }
+        - { id: c, texto: "O HTTPS criptografa a comunicação; no HTTP os dados trafegam legíveis" }
+        - { id: d, texto: "O HTTPS é mais rápido" }
+      resposta_correta: c
       explicacao: "Em rede pública, HTTP permite que qualquer um leia o que trafega."
     - id: q7
       tipo: multipla_escolha
       enunciado: "Por que validar a entrada do usuário também é uma questão de segurança?"
       opcoes:
         - { id: a, texto: "Porque entrada não validada pode quebrar o app ou ser usada para ataques" }
-        - { id: b, texto: "Porque validar deixa o app bonito" }
-        - { id: c, texto: "Não tem relação com segurança" }
-        - { id: d, texto: "Porque o Android exige" }
+        - { id: b, texto: "Porque o Android exige" }
+        - { id: c, texto: "Porque validar deixa o app bonito" }
+        - { id: d, texto: "Não tem relação com segurança" }
       resposta_correta: a
       explicacao: "É a mesma lição do WHERE esquecido e do try/catch: nunca confie no que vem de fora."
     - id: q8
       tipo: multipla_escolha
       enunciado: "O que a LGPD exige de quem coleta dados pessoais?"
       opcoes:
-        - { id: a, texto: "Coletar apenas o necessário, informar a finalidade e proteger os dados coletados" }
-        - { id: b, texto: "Coletar o máximo de dados possível" }
-        - { id: c, texto: "Nada, é apenas uma recomendação" }
-        - { id: d, texto: "Vender os dados coletados" }
-      resposta_correta: a
+        - { id: a, texto: "Coletar o máximo de dados possível" }
+        - { id: b, texto: "Nada, é apenas uma recomendação" }
+        - { id: c, texto: "Vender os dados coletados" }
+        - { id: d, texto: "Coletar apenas o necessário, informar a finalidade e proteger os dados coletados" }
+      resposta_correta: d
       explicacao: "Minimização, transparência e proteção são princípios centrais da lei."
 ---
 

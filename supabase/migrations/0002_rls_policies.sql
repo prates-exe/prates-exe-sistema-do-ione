@@ -1,4 +1,4 @@
--- Sistema do Ione — Row Level Security
+-- Bitlab — Row Level Security
 -- Rode depois de 0001_init_schema.sql
 
 -- helper: is_professor() — SECURITY DEFINER evita recursão de policy em profiles

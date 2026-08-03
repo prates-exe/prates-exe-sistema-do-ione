@@ -1,4 +1,4 @@
--- Sistema do Ione — prática livre de Android.
+-- Bitlab — prática livre de Android.
 -- Mesmo padrão do code_playground_state: um espaço por aluno, sem vínculo
 -- com aula nenhuma, para ele treinar layout e Activity à vontade.
 create table if not exists android_playground_state (

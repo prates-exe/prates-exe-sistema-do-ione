@@ -1,4 +1,4 @@
--- Sistema do Ione — critérios de validação por aula
+-- Bitlab — critérios de validação por aula
 -- Cada critério é uma pergunta de sim/não sobre o estado do banco (ou sobre
 -- a saída do código, no caso de Java), com uma descrição em português e uma
 -- dica do que fazer quando ainda não foi atendido. Isso permite dizer ao

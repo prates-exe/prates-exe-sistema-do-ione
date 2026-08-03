@@ -1,4 +1,4 @@
--- Sistema do Ione — schema inicial
+-- Bitlab — schema inicial
 -- Rode este arquivo no SQL Editor do Supabase (Project > SQL Editor > New query),
 -- depois 0002_rls_policies.sql e por fim 0003_seed_trilhas.sql, nessa ordem.
 

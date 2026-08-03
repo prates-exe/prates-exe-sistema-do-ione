@@ -138,12 +138,12 @@ export function AndroidTerminal({
 
   function aoMudarXml(novoValor: string) {
     setLayoutXml(novoValor);
-    scheduleSave({ layoutXml: novoValor, activityJava }, 2000);
+    scheduleSave({ layoutXml: novoValor, activityJava }, 800);
   }
 
   function aoMudarJava(novoValor: string) {
     setActivityJava(novoValor);
-    scheduleSave({ layoutXml, activityJava: novoValor }, 2000);
+    scheduleSave({ layoutXml, activityJava: novoValor }, 800);
   }
 
   function aoMudarTextoView(id: string, valor: string) {
@@ -234,7 +234,7 @@ export function AndroidTerminal({
         if (atividadeCompleta && !primeiraExecucaoRef.current) {
           primeiraExecucaoRef.current = true;
           await supabase.from("progresso_aulas").upsert(
-            { aluno_id: alunoId, aula_id: aulaId, status: "em_andamento", exercicio_completo: true },
+            { aluno_id: alunoId, aula_id: aulaId, exercicio_completo: true },
             { onConflict: "aluno_id,aula_id" }
           );
         }

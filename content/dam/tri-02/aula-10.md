@@ -36,39 +36,39 @@ quiz:
       tipo: multipla_escolha
       enunciado: "Por que um aplicativo precisa pedir permissão explícita para usar o GPS?"
       opcoes:
-        - { id: a, texto: "Porque a localização revela onde a pessoa está e por onde circula — é informação pessoal sensível" }
-        - { id: b, texto: "Só por exigência técnica, sem relação com privacidade" }
-        - { id: c, texto: "Não é necessário pedir permissão para o GPS" }
-        - { id: d, texto: "Só é preciso pedir permissão para a câmera" }
-      resposta_correta: a
+        - { id: a, texto: "Só é preciso pedir permissão para a câmera" }
+        - { id: b, texto: "Não é necessário pedir permissão para o GPS" }
+        - { id: c, texto: "Porque a localização revela onde a pessoa está e por onde circula — é informação pessoal sensível" }
+        - { id: d, texto: "Só por exigência técnica, sem relação com privacidade" }
+      resposta_correta: c
       explicacao: "É proteção de privacidade e exigência ética e legal: a decisão fica com o usuário."
     - id: q2
       tipo: multipla_escolha
       enunciado: "O usuário pode mudar de ideia depois de conceder uma permissão?"
       opcoes:
-        - { id: a, texto: "Sim, pode revogar o acesso quando quiser nas configurações" }
-        - { id: b, texto: "Não, a permissão é definitiva" }
-        - { id: c, texto: "Só se reinstalar o aplicativo" }
-        - { id: d, texto: "Só o desenvolvedor pode mudar" }
-      resposta_correta: a
+        - { id: a, texto: "Só o desenvolvedor pode mudar" }
+        - { id: b, texto: "Só se reinstalar o aplicativo" }
+        - { id: c, texto: "Não, a permissão é definitiva" }
+        - { id: d, texto: "Sim, pode revogar o acesso quando quiser nas configurações" }
+      resposta_correta: d
       explicacao: "Por isso o app precisa verificar a permissão sempre antes de usar o recurso, não só na primeira vez."
     - id: q3
       tipo: multipla_escolha
       enunciado: "Quais destes são recursos de hardware que um app Android pode usar?"
       opcoes:
-        - { id: a, texto: "Acelerômetro, sensor de luminosidade, vibração, lanterna e GPS" }
-        - { id: b, texto: "Só a tela, nada mais" }
-        - { id: c, texto: "Apenas a câmera" }
-        - { id: d, texto: "Nenhum, tudo é feito por software" }
-      resposta_correta: a
+        - { id: a, texto: "Apenas a câmera" }
+        - { id: b, texto: "Nenhum, tudo é feito por software" }
+        - { id: c, texto: "Só a tela, nada mais" }
+        - { id: d, texto: "Acelerômetro, sensor de luminosidade, vibração, lanterna e GPS" }
+      resposta_correta: d
       explicacao: "Sensores leem o ambiente; atuadores (vibração, lanterna) agem sobre ele."
     - id: q4
       tipo: multipla_escolha
       enunciado: "Qual é a diferença entre um sensor e um atuador?"
       opcoes:
         - { id: a, texto: "O sensor lê informação do ambiente; o atuador provoca uma ação no mundo físico" }
-        - { id: b, texto: "São a mesma coisa" }
-        - { id: c, texto: "Sensor só existe no iPhone" }
+        - { id: b, texto: "Sensor só existe no iPhone" }
+        - { id: c, texto: "São a mesma coisa" }
         - { id: d, texto: "Atuador é um tipo de tela" }
       resposta_correta: a
       explicacao: "O acelerômetro é sensor (lê movimento); a vibração é atuador (produz movimento)."
@@ -76,41 +76,41 @@ quiz:
       tipo: multipla_escolha
       enunciado: "Qual é o formato de dados mais usado quando um app conversa com uma API?"
       opcoes:
-        - { id: a, texto: "JSON" }
-        - { id: b, texto: "PNG" }
+        - { id: a, texto: "PNG" }
+        - { id: b, texto: "XML de layout" }
         - { id: c, texto: "APK" }
-        - { id: d, texto: "XML de layout" }
-      resposta_correta: a
+        - { id: d, texto: "JSON" }
+      resposta_correta: d
       explicacao: "JSON é um formato de texto estruturado que o app precisa interpretar."
     - id: q6
       tipo: multipla_escolha
       enunciado: "O que é uma API, no contexto de um aplicativo?"
       opcoes:
-        - { id: a, texto: "Um serviço na internet que o app consulta para obter ou enviar dados" }
-        - { id: b, texto: "Um tipo de botão" }
-        - { id: c, texto: "O banco de dados local do aparelho" }
-        - { id: d, texto: "Um arquivo de layout" }
-      resposta_correta: a
+        - { id: a, texto: "Um tipo de botão" }
+        - { id: b, texto: "O banco de dados local do aparelho" }
+        - { id: c, texto: "Um arquivo de layout" }
+        - { id: d, texto: "Um serviço na internet que o app consulta para obter ou enviar dados" }
+      resposta_correta: d
       explicacao: "Um app de clima, por exemplo, consulta uma API para saber a previsão."
     - id: q7
       tipo: multipla_escolha
       enunciado: "O que pode acontecer se o desenvolvedor não tratar erros de conexão?"
       opcoes:
-        - { id: a, texto: "O aplicativo pode travar, fechar sozinho ou mostrar uma tela vazia sem explicação" }
-        - { id: b, texto: "Nada, o Android trata tudo automaticamente" }
-        - { id: c, texto: "O app fica mais rápido" }
-        - { id: d, texto: "A API para de existir" }
-      resposta_correta: a
+        - { id: a, texto: "O app fica mais rápido" }
+        - { id: b, texto: "A API para de existir" }
+        - { id: c, texto: "Nada, o Android trata tudo automaticamente" }
+        - { id: d, texto: "O aplicativo pode travar, fechar sozinho ou mostrar uma tela vazia sem explicação" }
+      resposta_correta: d
       explicacao: "A conexão pode cair, ficar lenta ou o servidor responder com erro — tudo isso precisa ser previsto."
     - id: q8
       tipo: multipla_escolha
       enunciado: "Qual é a forma correta de lidar com uma falha de conexão?"
       opcoes:
-        - { id: a, texto: "Avisar com clareza, oferecer tentar de novo e, se possível, seguir com os dados salvos localmente" }
-        - { id: b, texto: "Deixar o app fechar sozinho, sem aviso" }
-        - { id: c, texto: "Ignorar o erro completamente" }
-        - { id: d, texto: "Impedir o app de abrir de novo" }
-      resposta_correta: a
+        - { id: a, texto: "Impedir o app de abrir de novo" }
+        - { id: b, texto: "Avisar com clareza, oferecer tentar de novo e, se possível, seguir com os dados salvos localmente" }
+        - { id: c, texto: "Deixar o app fechar sozinho, sem aviso" }
+        - { id: d, texto: "Ignorar o erro completamente" }
+      resposta_correta: b
       explicacao: "É aqui que o banco local (SQLite) da aula anterior salva a experiência do usuário."
 ---
 

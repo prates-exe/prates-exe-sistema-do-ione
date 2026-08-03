@@ -33,38 +33,38 @@ quiz:
       enunciado: "Qual comando altera informações de um registro que já existe?"
       opcoes:
         - { id: a, texto: "UPDATE" }
-        - { id: b, texto: "INSERT INTO" }
-        - { id: c, texto: "SELECT" }
-        - { id: d, texto: "CREATE TABLE" }
+        - { id: b, texto: "CREATE TABLE" }
+        - { id: c, texto: "INSERT INTO" }
+        - { id: d, texto: "SELECT" }
       resposta_correta: a
       explicacao: "INSERT cria novo, UPDATE altera existente, DELETE remove."
     - id: q2
       tipo: multipla_escolha
       enunciado: "Qual comando remove registros de dentro de uma tabela, mas MANTÉM a tabela no banco?"
       opcoes:
-        - { id: a, texto: "DELETE" }
-        - { id: b, texto: "DROP TABLE" }
-        - { id: c, texto: "CREATE TABLE" }
-        - { id: d, texto: "SELECT" }
-      resposta_correta: a
+        - { id: a, texto: "SELECT" }
+        - { id: b, texto: "CREATE TABLE" }
+        - { id: c, texto: "DELETE" }
+        - { id: d, texto: "DROP TABLE" }
+      resposta_correta: c
       explicacao: "DELETE tira as linhas; a tabela continua existindo. DROP TABLE apaga a tabela inteira."
     - id: q3
       tipo: multipla_escolha
       enunciado: "O que acontece ao executar UPDATE sem a cláusula WHERE?"
       opcoes:
-        - { id: a, texto: "Todas as linhas da tabela são alteradas de uma vez" }
-        - { id: b, texto: "Nada acontece" }
-        - { id: c, texto: "Só a primeira linha é alterada" }
+        - { id: a, texto: "Só a primeira linha é alterada" }
+        - { id: b, texto: "Todas as linhas da tabela são alteradas de uma vez" }
+        - { id: c, texto: "Nada acontece" }
         - { id: d, texto: "O banco pede confirmação antes" }
-      resposta_correta: a
+      resposta_correta: b
       explicacao: "Sem filtro, o comando não tem limite. É um dos erros mais caros que existem."
     - id: q4
       tipo: multipla_escolha
       enunciado: "O que acontece ao executar DELETE FROM alunos; sem WHERE?"
       opcoes:
         - { id: a, texto: "Todos os alunos são apagados da tabela" }
-        - { id: b, texto: "Apenas o último aluno é apagado" }
-        - { id: c, texto: "A tabela é apagada do banco" }
+        - { id: b, texto: "A tabela é apagada do banco" }
+        - { id: c, texto: "Apenas o último aluno é apagado" }
         - { id: d, texto: "O banco recusa o comando" }
       resposta_correta: a
       explicacao: "Todas as linhas somem, mas a tabela (vazia) continua existindo."
@@ -72,41 +72,41 @@ quiz:
       tipo: multipla_escolha
       enunciado: "Qual é a prática recomendada antes de rodar um DELETE ou UPDATE arriscado?"
       opcoes:
-        - { id: a, texto: "Testar o mesmo filtro WHERE em um SELECT primeiro, para ver quais linhas seriam afetadas" }
+        - { id: a, texto: "Nunca usar WHERE" }
         - { id: b, texto: "Rodar direto, é mais rápido" }
-        - { id: c, texto: "Apagar a tabela e recriar" }
-        - { id: d, texto: "Nunca usar WHERE" }
-      resposta_correta: a
+        - { id: c, texto: "Testar o mesmo filtro WHERE em um SELECT primeiro, para ver quais linhas seriam afetadas" }
+        - { id: d, texto: "Apagar a tabela e recriar" }
+      resposta_correta: c
       explicacao: "O SELECT mostra exatamente o que será afetado, sem alterar nada."
     - id: q6
       tipo: multipla_escolha
       enunciado: "Qual a diferença entre DELETE e DROP TABLE?"
       opcoes:
-        - { id: a, texto: "DELETE remove linhas e mantém a tabela; DROP TABLE elimina a tabela inteira, estrutura e tudo" }
-        - { id: b, texto: "São exatamente a mesma coisa" }
-        - { id: c, texto: "DROP TABLE só funciona em tabelas vazias" }
-        - { id: d, texto: "DELETE apaga o banco todo" }
-      resposta_correta: a
+        - { id: a, texto: "São exatamente a mesma coisa" }
+        - { id: b, texto: "DELETE apaga o banco todo" }
+        - { id: c, texto: "DELETE remove linhas e mantém a tabela; DROP TABLE elimina a tabela inteira, estrutura e tudo" }
+        - { id: d, texto: "DROP TABLE só funciona em tabelas vazias" }
+      resposta_correta: c
       explicacao: "DELETE é DML (mexe nos dados); DROP TABLE é DDL (mexe na estrutura)."
     - id: q7
       tipo: multipla_escolha
       enunciado: "Na sintaxe UPDATE estoque SET quantidade = 10 WHERE id = 3, o que o WHERE está fazendo?"
       opcoes:
-        - { id: a, texto: "Limitando a alteração apenas ao registro cujo id é 3" }
-        - { id: b, texto: "Criando um registro novo com id 3" }
-        - { id: c, texto: "Ordenando os resultados" }
-        - { id: d, texto: "Apagando o registro 3" }
-      resposta_correta: a
+        - { id: a, texto: "Ordenando os resultados" }
+        - { id: b, texto: "Apagando o registro 3" }
+        - { id: c, texto: "Criando um registro novo com id 3" }
+        - { id: d, texto: "Limitando a alteração apenas ao registro cujo id é 3" }
+      resposta_correta: d
       explicacao: "O WHERE é o filtro que define quais linhas serão afetadas."
     - id: q8
       tipo: multipla_escolha
       enunciado: "Por que o WHERE é considerado 'obrigatório na prática' em UPDATE e DELETE, mesmo sendo opcional na sintaxe?"
       opcoes:
-        - { id: a, texto: "Porque sem ele o comando afeta a tabela inteira, o que quase nunca é a intenção" }
+        - { id: a, texto: "Porque deixa a consulta mais bonita" }
         - { id: b, texto: "Porque o banco não funciona sem ele" }
-        - { id: c, texto: "Porque deixa a consulta mais bonita" }
+        - { id: c, texto: "Porque sem ele o comando afeta a tabela inteira, o que quase nunca é a intenção" }
         - { id: d, texto: "Porque acelera o banco" }
-      resposta_correta: a
+      resposta_correta: c
       explicacao: "A sintaxe permite omitir, mas omitir por engano já destruiu muitos bancos de dados reais."
 ---
 

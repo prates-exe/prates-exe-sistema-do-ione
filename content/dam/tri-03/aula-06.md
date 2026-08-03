@@ -4,7 +4,7 @@ mes_numero: 3
 numero_sequencial: 20
 duracao_minutos: 25
 tipo_sandbox: code
-publicado: true
+publicado: false
 exercicio_inicial: |
   class Main {
     // Este metodo tem um BUG. Sua tarefa e encontra-lo usando rastros.
@@ -43,80 +43,80 @@ quiz:
       enunciado: "O que é o Logcat no Android Studio?"
       opcoes:
         - { id: a, texto: "A janela que mostra as mensagens e os erros gerados pelo app enquanto ele roda" }
-        - { id: b, texto: "Um editor de código" }
-        - { id: c, texto: "Um emulador" }
-        - { id: d, texto: "Um banco de dados" }
+        - { id: b, texto: "Um banco de dados" }
+        - { id: c, texto: "Um editor de código" }
+        - { id: d, texto: "Um emulador" }
       resposta_correta: a
       explicacao: "É a primeira coisa a olhar quando algo dá errado."
     - id: q2
       tipo: multipla_escolha
       enunciado: "Qual é o primeiro passo ao ver o app travar?"
       opcoes:
-        - { id: a, texto: "Ler a mensagem de erro completa, começando pela primeira linha" }
-        - { id: b, texto: "Mudar o código no chute até parar de dar erro" }
-        - { id: c, texto: "Reinstalar o Android Studio" }
-        - { id: d, texto: "Apagar o projeto e começar de novo" }
-      resposta_correta: a
+        - { id: a, texto: "Mudar o código no chute até parar de dar erro" }
+        - { id: b, texto: "Reinstalar o Android Studio" }
+        - { id: c, texto: "Apagar o projeto e começar de novo" }
+        - { id: d, texto: "Ler a mensagem de erro completa, começando pela primeira linha" }
+      resposta_correta: d
       explicacao: "A mensagem quase sempre diz o tipo do erro e a linha exata."
     - id: q3
       tipo: multipla_escolha
       enunciado: "O que é uma stack trace?"
       opcoes:
-        - { id: a, texto: "A sequência de chamadas que levou até o erro, com os números das linhas" }
-        - { id: b, texto: "Uma lista de variáveis" }
+        - { id: a, texto: "Uma lista de variáveis" }
+        - { id: b, texto: "A sequência de chamadas que levou até o erro, com os números das linhas" }
         - { id: c, texto: "O histórico de versões do código" }
         - { id: d, texto: "Um tipo de teste" }
-      resposta_correta: a
+      resposta_correta: b
       explicacao: "Ela mostra o caminho: qual método chamou qual, até o ponto da falha."
     - id: q4
       tipo: multipla_escolha
       enunciado: "Em uma stack trace, onde normalmente está a causa mais próxima do erro?"
       opcoes:
-        - { id: a, texto: "Nas primeiras linhas, e principalmente nas que citam arquivos do SEU projeto" }
-        - { id: b, texto: "Sempre na última linha" }
-        - { id: c, texto: "No meio, sempre" }
-        - { id: d, texto: "A ordem é aleatória" }
-      resposta_correta: a
+        - { id: a, texto: "Sempre na última linha" }
+        - { id: b, texto: "A ordem é aleatória" }
+        - { id: c, texto: "Nas primeiras linhas, e principalmente nas que citam arquivos do SEU projeto" }
+        - { id: d, texto: "No meio, sempre" }
+      resposta_correta: c
       explicacao: "Boa parte das linhas é código interno do Android; procure as do seu pacote."
     - id: q5
       tipo: multipla_escolha
       enunciado: "Para que serve imprimir valores intermediários durante a investigação?"
       opcoes:
-        - { id: a, texto: "Para ver o que realmente está nas variáveis, em vez de supor" }
+        - { id: a, texto: "Não serve para nada" }
         - { id: b, texto: "Para deixar o app mais lento" }
         - { id: c, texto: "Para preencher o Logcat" }
-        - { id: d, texto: "Não serve para nada" }
-      resposta_correta: a
+        - { id: d, texto: "Para ver o que realmente está nas variáveis, em vez de supor" }
+      resposta_correta: d
       explicacao: "Quase todo bug é uma diferença entre o que você acha que está lá e o que está de fato."
     - id: q6
       tipo: multipla_escolha
       enunciado: "O que significa NullPointerException?"
       opcoes:
-        - { id: a, texto: "O código tentou usar algo que está vazio (nulo), como uma View não encontrada" }
-        - { id: b, texto: "O número é zero" }
-        - { id: c, texto: "Faltou memória" }
-        - { id: d, texto: "A internet caiu" }
-      resposta_correta: a
+        - { id: a, texto: "A internet caiu" }
+        - { id: b, texto: "Faltou memória" }
+        - { id: c, texto: "O código tentou usar algo que está vazio (nulo), como uma View não encontrada" }
+        - { id: d, texto: "O número é zero" }
+      resposta_correta: c
       explicacao: "No Android, quase sempre é um findViewById com id errado."
     - id: q7
       tipo: multipla_escolha
       enunciado: "Por que 'mudar o código no chute' é uma péssima estratégia de depuração?"
       opcoes:
-        - { id: a, texto: "Porque você pode esconder o sintoma sem corrigir a causa, e ainda criar novos erros" }
-        - { id: b, texto: "Porque demora menos" }
+        - { id: a, texto: "Porque demora menos" }
+        - { id: b, texto: "Porque você pode esconder o sintoma sem corrigir a causa, e ainda criar novos erros" }
         - { id: c, texto: "Porque é proibido" }
         - { id: d, texto: "Não é uma péssima estratégia" }
-      resposta_correta: a
+      resposta_correta: b
       explicacao: "Depurar é investigar com método: observar, formular uma hipótese e testá-la."
     - id: q8
       tipo: multipla_escolha
       enunciado: "Um app que calcula média e devolve 8.0 em vez de 8.33 tem que tipo de problema?"
       opcoes:
-        - { id: a, texto: "Erro de lógica — o app roda sem travar, mas o resultado está errado" }
-        - { id: b, texto: "Erro de compilação" }
+        - { id: a, texto: "Erro de compilação" }
+        - { id: b, texto: "Erro de lógica — o app roda sem travar, mas o resultado está errado" }
         - { id: c, texto: "Erro de rede" }
         - { id: d, texto: "Nenhum problema" }
-      resposta_correta: a
+      resposta_correta: b
       explicacao: "São os mais perigosos: não há mensagem de erro, só um resultado silenciosamente errado."
 ---
 

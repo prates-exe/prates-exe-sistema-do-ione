@@ -19,8 +19,12 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
-  title: "Sistema do Ione",
-  description: "Plataforma de ensino de Desenvolvimento de Aplicativos e Banco de Dados",
+  title: {
+    default: "Bitlab",
+    template: "%s · Bitlab",
+  },
+  description:
+    "Laboratório de Banco de Dados e Desenvolvimento de Aplicativos: escreva SQL e monte telas Android direto no navegador.",
 };
 
 export default function RootLayout({

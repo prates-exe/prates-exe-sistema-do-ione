@@ -1,4 +1,4 @@
--- Sistema do Ione — sandbox de Android (layout XML + Activity Java simulados)
+-- Bitlab — sandbox de Android (layout XML + Activity Java simulados)
 -- Cada aluno tem seu próprio layout_xml e activity_java por aula, salvos
 -- com autosave, no mesmo padrão do sandbox de código.
 alter table aulas drop constraint if exists aulas_tipo_sandbox_check;

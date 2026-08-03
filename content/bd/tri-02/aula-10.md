@@ -35,81 +35,81 @@ quiz:
       tipo: multipla_escolha
       enunciado: "O que caracteriza um relacionamento N:M (muitos para muitos)?"
       opcoes:
-        - { id: a, texto: "Cada registro de um lado pode se relacionar com vários do outro, e vice-versa" }
-        - { id: b, texto: "Cada registro se relaciona com exatamente um do outro lado" }
-        - { id: c, texto: "Um lado tem muitos e o outro tem apenas um" }
-        - { id: d, texto: "Não existe relacionamento" }
-      resposta_correta: a
+        - { id: a, texto: "Não existe relacionamento" }
+        - { id: b, texto: "Um lado tem muitos e o outro tem apenas um" }
+        - { id: c, texto: "Cada registro de um lado pode se relacionar com vários do outro, e vice-versa" }
+        - { id: d, texto: "Cada registro se relaciona com exatamente um do outro lado" }
+      resposta_correta: c
       explicacao: "Um aluno cursa várias disciplinas e cada disciplina tem vários alunos."
     - id: q2
       tipo: multipla_escolha
       enunciado: "Por que um N:M não pode ser resolvido com uma FK simples, como o 1:N?"
       opcoes:
-        - { id: a, texto: "Porque uma coluna guarda um valor só, e seria preciso guardar vários de cada lado" }
+        - { id: a, texto: "Porque a tabela ficaria pequena demais" }
         - { id: b, texto: "Porque o SQL não permite chaves estrangeiras" }
-        - { id: c, texto: "Porque N:M não existe na prática" }
-        - { id: d, texto: "Porque a tabela ficaria pequena demais" }
-      resposta_correta: a
+        - { id: c, texto: "Porque uma coluna guarda um valor só, e seria preciso guardar vários de cada lado" }
+        - { id: d, texto: "Porque N:M não existe na prática" }
+      resposta_correta: c
       explicacao: "Você teria que repetir a linha inteira ou criar várias colunas — os dois caminhos são ruins."
     - id: q3
       tipo: multipla_escolha
       enunciado: "Como se resolve um relacionamento N:M em um banco relacional?"
       opcoes:
         - { id: a, texto: "Criando uma terceira tabela (associativa) com uma FK para cada lado" }
-        - { id: b, texto: "Criando muitas colunas na mesma tabela" }
+        - { id: b, texto: "Não é possível resolver" }
         - { id: c, texto: "Usando apenas uma chave primária composta na primeira tabela" }
-        - { id: d, texto: "Não é possível resolver" }
+        - { id: d, texto: "Criando muitas colunas na mesma tabela" }
       resposta_correta: a
       explicacao: "A tabela associativa transforma um N:M em dois relacionamentos 1:N."
     - id: q4
       tipo: multipla_escolha
       enunciado: "Quantas chaves estrangeiras uma tabela associativa tem, no mínimo?"
       opcoes:
-        - { id: a, texto: "Duas — uma para cada tabela que ela liga" }
-        - { id: b, texto: "Uma só" }
-        - { id: c, texto: "Nenhuma" }
-        - { id: d, texto: "Quatro" }
-      resposta_correta: a
+        - { id: a, texto: "Nenhuma" }
+        - { id: b, texto: "Quatro" }
+        - { id: c, texto: "Uma só" }
+        - { id: d, texto: "Duas — uma para cada tabela que ela liga" }
+      resposta_correta: d
       explicacao: "É exatamente isso que faz a ponte entre os dois lados."
     - id: q5
       tipo: multipla_escolha
       enunciado: "Em um sistema escolar, qual seria a tabela associativa entre alunos e cursos?"
       opcoes:
-        - { id: a, texto: "matriculas" }
+        - { id: a, texto: "notas_finais" }
         - { id: b, texto: "professores" }
         - { id: c, texto: "salas" }
-        - { id: d, texto: "notas_finais" }
-      resposta_correta: a
+        - { id: d, texto: "matriculas" }
+      resposta_correta: d
       explicacao: "A matrícula é justamente o encontro entre um aluno e um curso."
     - id: q6
       tipo: multipla_escolha
       enunciado: "Uma tabela associativa pode ter colunas próprias, além das duas FKs?"
       opcoes:
         - { id: a, texto: "Sim — por exemplo a data da matrícula ou a nota obtida" }
-        - { id: b, texto: "Não, só pode ter as duas FKs" }
+        - { id: b, texto: "Só em bancos NoSQL" }
         - { id: c, texto: "Só se tiver menos de 10 linhas" }
-        - { id: d, texto: "Só em bancos NoSQL" }
+        - { id: d, texto: "Não, só pode ter as duas FKs" }
       resposta_correta: a
       explicacao: "Esses dados pertencem à RELAÇÃO, não ao aluno nem ao curso separadamente."
     - id: q7
       tipo: multipla_escolha
       enunciado: "Em um pedido de loja com vários produtos, e cada produto em vários pedidos, qual é a cardinalidade?"
       opcoes:
-        - { id: a, texto: "N:M, resolvida por uma tabela itens_do_pedido" }
-        - { id: b, texto: "1:1" }
-        - { id: c, texto: "1:N, sem tabela extra" }
-        - { id: d, texto: "Não há relacionamento" }
-      resposta_correta: a
+        - { id: a, texto: "1:N, sem tabela extra" }
+        - { id: b, texto: "N:M, resolvida por uma tabela itens_do_pedido" }
+        - { id: c, texto: "Não há relacionamento" }
+        - { id: d, texto: "1:1" }
+      resposta_correta: b
       explicacao: "E a tabela associativa guarda também a quantidade de cada produto naquele pedido."
     - id: q8
       tipo: multipla_escolha
       enunciado: "Para listar o nome do estudante junto com o nome do curso, quantos JOINs são necessários?"
       opcoes:
-        - { id: a, texto: "Dois — da associativa para cada uma das duas tabelas" }
-        - { id: b, texto: "Um só" }
-        - { id: c, texto: "Nenhum" }
-        - { id: d, texto: "Três" }
-      resposta_correta: a
+        - { id: a, texto: "Nenhum" }
+        - { id: b, texto: "Três" }
+        - { id: c, texto: "Um só" }
+        - { id: d, texto: "Dois — da associativa para cada uma das duas tabelas" }
+      resposta_correta: d
       explicacao: "Parte-se de matriculas e liga-se com estudantes e com cursos."
 ---
 

@@ -29,81 +29,81 @@ quiz:
       tipo: multipla_escolha
       enunciado: "Qual é a finalidade da Chave Estrangeira (FK)?"
       opcoes:
-        - { id: a, texto: "Criar a ligação entre duas tabelas, referenciando a chave primária de outra" }
-        - { id: b, texto: "Identificar de forma única cada registro da própria tabela" }
+        - { id: a, texto: "Identificar de forma única cada registro da própria tabela" }
+        - { id: b, texto: "Impedir que a tabela seja excluída" }
         - { id: c, texto: "Ordenar os registros de uma consulta" }
-        - { id: d, texto: "Impedir que a tabela seja excluída" }
-      resposta_correta: a
+        - { id: d, texto: "Criar a ligação entre duas tabelas, referenciando a chave primária de outra" }
+      resposta_correta: d
       explicacao: "A FK é o que permite dizer que um pedido pertence a um cliente específico."
     - id: q2
       tipo: multipla_escolha
       enunciado: "Qual a diferença entre PK e FK?"
       opcoes:
         - { id: a, texto: "A PK identifica o registro na própria tabela; a FK aponta para a PK de outra tabela" }
-        - { id: b, texto: "Não há diferença" }
-        - { id: c, texto: "A FK é sempre texto e a PK sempre número" }
-        - { id: d, texto: "A PK liga tabelas e a FK identifica registros" }
+        - { id: b, texto: "A PK liga tabelas e a FK identifica registros" }
+        - { id: c, texto: "Não há diferença" }
+        - { id: d, texto: "A FK é sempre texto e a PK sempre número" }
       resposta_correta: a
       explicacao: "PK = identidade própria. FK = referência a outra tabela."
     - id: q3
       tipo: multipla_escolha
       enunciado: "Em um sistema de loja, onde fica a chave estrangeira?"
       opcoes:
-        - { id: a, texto: "Na tabela pedidos, apontando para o cliente dono do pedido" }
-        - { id: b, texto: "Na tabela clientes, apontando para todos os pedidos" }
-        - { id: c, texto: "Em nenhuma, FK é opcional e não se usa" }
-        - { id: d, texto: "Em uma terceira tabela chamada FK" }
-      resposta_correta: a
+        - { id: a, texto: "Em nenhuma, FK é opcional e não se usa" }
+        - { id: b, texto: "Em uma terceira tabela chamada FK" }
+        - { id: c, texto: "Na tabela clientes, apontando para todos os pedidos" }
+        - { id: d, texto: "Na tabela pedidos, apontando para o cliente dono do pedido" }
+      resposta_correta: d
       explicacao: "A FK fica sempre no lado 'muitos': muitos pedidos pertencem a um cliente."
     - id: q4
       tipo: multipla_escolha
       enunciado: "O relacionamento 'um cliente pode ter vários pedidos' é chamado de:"
       opcoes:
-        - { id: a, texto: "1:N (um para muitos)" }
+        - { id: a, texto: "0:0" }
         - { id: b, texto: "1:1 (um para um)" }
-        - { id: c, texto: "N:N (muitos para muitos)" }
-        - { id: d, texto: "0:0" }
-      resposta_correta: a
+        - { id: c, texto: "1:N (um para muitos)" }
+        - { id: d, texto: "N:N (muitos para muitos)" }
+      resposta_correta: c
       explicacao: "Um do lado do cliente, muitos do lado dos pedidos."
     - id: q5
       tipo: multipla_escolha
       enunciado: "O que é cardinalidade?"
       opcoes:
-        - { id: a, texto: "A definição de quantos registros de uma tabela se relacionam com quantos de outra" }
+        - { id: a, texto: "A ordem alfabética dos registros" }
         - { id: b, texto: "A quantidade de colunas de uma tabela" }
         - { id: c, texto: "O tamanho do banco em megabytes" }
-        - { id: d, texto: "A ordem alfabética dos registros" }
-      resposta_correta: a
+        - { id: d, texto: "A definição de quantos registros de uma tabela se relacionam com quantos de outra" }
+      resposta_correta: d
       explicacao: "1:1, 1:N e N:N são os tipos de cardinalidade."
     - id: q6
       tipo: multipla_escolha
       enunciado: "Sem chaves estrangeiras, o que aconteceria com as tabelas de um banco?"
       opcoes:
-        - { id: a, texto: "Ficariam isoladas, sem nenhum relacionamento entre si" }
-        - { id: b, texto: "Funcionariam exatamente igual" }
-        - { id: c, texto: "Seriam apagadas automaticamente" }
-        - { id: d, texto: "Viravam uma planilha" }
-      resposta_correta: a
+        - { id: a, texto: "Funcionariam exatamente igual" }
+        - { id: b, texto: "Seriam apagadas automaticamente" }
+        - { id: c, texto: "Viravam uma planilha" }
+        - { id: d, texto: "Ficariam isoladas, sem nenhum relacionamento entre si" }
+      resposta_correta: d
       explicacao: "Sem FK não há como saber que um pedido pertence a determinado cliente."
     - id: q7
       tipo: multipla_escolha
       enunciado: "Ao cadastrar um pedido para um cliente, o que precisa acontecer primeiro?"
       opcoes:
-        - { id: a, texto: "O cliente precisa já existir na tabela clientes" }
-        - { id: b, texto: "O pedido precisa ser criado antes do cliente" }
-        - { id: c, texto: "Tanto faz a ordem" }
-        - { id: d, texto: "É preciso apagar a tabela clientes" }
-      resposta_correta: a
+        - { id: a, texto: "O pedido precisa ser criado antes do cliente" }
+        - { id: b, texto: "Tanto faz a ordem" }
+        - { id: c, texto: "É preciso apagar a tabela clientes" }
+        - { id: d, texto: "O cliente precisa já existir na tabela clientes" }
+      resposta_correta: d
       explicacao: "A FK aponta para um registro existente. Sem o cliente cadastrado, não há para onde apontar."
     - id: q8
       tipo: multipla_escolha
       enunciado: "Em uma escola, 'um aluno pode se matricular em vários cursos e um curso tem vários alunos' é um relacionamento:"
       opcoes:
-        - { id: a, texto: "N:N (muitos para muitos)" }
-        - { id: b, texto: "1:N (um para muitos)" }
-        - { id: c, texto: "1:1 (um para um)" }
-        - { id: d, texto: "Não é um relacionamento" }
-      resposta_correta: a
+        - { id: a, texto: "Não é um relacionamento" }
+        - { id: b, texto: "1:1 (um para um)" }
+        - { id: c, texto: "1:N (um para muitos)" }
+        - { id: d, texto: "N:N (muitos para muitos)" }
+      resposta_correta: d
       explicacao: "Muitos dos dois lados. Esse caso normalmente exige uma terceira tabela, chamada tabela associativa."
 ---
 

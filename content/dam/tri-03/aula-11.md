@@ -4,7 +4,7 @@ mes_numero: 3
 numero_sequencial: 25
 duracao_minutos: 25
 tipo_sandbox: none
-publicado: true
+publicado: false
 quiz:
   titulo: "Quiz — Publicação"
   nota_minima_aprovacao: 60
@@ -13,49 +13,49 @@ quiz:
       tipo: multipla_escolha
       enunciado: "O que é um APK?"
       opcoes:
-        - { id: a, texto: "O arquivo instalável do aplicativo Android, com todo o código e recursos empacotados" }
-        - { id: b, texto: "O código-fonte do projeto" }
-        - { id: c, texto: "Um tipo de banco de dados" }
-        - { id: d, texto: "Um emulador" }
-      resposta_correta: a
+        - { id: a, texto: "Um emulador" }
+        - { id: b, texto: "Um tipo de banco de dados" }
+        - { id: c, texto: "O arquivo instalável do aplicativo Android, com todo o código e recursos empacotados" }
+        - { id: d, texto: "O código-fonte do projeto" }
+      resposta_correta: c
       explicacao: "É o que se instala no aparelho."
     - id: q2
       tipo: multipla_escolha
       enunciado: "Qual a diferença entre APK e AAB?"
       opcoes:
         - { id: a, texto: "O AAB é enviado à Play Store, que gera versões otimizadas para cada aparelho; o APK é o instalável direto" }
-        - { id: b, texto: "São exatamente a mesma coisa" }
-        - { id: c, texto: "O AAB é o código-fonte" }
-        - { id: d, texto: "O APK só funciona em emulador" }
+        - { id: b, texto: "O AAB é o código-fonte" }
+        - { id: c, texto: "O APK só funciona em emulador" }
+        - { id: d, texto: "São exatamente a mesma coisa" }
       resposta_correta: a
       explicacao: "O AAB (Android App Bundle) é hoje o formato exigido para publicar."
     - id: q3
       tipo: multipla_escolha
       enunciado: "O que significa assinar um aplicativo?"
       opcoes:
-        - { id: a, texto: "Aplicar uma assinatura digital que comprova que aquele app veio de você" }
-        - { id: b, texto: "Escrever o seu nome no código" }
-        - { id: c, texto: "Registrar o app em cartório" }
-        - { id: d, texto: "Colocar a sua foto no ícone" }
-      resposta_correta: a
+        - { id: a, texto: "Registrar o app em cartório" }
+        - { id: b, texto: "Aplicar uma assinatura digital que comprova que aquele app veio de você" }
+        - { id: c, texto: "Colocar a sua foto no ícone" }
+        - { id: d, texto: "Escrever o seu nome no código" }
+      resposta_correta: b
       explicacao: "É o que garante ao sistema que a atualização veio do mesmo autor."
     - id: q4
       tipo: multipla_escolha
       enunciado: "O que acontece se você PERDER a chave de assinatura do seu app publicado?"
       opcoes:
-        - { id: a, texto: "Você não consegue mais publicar atualizações daquele app" }
-        - { id: b, texto: "Nada, é só gerar outra" }
-        - { id: c, texto: "O app é apagado da loja automaticamente" }
-        - { id: d, texto: "A Google recupera para você" }
-      resposta_correta: a
+        - { id: a, texto: "O app é apagado da loja automaticamente" }
+        - { id: b, texto: "Você não consegue mais publicar atualizações daquele app" }
+        - { id: c, texto: "A Google recupera para você" }
+        - { id: d, texto: "Nada, é só gerar outra" }
+      resposta_correta: b
       explicacao: "Por isso a chave deve ser guardada com muito cuidado e backup."
     - id: q5
       tipo: multipla_escolha
       enunciado: "Qual a diferença entre build de debug e de release?"
       opcoes:
         - { id: a, texto: "O debug é para testes durante o desenvolvimento; o release é otimizado e assinado para distribuição" }
-        - { id: b, texto: "São iguais" }
-        - { id: c, texto: "O release não funciona em celular" }
+        - { id: b, texto: "O release não funciona em celular" }
+        - { id: c, texto: "São iguais" }
         - { id: d, texto: "O debug é mais rápido para o usuário" }
       resposta_correta: a
       explicacao: "Nunca se distribui uma build de debug: ela é maior, mais lenta e menos segura."
@@ -63,31 +63,31 @@ quiz:
       tipo: multipla_escolha
       enunciado: "O que é preciso para publicar na Google Play Store?"
       opcoes:
-        - { id: a, texto: "Uma conta de desenvolvedor, que tem uma taxa única de cadastro" }
+        - { id: a, texto: "Autorização do governo" }
         - { id: b, texto: "Nada, é totalmente livre" }
-        - { id: c, texto: "Uma empresa registrada obrigatoriamente" }
-        - { id: d, texto: "Autorização do governo" }
-      resposta_correta: a
+        - { id: c, texto: "Uma conta de desenvolvedor, que tem uma taxa única de cadastro" }
+        - { id: d, texto: "Uma empresa registrada obrigatoriamente" }
+      resposta_correta: c
       explicacao: "A conta é paga uma única vez e permite publicar vários aplicativos."
     - id: q7
       tipo: multipla_escolha
       enunciado: "O que a ficha do app na loja precisa ter, além do arquivo?"
       opcoes:
-        - { id: a, texto: "Título, descrição, capturas de tela, ícone, classificação indicativa e política de privacidade" }
-        - { id: b, texto: "Apenas o arquivo do app" }
-        - { id: c, texto: "Somente o nome" }
-        - { id: d, texto: "O código-fonte completo" }
-      resposta_correta: a
+        - { id: a, texto: "O código-fonte completo" }
+        - { id: b, texto: "Somente o nome" }
+        - { id: c, texto: "Título, descrição, capturas de tela, ícone, classificação indicativa e política de privacidade" }
+        - { id: d, texto: "Apenas o arquivo do app" }
+      resposta_correta: c
       explicacao: "A política de privacidade é obrigatória para apps que coletam dados."
     - id: q8
       tipo: multipla_escolha
       enunciado: "Por que existe o versionamento (versionCode e versionName) de um app?"
       opcoes:
-        - { id: a, texto: "Para o sistema saber qual versão é mais nova e o usuário identificar as atualizações" }
-        - { id: b, texto: "Apenas por organização interna" }
-        - { id: c, texto: "Para calcular o preço do app" }
-        - { id: d, texto: "Não tem função" }
-      resposta_correta: a
+        - { id: a, texto: "Não tem função" }
+        - { id: b, texto: "Para calcular o preço do app" }
+        - { id: c, texto: "Para o sistema saber qual versão é mais nova e o usuário identificar as atualizações" }
+        - { id: d, texto: "Apenas por organização interna" }
+      resposta_correta: c
       explicacao: "Cada envio à loja precisa de um versionCode maior que o anterior."
 ---
 

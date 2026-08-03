@@ -4,7 +4,7 @@ mes_numero: 3
 numero_sequencial: 24
 duracao_minutos: 25
 tipo_sandbox: sql
-publicado: true
+publicado: false
 exercicio_inicial: |
   -- Aula 12 — simulado pratico da prova.
   -- Sao 6 tarefas, uma de cada assunto cobrado.
@@ -35,11 +35,11 @@ quiz:
       tipo: multipla_escolha
       enunciado: "Qual comando cria a estrutura de uma tabela?"
       opcoes:
-        - { id: a, texto: "CREATE TABLE (DDL)" }
-        - { id: b, texto: "INSERT INTO (DML)" }
-        - { id: c, texto: "SELECT (DQL)" }
-        - { id: d, texto: "CREATE VIEW" }
-      resposta_correta: a
+        - { id: a, texto: "SELECT (DQL)" }
+        - { id: b, texto: "CREATE TABLE (DDL)" }
+        - { id: c, texto: "CREATE VIEW" }
+        - { id: d, texto: "INSERT INTO (DML)" }
+      resposta_correta: b
       explicacao: "DDL define estrutura; DML mexe nos dados; DQL consulta."
     - id: q2
       tipo: multipla_escolha
@@ -47,69 +47,69 @@ quiz:
       opcoes:
         - { id: a, texto: "Altera todas as linhas da tabela" }
         - { id: b, texto: "Não altera nada" }
-        - { id: c, texto: "Altera apenas a primeira linha" }
-        - { id: d, texto: "O banco pede confirmação" }
+        - { id: c, texto: "O banco pede confirmação" }
+        - { id: d, texto: "Altera apenas a primeira linha" }
       resposta_correta: a
       explicacao: "É um dos erros mais caros da profissão."
     - id: q3
       tipo: multipla_escolha
       enunciado: "Qual a diferença entre DELETE e DROP TABLE?"
       opcoes:
-        - { id: a, texto: "DELETE remove linhas e mantém a tabela; DROP TABLE elimina a tabela inteira" }
-        - { id: b, texto: "São iguais" }
+        - { id: a, texto: "DELETE apaga o banco" }
+        - { id: b, texto: "DELETE remove linhas e mantém a tabela; DROP TABLE elimina a tabela inteira" }
         - { id: c, texto: "DROP TABLE remove só uma linha" }
-        - { id: d, texto: "DELETE apaga o banco" }
-      resposta_correta: a
+        - { id: d, texto: "São iguais" }
+      resposta_correta: b
       explicacao: "DELETE é DML; DROP TABLE é DDL."
     - id: q4
       tipo: multipla_escolha
       enunciado: "Qual a finalidade da chave estrangeira?"
       opcoes:
-        - { id: a, texto: "Ligar uma tabela a outra, referenciando a chave primária dela" }
-        - { id: b, texto: "Identificar unicamente o registro na própria tabela" }
+        - { id: a, texto: "Impedir exclusões" }
+        - { id: b, texto: "Ligar uma tabela a outra, referenciando a chave primária dela" }
         - { id: c, texto: "Ordenar os resultados" }
-        - { id: d, texto: "Impedir exclusões" }
-      resposta_correta: a
+        - { id: d, texto: "Identificar unicamente o registro na própria tabela" }
+      resposta_correta: b
       explicacao: "A PK identifica; a FK relaciona."
     - id: q5
       tipo: multipla_escolha
       enunciado: "Qual JOIN traz também os registros SEM correspondência?"
       opcoes:
         - { id: a, texto: "LEFT JOIN" }
-        - { id: b, texto: "INNER JOIN" }
-        - { id: c, texto: "Nenhum" }
-        - { id: d, texto: "Os dois igualmente" }
+        - { id: b, texto: "Nenhum" }
+        - { id: c, texto: "Os dois igualmente" }
+        - { id: d, texto: "INNER JOIN" }
       resposta_correta: a
       explicacao: "O INNER exige par nos dois lados; o LEFT preserva todos os da esquerda."
     - id: q6
       tipo: multipla_escolha
       enunciado: "Por que uma média precisa vir de uma subconsulta no WHERE?"
       opcoes:
-        - { id: a, texto: "Porque funções de agregação não podem ser usadas dentro do WHERE" }
+        - { id: a, texto: "Não precisa de subconsulta" }
         - { id: b, texto: "Porque AVG é lento" }
         - { id: c, texto: "Porque WHERE só aceita texto" }
-        - { id: d, texto: "Não precisa de subconsulta" }
-      resposta_correta: a
+        - { id: d, texto: "Porque funções de agregação não podem ser usadas dentro do WHERE" }
+      resposta_correta: d
       explicacao: "O WHERE age linha a linha, antes da agregação."
     - id: q7
       tipo: multipla_escolha
       enunciado: "Uma View guarda os dados ou a consulta?"
       opcoes:
-        - { id: a, texto: "A consulta — por isso reflete sempre os dados atuais" }
-        - { id: b, texto: "Uma cópia dos dados" }
+        - { id: a, texto: "Uma cópia dos dados" }
+        - { id: b, texto: "A consulta — por isso reflete sempre os dados atuais" }
         - { id: c, texto: "As duas coisas" }
         - { id: d, texto: "Nenhuma das duas" }
-      resposta_correta: a
+      resposta_correta: b
       explicacao: "Ela executa a consulta original a cada uso."
     - id: q8
       tipo: multipla_escolha
       enunciado: "Ao contar itens por categoria com LEFT JOIN, por que usar COUNT(coluna) e não COUNT(*)?"
       opcoes:
-        - { id: a, texto: "Porque COUNT(*) conta a linha do NULL, mostrando 1 onde deveria ser 0" }
-        - { id: b, texto: "Porque COUNT(*) não funciona com JOIN" }
-        - { id: c, texto: "Porque COUNT(coluna) é mais rápido" }
-        - { id: d, texto: "Não há diferença" }
-      resposta_correta: a
+        - { id: a, texto: "Porque COUNT(*) não funciona com JOIN" }
+        - { id: b, texto: "Porque COUNT(coluna) é mais rápido" }
+        - { id: c, texto: "Não há diferença" }
+        - { id: d, texto: "Porque COUNT(*) conta a linha do NULL, mostrando 1 onde deveria ser 0" }
+      resposta_correta: d
       explicacao: "COUNT de uma coluna ignora os NULL — que é exatamente o que queremos."
 ---
 

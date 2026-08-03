@@ -1,4 +1,4 @@
--- Sistema do Ione — perfil do aluno (nome de exibição e avatar)
+-- Bitlab — perfil do aluno (nome de exibição e avatar)
 -- O aluno pode personalizar como aparece no site (nome de exibição + avatar
 -- escolhido entre opções fixas), mas nunca pode alterar full_name (o nome
 -- real cadastrado pela professora) nem role, mesmo que tente forjar a

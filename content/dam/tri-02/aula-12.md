@@ -42,21 +42,21 @@ quiz:
       tipo: multipla_escolha
       enunciado: "O que é um array?"
       opcoes:
-        - { id: a, texto: "Uma variável que guarda vários valores do mesmo tipo, em posições numeradas" }
+        - { id: a, texto: "Um tipo de laço de repetição" }
         - { id: b, texto: "Uma variável que guarda um único valor" }
-        - { id: c, texto: "Um tipo de laço de repetição" }
+        - { id: c, texto: "Uma variável que guarda vários valores do mesmo tipo, em posições numeradas" }
         - { id: d, texto: "Um comando de decisão" }
-      resposta_correta: a
+      resposta_correta: c
       explicacao: "Em vez de nota1, nota2, nota3, você tem notas[0], notas[1], notas[2]."
     - id: q2
       tipo: multipla_escolha
       enunciado: "Qual é o índice do PRIMEIRO elemento de um array em Java?"
       opcoes:
-        - { id: a, texto: "0" }
-        - { id: b, texto: "1" }
-        - { id: c, texto: "-1" }
-        - { id: d, texto: "Depende do tamanho" }
-      resposta_correta: a
+        - { id: a, texto: "Depende do tamanho" }
+        - { id: b, texto: "-1" }
+        - { id: c, texto: "0" }
+        - { id: d, texto: "1" }
+      resposta_correta: c
       explicacao: "Arrays em Java começam no zero. Essa é a fonte de metade dos erros com listas."
     - id: q3
       tipo: multipla_escolha
@@ -72,29 +72,29 @@ quiz:
       tipo: multipla_escolha
       enunciado: "Como descobrir quantos elementos um array tem?"
       opcoes:
-        - { id: a, texto: "Usando .length, sem parênteses" }
+        - { id: a, texto: "Contando manualmente" }
         - { id: b, texto: "Usando .length(), com parênteses" }
-        - { id: c, texto: "Usando .size" }
-        - { id: d, texto: "Contando manualmente" }
-      resposta_correta: a
+        - { id: c, texto: "Usando .length, sem parênteses" }
+        - { id: d, texto: "Usando .size" }
+      resposta_correta: c
       explicacao: "Em arrays é .length (sem parênteses). Em String é .length() (com parênteses)."
     - id: q5
       tipo: multipla_escolha
       enunciado: "Qual é a condição correta para percorrer um array inteiro com for?"
       opcoes:
-        - { id: a, texto: "i < array.length" }
-        - { id: b, texto: "i <= array.length" }
-        - { id: c, texto: "i < array.length - 1" }
-        - { id: d, texto: "i > 0" }
-      resposta_correta: a
+        - { id: a, texto: "i <= array.length" }
+        - { id: b, texto: "i > 0" }
+        - { id: c, texto: "i < array.length" }
+        - { id: d, texto: "i < array.length - 1" }
+      resposta_correta: c
       explicacao: "Com <= você tentaria acessar uma posição que não existe e o programa quebraria."
     - id: q6
       tipo: multipla_escolha
       enunciado: "O que acontece ao acessar um índice que não existe, como notas[10] em um array de 4?"
       opcoes:
         - { id: a, texto: "O programa quebra com um erro de índice fora do limite" }
-        - { id: b, texto: "Retorna zero" }
-        - { id: c, texto: "Retorna o último elemento" }
+        - { id: b, texto: "Retorna o último elemento" }
+        - { id: c, texto: "Retorna zero" }
         - { id: d, texto: "O array cresce automaticamente" }
       resposta_correta: a
       explicacao: "É o famoso ArrayIndexOutOfBoundsException, um dos erros mais comuns em Java."
@@ -102,20 +102,20 @@ quiz:
       tipo: multipla_escolha
       enunciado: "Para achar o maior valor de um array, qual é a estratégia?"
       opcoes:
-        - { id: a, texto: "Guardar o primeiro como maior e, percorrendo, trocar sempre que achar um valor maior" }
-        - { id: b, texto: "Somar todos e dividir pelo tamanho" }
-        - { id: c, texto: "Pegar sempre o último elemento" }
-        - { id: d, texto: "Não é possível sem ordenar antes" }
-      resposta_correta: a
+        - { id: a, texto: "Somar todos e dividir pelo tamanho" }
+        - { id: b, texto: "Guardar o primeiro como maior e, percorrendo, trocar sempre que achar um valor maior" }
+        - { id: c, texto: "Não é possível sem ordenar antes" }
+        - { id: d, texto: "Pegar sempre o último elemento" }
+      resposta_correta: b
       explicacao: "É o mesmo raciocínio de segurar a maior carta da mão enquanto olha as outras."
     - id: q8
       tipo: multipla_escolha
       enunciado: "Qual a relação entre arrays e a RecyclerView que você viu na Aula 8?"
       opcoes:
         - { id: a, texto: "A lista de dados que alimenta a RecyclerView é justamente uma coleção como essa" }
-        - { id: b, texto: "Nenhuma relação" }
-        - { id: c, texto: "A RecyclerView substitui os arrays" }
-        - { id: d, texto: "Arrays só funcionam fora do Android" }
+        - { id: b, texto: "Arrays só funcionam fora do Android" }
+        - { id: c, texto: "Nenhuma relação" }
+        - { id: d, texto: "A RecyclerView substitui os arrays" }
       resposta_correta: a
       explicacao: "O Adapter percorre a coleção exatamente como você percorre um array com for."
 ---

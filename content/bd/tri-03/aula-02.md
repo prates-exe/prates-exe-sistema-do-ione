@@ -4,7 +4,7 @@ mes_numero: 3
 numero_sequencial: 14
 duracao_minutos: 25
 tipo_sandbox: sql
-publicado: true
+publicado: false
 exercicio_inicial: |
   -- Aula 2 — reforcando o INNER JOIN com um cenario novo.
   -- Siga a atividade passo a passo.
@@ -33,59 +33,59 @@ quiz:
       enunciado: "O que a cláusula ON define em um JOIN?"
       opcoes:
         - { id: a, texto: "A condição que liga as duas tabelas, normalmente FK igual a PK" }
-        - { id: b, texto: "Quais colunas serão exibidas" }
-        - { id: c, texto: "A ordem do resultado" }
-        - { id: d, texto: "O filtro de linhas" }
+        - { id: b, texto: "A ordem do resultado" }
+        - { id: c, texto: "O filtro de linhas" }
+        - { id: d, texto: "Quais colunas serão exibidas" }
       resposta_correta: a
       explicacao: "Quem filtra é o WHERE; o ON define a ligação."
     - id: q2
       tipo: multipla_escolha
       enunciado: "Por que usar apelidos de tabela, como med_exames e?"
       opcoes:
-        - { id: a, texto: "Para encurtar a consulta e deixá-la mais legível" }
-        - { id: b, texto: "Porque o SQL exige apelidos em JOIN" }
-        - { id: c, texto: "Para renomear a tabela no banco" }
-        - { id: d, texto: "Não há motivo" }
-      resposta_correta: a
+        - { id: a, texto: "Porque o SQL exige apelidos em JOIN" }
+        - { id: b, texto: "Não há motivo" }
+        - { id: c, texto: "Para encurtar a consulta e deixá-la mais legível" }
+        - { id: d, texto: "Para renomear a tabela no banco" }
+      resposta_correta: c
       explicacao: "e.nome é bem mais curto que med_exames.nome, e o significado continua claro."
     - id: q3
       tipo: multipla_escolha
       enunciado: "Quando duas tabelas têm uma coluna com o mesmo nome, o que é obrigatório?"
       opcoes:
-        - { id: a, texto: "Dizer de qual tabela vem, usando tabela.coluna ou o apelido" }
-        - { id: b, texto: "Renomear a coluna em uma das tabelas" }
-        - { id: c, texto: "Apagar uma das colunas" }
-        - { id: d, texto: "Nada, o banco escolhe sozinho" }
-      resposta_correta: a
+        - { id: a, texto: "Apagar uma das colunas" }
+        - { id: b, texto: "Dizer de qual tabela vem, usando tabela.coluna ou o apelido" }
+        - { id: c, texto: "Nada, o banco escolhe sozinho" }
+        - { id: d, texto: "Renomear a coluna em uma das tabelas" }
+      resposta_correta: b
       explicacao: "Sem isso o banco responde 'ambiguous column name'."
     - id: q4
       tipo: multipla_escolha
       enunciado: "Como combinar JOIN com filtro por uma coluna da OUTRA tabela?"
       opcoes:
-        - { id: a, texto: "Fazendo o JOIN e usando WHERE com a coluna da tabela juntada" }
-        - { id: b, texto: "Não é possível filtrar por outra tabela" }
-        - { id: c, texto: "Usando dois SELECT separados" }
+        - { id: a, texto: "Usando dois SELECT separados" }
+        - { id: b, texto: "Fazendo o JOIN e usando WHERE com a coluna da tabela juntada" }
+        - { id: c, texto: "Não é possível filtrar por outra tabela" }
         - { id: d, texto: "Usando DROP TABLE" }
-      resposta_correta: a
+      resposta_correta: b
       explicacao: "Depois do JOIN, todas as colunas das duas tabelas estão disponíveis para o WHERE."
     - id: q5
       tipo: multipla_escolha
       enunciado: "O que faz SELECT s.nome, COUNT(*) FROM exames e INNER JOIN setores s ON e.setor_id=s.id GROUP BY s.nome?"
       opcoes:
-        - { id: a, texto: "Conta quantos exames existem em cada setor" }
-        - { id: b, texto: "Conta quantos setores existem" }
-        - { id: c, texto: "Soma os preços" }
-        - { id: d, texto: "Apaga os exames" }
-      resposta_correta: a
+        - { id: a, texto: "Conta quantos setores existem" }
+        - { id: b, texto: "Soma os preços" }
+        - { id: c, texto: "Apaga os exames" }
+        - { id: d, texto: "Conta quantos exames existem em cada setor" }
+      resposta_correta: d
       explicacao: "O GROUP BY separa por setor e o COUNT conta dentro de cada grupo."
     - id: q6
       tipo: multipla_escolha
       enunciado: "Em um JOIN com GROUP BY, qual coluna costuma ir no GROUP BY?"
       opcoes:
         - { id: a, texto: "A mesma coluna descritiva que aparece no SELECT junto com a função de agregação" }
-        - { id: b, texto: "Sempre a chave primária da tabela principal" }
-        - { id: c, texto: "Sempre a coluna de preço" }
-        - { id: d, texto: "Qualquer uma, tanto faz" }
+        - { id: b, texto: "Qualquer uma, tanto faz" }
+        - { id: c, texto: "Sempre a chave primária da tabela principal" }
+        - { id: d, texto: "Sempre a coluna de preço" }
       resposta_correta: a
       explicacao: "Se você mostra s.nome e um COUNT, o agrupamento é por s.nome."
     - id: q7
@@ -93,9 +93,9 @@ quiz:
       enunciado: "O que acontece com um exame cujo setor_id aponta para um setor inexistente?"
       opcoes:
         - { id: a, texto: "Ele desaparece do resultado do INNER JOIN" }
-        - { id: b, texto: "Aparece com o setor em branco" }
-        - { id: c, texto: "O comando dá erro" }
-        - { id: d, texto: "O setor é criado automaticamente" }
+        - { id: b, texto: "O comando dá erro" }
+        - { id: c, texto: "O setor é criado automaticamente" }
+        - { id: d, texto: "Aparece com o setor em branco" }
       resposta_correta: a
       explicacao: "O INNER JOIN exige correspondência dos dois lados — e é isso que o LEFT JOIN resolve."
     - id: q8
@@ -104,8 +104,8 @@ quiz:
       opcoes:
         - { id: a, texto: "SELECT, FROM, JOIN, ON, WHERE, GROUP BY, ORDER BY" }
         - { id: b, texto: "SELECT, WHERE, FROM, JOIN" }
-        - { id: c, texto: "FROM, SELECT, ORDER BY, WHERE" }
-        - { id: d, texto: "A ordem é livre" }
+        - { id: c, texto: "A ordem é livre" }
+        - { id: d, texto: "FROM, SELECT, ORDER BY, WHERE" }
       resposta_correta: a
       explicacao: "Essa sequência é fixa e vale para qualquer consulta."
 ---

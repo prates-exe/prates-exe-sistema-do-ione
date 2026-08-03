@@ -52,31 +52,31 @@ quiz:
       tipo: multipla_escolha
       enunciado: "Qual a diferença entre UI e UX?"
       opcoes:
-        - { id: a, texto: "UI é a interface em si (cores, botões, textos); UX é a experiência de usar o app" }
-        - { id: b, texto: "São a mesma coisa, só siglas diferentes" }
-        - { id: c, texto: "UI é só para Android; UX é só para iOS" }
-        - { id: d, texto: "UX é o nome do banco de dados do app" }
-      resposta_correta: a
+        - { id: a, texto: "UI é só para Android; UX é só para iOS" }
+        - { id: b, texto: "UX é o nome do banco de dados do app" }
+        - { id: c, texto: "São a mesma coisa, só siglas diferentes" }
+        - { id: d, texto: "UI é a interface em si (cores, botões, textos); UX é a experiência de usar o app" }
+      resposta_correta: d
       explicacao: "Uma UI bonita não garante boa UX: se a pessoa se perde ou se frustra, a experiência é ruim."
     - id: q2
       tipo: multipla_escolha
       enunciado: "Cada tela de um aplicativo é representada por qual componente?"
       opcoes:
-        - { id: a, texto: "Uma Activity" }
-        - { id: b, texto: "Um Adapter" }
-        - { id: c, texto: "Um JSON" }
-        - { id: d, texto: "Um SGBD" }
-      resposta_correta: a
+        - { id: a, texto: "Um Adapter" }
+        - { id: b, texto: "Um JSON" }
+        - { id: c, texto: "Um SGBD" }
+        - { id: d, texto: "Uma Activity" }
+      resposta_correta: d
       explicacao: "Cada tela é uma Activity. Menus e Fragmentos completam a navegação."
     - id: q3
       tipo: multipla_escolha
       enunciado: "Qual recurso abre outra tela e leva dados de uma Activity para outra?"
       opcoes:
-        - { id: a, texto: "Intent" }
-        - { id: b, texto: "Adapter" }
-        - { id: c, texto: "SQLite" }
-        - { id: d, texto: "JSON" }
-      resposta_correta: a
+        - { id: a, texto: "JSON" }
+        - { id: b, texto: "SQLite" }
+        - { id: c, texto: "Adapter" }
+        - { id: d, texto: "Intent" }
+      resposta_correta: d
       explicacao: "A Intent é o mecanismo de navegação e de passagem de dados entre telas."
     - id: q4
       tipo: multipla_escolha
@@ -92,41 +92,41 @@ quiz:
       tipo: multipla_escolha
       enunciado: "Qual é o papel do Adapter em uma lista?"
       opcoes:
-        - { id: a, texto: "Ligar os dados às posições exibidas na lista, definindo o que cada item mostra" }
+        - { id: a, texto: "Fazer a conexão com a internet" }
         - { id: b, texto: "Guardar os dados no banco local" }
-        - { id: c, texto: "Fazer a conexão com a internet" }
+        - { id: c, texto: "Ligar os dados às posições exibidas na lista, definindo o que cada item mostra" }
         - { id: d, texto: "Controlar o ciclo de vida da Activity" }
-      resposta_correta: a
+      resposta_correta: c
       explicacao: "Sem o Adapter, a lista não sabe de onde vêm os dados nem como desenhá-los."
     - id: q6
       tipo: multipla_escolha
       enunciado: "Por que a RecyclerView é melhor que a ListView para listas longas?"
       opcoes:
-        - { id: a, texto: "Porque reaproveita as views que saem da tela, gastando menos memória" }
-        - { id: b, texto: "Porque tem cores mais bonitas" }
+        - { id: a, texto: "Porque tem cores mais bonitas" }
+        - { id: b, texto: "Porque funciona sem internet" }
         - { id: c, texto: "Porque não precisa de Adapter" }
-        - { id: d, texto: "Porque funciona sem internet" }
-      resposta_correta: a
+        - { id: d, texto: "Porque reaproveita as views que saem da tela, gastando menos memória" }
+      resposta_correta: d
       explicacao: "Uma lista de mil itens não cria mil componentes: só os visíveis existem de fato."
     - id: q7
       tipo: multipla_escolha
       enunciado: "Qual destas é uma boa prática de interface em uma tela de cadastro?"
       opcoes:
-        - { id: a, texto: "Usar rótulos ou hints claros indicando o que preencher em cada campo" }
-        - { id: b, texto: "Deixar todos os campos sem identificação" }
-        - { id: c, texto: "Usar cor de texto parecida com a do fundo" }
-        - { id: d, texto: "Fazer botões pequenos, difíceis de acertar" }
-      resposta_correta: a
+        - { id: a, texto: "Fazer botões pequenos, difíceis de acertar" }
+        - { id: b, texto: "Usar cor de texto parecida com a do fundo" }
+        - { id: c, texto: "Usar rótulos ou hints claros indicando o que preencher em cada campo" }
+        - { id: d, texto: "Deixar todos os campos sem identificação" }
+      resposta_correta: c
       explicacao: "Contraste adequado, área de toque confortável e rótulos claros são o básico de boa UX."
     - id: q8
       tipo: multipla_escolha
       enunciado: "O que é hierarquia visual em uma tela?"
       opcoes:
-        - { id: a, texto: "Organizar os elementos para que o mais importante seja percebido primeiro" }
-        - { id: b, texto: "Colocar tudo exatamente do mesmo tamanho" }
-        - { id: c, texto: "Usar apenas texto, sem botões" }
-        - { id: d, texto: "Ordenar os arquivos em pastas" }
-      resposta_correta: a
+        - { id: a, texto: "Colocar tudo exatamente do mesmo tamanho" }
+        - { id: b, texto: "Ordenar os arquivos em pastas" }
+        - { id: c, texto: "Organizar os elementos para que o mais importante seja percebido primeiro" }
+        - { id: d, texto: "Usar apenas texto, sem botões" }
+      resposta_correta: c
       explicacao: "Título maior, botão principal em destaque, informação secundária menor."
 ---
 

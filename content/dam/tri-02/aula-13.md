@@ -40,21 +40,21 @@ quiz:
       tipo: multipla_escolha
       enunciado: "O que é um método?"
       opcoes:
-        - { id: a, texto: "Um bloco de código com nome, que pode ser executado sempre que for chamado" }
+        - { id: a, texto: "Um laço de repetição" }
         - { id: b, texto: "Um tipo de variável" }
-        - { id: c, texto: "Um laço de repetição" }
+        - { id: c, texto: "Um bloco de código com nome, que pode ser executado sempre que for chamado" }
         - { id: d, texto: "Um comentário especial" }
-      resposta_correta: a
+      resposta_correta: c
       explicacao: "Você escreve uma vez e usa quantas vezes quiser."
     - id: q2
       tipo: multipla_escolha
       enunciado: "O que são os parâmetros de um método?"
       opcoes:
-        - { id: a, texto: "As informações que o método recebe para trabalhar" }
-        - { id: b, texto: "O nome do método" }
-        - { id: c, texto: "O valor que ele devolve" }
-        - { id: d, texto: "Comentários dentro do método" }
-      resposta_correta: a
+        - { id: a, texto: "O valor que ele devolve" }
+        - { id: b, texto: "As informações que o método recebe para trabalhar" }
+        - { id: c, texto: "Comentários dentro do método" }
+        - { id: d, texto: "O nome do método" }
+      resposta_correta: b
       explicacao: "Em calcularImc(double peso, double altura), peso e altura são os parâmetros."
     - id: q3
       tipo: multipla_escolha
@@ -62,19 +62,19 @@ quiz:
       opcoes:
         - { id: a, texto: "Devolve um valor para quem chamou o método e encerra sua execução" }
         - { id: b, texto: "Mostra o valor na tela" }
-        - { id: c, texto: "Cria uma variável nova" }
-        - { id: d, texto: "Repete o método" }
+        - { id: c, texto: "Repete o método" }
+        - { id: d, texto: "Cria uma variável nova" }
       resposta_correta: a
       explicacao: "Devolver é diferente de imprimir: quem chamou decide o que fazer com o valor."
     - id: q4
       tipo: multipla_escolha
       enunciado: "O que significa void na assinatura de um método?"
       opcoes:
-        - { id: a, texto: "Que o método não devolve nenhum valor" }
-        - { id: b, texto: "Que o método está vazio" }
-        - { id: c, texto: "Que o método tem erro" }
-        - { id: d, texto: "Que ele devolve um número" }
-      resposta_correta: a
+        - { id: a, texto: "Que o método tem erro" }
+        - { id: b, texto: "Que ele devolve um número" }
+        - { id: c, texto: "Que o método está vazio" }
+        - { id: d, texto: "Que o método não devolve nenhum valor" }
+      resposta_correta: d
       explicacao: "Por isso o main é void: ele executa, mas não devolve nada."
     - id: q5
       tipo: multipla_escolha
@@ -82,39 +82,39 @@ quiz:
       opcoes:
         - { id: a, texto: "boolean" }
         - { id: b, texto: "int" }
-        - { id: c, texto: "static" }
-        - { id: d, texto: "numero" }
+        - { id: c, texto: "numero" }
+        - { id: d, texto: "static" }
       resposta_correta: a
       explicacao: "O tipo de retorno vem antes do nome do método e diz que tipo de valor ele devolve."
     - id: q6
       tipo: multipla_escolha
       enunciado: "Qual é a principal vantagem de usar métodos?"
       opcoes:
-        - { id: a, texto: "Evitar repetição: escreve uma vez, usa várias, e corrige em um lugar só" }
+        - { id: a, texto: "Aumentar o número de linhas do código" }
         - { id: b, texto: "Deixar o programa mais lento de propósito" }
-        - { id: c, texto: "Aumentar o número de linhas do código" }
+        - { id: c, texto: "Evitar repetição: escreve uma vez, usa várias, e corrige em um lugar só" }
         - { id: d, texto: "Substituir os laços de repetição" }
-      resposta_correta: a
+      resposta_correta: c
       explicacao: "Se a fórmula mudar, você altera dentro do método e todas as chamadas já usam a nova."
     - id: q7
       tipo: multipla_escolha
       enunciado: "Qual a diferença entre um método que devolve valor e um que só imprime?"
       opcoes:
-        - { id: a, texto: "O que devolve pode ser reaproveitado em contas e decisões; o que imprime só serve para mostrar" }
-        - { id: b, texto: "Não há diferença prática" }
-        - { id: c, texto: "O que imprime é sempre melhor" }
-        - { id: d, texto: "Métodos não podem devolver valores" }
-      resposta_correta: a
+        - { id: a, texto: "O que imprime é sempre melhor" }
+        - { id: b, texto: "Métodos não podem devolver valores" }
+        - { id: c, texto: "Não há diferença prática" }
+        - { id: d, texto: "O que devolve pode ser reaproveitado em contas e decisões; o que imprime só serve para mostrar" }
+      resposta_correta: d
       explicacao: "Por isso calcularImc devolve o número: quem chamou pode mostrar, comparar ou classificar."
     - id: q8
       tipo: multipla_escolha
       enunciado: "Que relação isso tem com o método saudar(View v) da Aula 7?"
       opcoes:
-        - { id: a, texto: "É exatamente a mesma estrutura: um método que recebe um parâmetro e executa quando chamado" }
-        - { id: b, texto: "Nenhuma relação" }
+        - { id: a, texto: "O Android não usa métodos" }
+        - { id: b, texto: "É exatamente a mesma estrutura: um método que recebe um parâmetro e executa quando chamado" }
         - { id: c, texto: "Métodos do Android são totalmente diferentes" }
-        - { id: d, texto: "O Android não usa métodos" }
-      resposta_correta: a
+        - { id: d, texto: "Nenhuma relação" }
+      resposta_correta: b
       explicacao: "A diferença é só quem chama: lá é o clique do botão, aqui é o seu código."
 ---
 

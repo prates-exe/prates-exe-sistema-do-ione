@@ -4,7 +4,7 @@ mes_numero: 3
 numero_sequencial: 16
 duracao_minutos: 25
 tipo_sandbox: sql
-publicado: true
+publicado: false
 exercicio_inicial: |
   -- Aula 3 — subconsultas (subqueries) dentro do WHERE.
   -- Siga a atividade passo a passo.
@@ -32,50 +32,50 @@ quiz:
       tipo: multipla_escolha
       enunciado: "O que é uma subconsulta (subquery)?"
       opcoes:
-        - { id: a, texto: "Uma consulta escrita dentro de outra, cujo resultado é usado pela consulta principal" }
-        - { id: b, texto: "Uma consulta que roda duas vezes" }
-        - { id: c, texto: "Um tipo de tabela" }
-        - { id: d, texto: "Um comando para apagar dados" }
-      resposta_correta: a
+        - { id: a, texto: "Um comando para apagar dados" }
+        - { id: b, texto: "Um tipo de tabela" }
+        - { id: c, texto: "Uma consulta escrita dentro de outra, cujo resultado é usado pela consulta principal" }
+        - { id: d, texto: "Uma consulta que roda duas vezes" }
+      resposta_correta: c
       explicacao: "A subconsulta é resolvida primeiro; seu resultado alimenta a consulta de fora."
     - id: q2
       tipo: multipla_escolha
       enunciado: "Por que não podemos escrever WHERE salario > AVG(salario) diretamente?"
       opcoes:
         - { id: a, texto: "Porque funções de agregação não podem ser usadas dentro do WHERE" }
-        - { id: b, texto: "Porque AVG não existe" }
-        - { id: c, texto: "Porque salario é texto" }
-        - { id: d, texto: "Pode sim, sem problema" }
+        - { id: b, texto: "Porque salario é texto" }
+        - { id: c, texto: "Pode sim, sem problema" }
+        - { id: d, texto: "Porque AVG não existe" }
       resposta_correta: a
       explicacao: "O WHERE filtra linha a linha, antes da agregação acontecer. Por isso a média precisa vir de uma subconsulta."
     - id: q3
       tipo: multipla_escolha
       enunciado: "Qual operador usamos quando a subconsulta devolve VÁRIOS valores?"
       opcoes:
-        - { id: a, texto: "IN" }
-        - { id: b, texto: "=" }
-        - { id: c, texto: ">" }
-        - { id: d, texto: "LIKE" }
-      resposta_correta: a
+        - { id: a, texto: ">" }
+        - { id: b, texto: "IN" }
+        - { id: c, texto: "LIKE" }
+        - { id: d, texto: "=" }
+      resposta_correta: b
       explicacao: "O = só funciona com um valor único; para uma lista, usa-se IN."
     - id: q4
       tipo: multipla_escolha
       enunciado: "O que acontece se usar = com uma subconsulta que devolve várias linhas?"
       opcoes:
-        - { id: a, texto: "Dá erro ou resultado incorreto, porque = espera um único valor" }
-        - { id: b, texto: "Funciona normalmente" }
-        - { id: c, texto: "A subconsulta é ignorada" }
-        - { id: d, texto: "O banco escolhe o primeiro valor" }
-      resposta_correta: a
+        - { id: a, texto: "O banco escolhe o primeiro valor" }
+        - { id: b, texto: "A subconsulta é ignorada" }
+        - { id: c, texto: "Dá erro ou resultado incorreto, porque = espera um único valor" }
+        - { id: d, texto: "Funciona normalmente" }
+      resposta_correta: c
       explicacao: "Regra prática: um valor usa =, vários valores usam IN."
     - id: q5
       tipo: multipla_escolha
       enunciado: "Em SELECT nome FROM func WHERE salario > (SELECT AVG(salario) FROM func), o que roda primeiro?"
       opcoes:
         - { id: a, texto: "A subconsulta, calculando a média" }
-        - { id: b, texto: "A consulta de fora" }
-        - { id: c, texto: "As duas ao mesmo tempo" }
-        - { id: d, texto: "Depende do banco" }
+        - { id: b, texto: "As duas ao mesmo tempo" }
+        - { id: c, texto: "Depende do banco" }
+        - { id: d, texto: "A consulta de fora" }
       resposta_correta: a
       explicacao: "Primeiro o banco descobre a média, depois compara cada salário com esse número."
     - id: q6
@@ -83,8 +83,8 @@ quiz:
       enunciado: "Qual a diferença entre resolver algo com subconsulta e com JOIN?"
       opcoes:
         - { id: a, texto: "O JOIN combina colunas das duas tabelas no resultado; a subconsulta serve para filtrar, sem trazer as colunas da outra" }
-        - { id: b, texto: "São exatamente iguais" }
-        - { id: c, texto: "Subconsulta não pode usar duas tabelas" }
+        - { id: b, texto: "Subconsulta não pode usar duas tabelas" }
+        - { id: c, texto: "São exatamente iguais" }
         - { id: d, texto: "JOIN não funciona com WHERE" }
       resposta_correta: a
       explicacao: "Se você precisa MOSTRAR dados da outra tabela, use JOIN. Se só precisa FILTRAR, a subconsulta é mais direta."
@@ -93,8 +93,8 @@ quiz:
       enunciado: "O que NOT IN faz em uma subconsulta?"
       opcoes:
         - { id: a, texto: "Traz os registros que NÃO estão na lista devolvida pela subconsulta" }
-        - { id: b, texto: "Inverte a ordem do resultado" }
-        - { id: c, texto: "Apaga os registros da lista" }
+        - { id: b, texto: "Apaga os registros da lista" }
+        - { id: c, texto: "Inverte a ordem do resultado" }
         - { id: d, texto: "Não existe em SQL" }
       resposta_correta: a
       explicacao: "É outra forma de responder 'quem está sem par', junto com o LEFT JOIN + IS NULL."
@@ -102,11 +102,11 @@ quiz:
       tipo: multipla_escolha
       enunciado: "Por que uma subconsulta deixa a consulta mais legível em casos como 'acima da média'?"
       opcoes:
-        - { id: a, texto: "Porque expressa a pergunta do jeito que ela é pensada, sem precisar calcular a média à parte antes" }
-        - { id: b, texto: "Porque usa menos letras" }
-        - { id: c, texto: "Porque é sempre mais rápida" }
-        - { id: d, texto: "Não deixa mais legível" }
-      resposta_correta: a
+        - { id: a, texto: "Porque usa menos letras" }
+        - { id: b, texto: "Porque é sempre mais rápida" }
+        - { id: c, texto: "Não deixa mais legível" }
+        - { id: d, texto: "Porque expressa a pergunta do jeito que ela é pensada, sem precisar calcular a média à parte antes" }
+      resposta_correta: d
       explicacao: "Sem ela, você teria que rodar uma consulta, anotar o número e escrever outra na mão."
 ---
 

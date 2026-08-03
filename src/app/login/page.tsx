@@ -5,6 +5,7 @@ import { login } from "@/lib/auth/actions";
 import { Card, CardBody } from "@/components/ui/Card";
 import { Input, Label } from "@/components/ui/Input";
 import { Button } from "@/components/ui/Button";
+import { Logo } from "@/components/ui/Logo";
 
 export default function LoginPage() {
   const [state, formAction, pending] = useActionState(login, undefined);
@@ -12,9 +13,15 @@ export default function LoginPage() {
   return (
     <main className="flex flex-1 items-center justify-center px-4 py-12">
       <div className="w-full max-w-sm">
-        <div className="mb-6 text-center">
-          <h1 className="font-heading text-2xl font-bold text-brand-600">Sistema do Ione</h1>
-          <p className="mt-1 text-sm text-slate-500">Aplicativos e Banco de Dados.</p>
+        <div className="mb-6 flex flex-col items-center text-center">
+          {/* O nome já está no próprio logo, então nada de texto extra aqui:
+              um leitor de tela anunciaria "Bitlab Bitlab". */}
+          <h1>
+            <Logo />
+          </h1>
+          <p className="mt-3 text-sm text-slate-500">
+            Banco de Dados e Desenvolvimento de Aplicativos.
+          </p>
         </div>
 
         <Card className="overflow-hidden border-slate-900/20 shadow-[4px_4px_0_0_#0f172a1a]">

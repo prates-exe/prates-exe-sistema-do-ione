@@ -4,7 +4,7 @@ mes_numero: 3
 numero_sequencial: 21
 duracao_minutos: 25
 tipo_sandbox: code
-publicado: true
+publicado: false
 exercicio_inicial: |
   class Main {
     // Converte o texto digitado em numero, sem deixar o app travar.
@@ -40,80 +40,80 @@ quiz:
       enunciado: "O que é uma exceção em Java?"
       opcoes:
         - { id: a, texto: "Um erro que acontece durante a execução e interrompe o fluxo normal do programa" }
-        - { id: b, texto: "Um erro de digitação no código" }
-        - { id: c, texto: "Um tipo de variável" }
-        - { id: d, texto: "Um comentário especial" }
+        - { id: b, texto: "Um tipo de variável" }
+        - { id: c, texto: "Um comentário especial" }
+        - { id: d, texto: "Um erro de digitação no código" }
       resposta_correta: a
       explicacao: "Diferente do erro de compilação, ela só aparece quando o programa está rodando."
     - id: q2
       tipo: multipla_escolha
       enunciado: "Para que serve o bloco try/catch?"
       opcoes:
-        - { id: a, texto: "Tentar executar um código e, se der erro, tratar a falha em vez de travar" }
-        - { id: b, texto: "Repetir um trecho de código" }
-        - { id: c, texto: "Criar variáveis" }
-        - { id: d, texto: "Acelerar o programa" }
-      resposta_correta: a
+        - { id: a, texto: "Repetir um trecho de código" }
+        - { id: b, texto: "Tentar executar um código e, se der erro, tratar a falha em vez de travar" }
+        - { id: c, texto: "Acelerar o programa" }
+        - { id: d, texto: "Criar variáveis" }
+      resposta_correta: b
       explicacao: "O try contém o código arriscado; o catch decide o que fazer se falhar."
     - id: q3
       tipo: multipla_escolha
       enunciado: "O que acontece com o app se uma exceção NÃO for tratada?"
       opcoes:
-        - { id: a, texto: "Ele fecha sozinho, mostrando a mensagem de que o aplicativo parou" }
-        - { id: b, texto: "Nada, ele continua normalmente" }
+        - { id: a, texto: "O Android corrige automaticamente" }
+        - { id: b, texto: "Ele fecha sozinho, mostrando a mensagem de que o aplicativo parou" }
         - { id: c, texto: "Ele fica mais rápido" }
-        - { id: d, texto: "O Android corrige automaticamente" }
-      resposta_correta: a
+        - { id: d, texto: "Nada, ele continua normalmente" }
+      resposta_correta: b
       explicacao: "É a experiência mais frustrante possível para o usuário."
     - id: q4
       tipo: multipla_escolha
       enunciado: "Qual exceção acontece ao tentar converter 'abc' em número?"
       opcoes:
         - { id: a, texto: "NumberFormatException" }
-        - { id: b, texto: "NullPointerException" }
-        - { id: c, texto: "ArrayIndexOutOfBoundsException" }
-        - { id: d, texto: "Nenhuma, dá zero" }
+        - { id: b, texto: "ArrayIndexOutOfBoundsException" }
+        - { id: c, texto: "Nenhuma, dá zero" }
+        - { id: d, texto: "NullPointerException" }
       resposta_correta: a
       explicacao: "É a exceção clássica de Integer.parseInt com texto inválido."
     - id: q5
       tipo: multipla_escolha
       enunciado: "Por que um catch VAZIO é considerado má prática?"
       opcoes:
-        - { id: a, texto: "Porque esconde o problema: o erro some sem ninguém saber e o app continua em estado inconsistente" }
-        - { id: b, texto: "Porque deixa o código maior" }
+        - { id: a, texto: "Porque deixa o código maior" }
+        - { id: b, texto: "Porque esconde o problema: o erro some sem ninguém saber e o app continua em estado inconsistente" }
         - { id: c, texto: "Porque não compila" }
         - { id: d, texto: "Não é má prática" }
-      resposta_correta: a
+      resposta_correta: b
       explicacao: "Tratar não é silenciar: é decidir conscientemente o que fazer."
     - id: q6
       tipo: multipla_escolha
       enunciado: "Qual é a melhor reação a uma entrada inválida do usuário?"
       opcoes:
-        - { id: a, texto: "Avisar com uma mensagem clara e permitir corrigir, mantendo o app funcionando" }
-        - { id: b, texto: "Fechar o aplicativo" }
-        - { id: c, texto: "Ignorar em silêncio e continuar com valor errado" }
-        - { id: d, texto: "Mostrar a stack trace completa na tela" }
-      resposta_correta: a
+        - { id: a, texto: "Ignorar em silêncio e continuar com valor errado" }
+        - { id: b, texto: "Mostrar a stack trace completa na tela" }
+        - { id: c, texto: "Avisar com uma mensagem clara e permitir corrigir, mantendo o app funcionando" }
+        - { id: d, texto: "Fechar o aplicativo" }
+      resposta_correta: c
       explicacao: "Mensagem técnica na tela do usuário não ajuda ninguém — ela vai para o Logcat."
     - id: q7
       tipo: multipla_escolha
       enunciado: "Onde é mais importante usar tratamento de exceções em um app?"
       opcoes:
-        - { id: a, texto: "Em tudo que vem de fora: entrada do usuário, internet, arquivos e banco de dados" }
-        - { id: b, texto: "Apenas em cálculos matemáticos" }
-        - { id: c, texto: "Apenas na tela inicial" }
-        - { id: d, texto: "Em nenhum lugar" }
-      resposta_correta: a
+        - { id: a, texto: "Apenas na tela inicial" }
+        - { id: b, texto: "Em nenhum lugar" }
+        - { id: c, texto: "Em tudo que vem de fora: entrada do usuário, internet, arquivos e banco de dados" }
+        - { id: d, texto: "Apenas em cálculos matemáticos" }
+      resposta_correta: c
       explicacao: "São as partes que você não controla — e por isso podem falhar."
     - id: q8
       tipo: multipla_escolha
       enunciado: "O que é 'validar antes' e como se relaciona com exceções?"
       opcoes:
-        - { id: a, texto: "Conferir a entrada antes de usá-la, evitando que a exceção chegue a acontecer" }
-        - { id: b, texto: "Tratar a exceção duas vezes" }
-        - { id: c, texto: "Ignorar a validação" }
-        - { id: d, texto: "Usar catch vazio" }
-      resposta_correta: a
+        - { id: a, texto: "Tratar a exceção duas vezes" }
+        - { id: b, texto: "Usar catch vazio" }
+        - { id: c, texto: "Conferir a entrada antes de usá-la, evitando que a exceção chegue a acontecer" }
+        - { id: d, texto: "Ignorar a validação" }
+      resposta_correta: c
       explicacao: "Validar e tratar são complementares: o ideal é fazer os dois."
 ---
 

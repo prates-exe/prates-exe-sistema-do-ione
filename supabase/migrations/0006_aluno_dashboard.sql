@@ -1,4 +1,4 @@
--- Sistema do Ione — junta em uma única consulta tudo que o painel do aluno
+-- Bitlab — junta em uma única consulta tudo que o painel do aluno
 -- precisa (turmas, aulas publicadas e progresso). Antes disso, a mesma tela
 -- fazia até 4 consultas separadas ao banco, uma esperando a outra terminar
 -- para começar — cada uma soma o tempo de ida e volta até o Supabase, e

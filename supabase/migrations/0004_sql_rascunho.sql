@@ -1,4 +1,4 @@
--- Sistema do Ione — guarda o comando SQL ainda não executado
+-- Bitlab — guarda o comando SQL ainda não executado
 -- Antes disso, o texto que o aluno estava digitando (mas não tinha rodado
 -- ainda) só ficava no localStorage do navegador: se a página recarregasse
 -- num computador de laboratório que limpa dados entre sessões, ou o aluno

@@ -32,8 +32,8 @@ quiz:
       enunciado: "Como escrevemos um comentário de uma linha em Java?"
       opcoes:
         - { id: a, texto: "// comentário" }
-        - { id: b, texto: "# comentário" }
-        - { id: c, texto: "<!-- comentário -->" }
+        - { id: b, texto: "<!-- comentário -->" }
+        - { id: c, texto: "# comentário" }
         - { id: d, texto: "' comentário" }
       resposta_correta: a
       explicacao: "// inicia um comentário de uma linha, que o Java ignora ao executar."
@@ -41,40 +41,40 @@ quiz:
       tipo: multipla_escolha
       enunciado: "Como escrevemos um comentário de VÁRIAS linhas em Java?"
       opcoes:
-        - { id: a, texto: "Entre /* e */" }
-        - { id: b, texto: "Entre << e >>" }
-        - { id: c, texto: "Usando // em uma linha só" }
-        - { id: d, texto: "Não é possível" }
-      resposta_correta: a
+        - { id: a, texto: "Não é possível" }
+        - { id: b, texto: "Usando // em uma linha só" }
+        - { id: c, texto: "Entre /* e */" }
+        - { id: d, texto: "Entre << e >>" }
+      resposta_correta: c
       explicacao: "Tudo entre /* e */ é ignorado, mesmo ocupando várias linhas."
     - id: q3
       tipo: multipla_escolha
       enunciado: "O que acontece com o comentário quando o programa roda?"
       opcoes:
-        - { id: a, texto: "Nada — o Java ignora completamente, ele serve só para humanos lerem" }
-        - { id: b, texto: "Aparece na tela junto com a saída" }
-        - { id: c, texto: "Deixa o programa mais lento" }
+        - { id: a, texto: "Aparece na tela junto com a saída" }
+        - { id: b, texto: "Deixa o programa mais lento" }
+        - { id: c, texto: "Nada — o Java ignora completamente, ele serve só para humanos lerem" }
         - { id: d, texto: "Vira um erro" }
-      resposta_correta: a
+      resposta_correta: c
       explicacao: "Comentário não afeta em nada a execução."
     - id: q4
       tipo: multipla_escolha
       enunciado: "Por que usar nomes descritivos, como 'idadeAluno' em vez de 'x'?"
       opcoes:
-        - { id: a, texto: "Facilita entender o código depois, para você mesmo e para outras pessoas" }
-        - { id: b, texto: "É obrigatório, o código não roda com nomes curtos" }
-        - { id: c, texto: "Deixa o programa mais rápido" }
+        - { id: a, texto: "É obrigatório, o código não roda com nomes curtos" }
+        - { id: b, texto: "Deixa o programa mais rápido" }
+        - { id: c, texto: "Facilita entender o código depois, para você mesmo e para outras pessoas" }
         - { id: d, texto: "Não faz diferença nenhuma" }
-      resposta_correta: a
+      resposta_correta: c
       explicacao: "Não muda a velocidade, mas muda muito a facilidade de manter o código."
     - id: q5
       tipo: multipla_escolha
       enunciado: "Qual nome segue o padrão camelCase do Java?"
       opcoes:
         - { id: a, texto: "areaDoRetangulo" }
-        - { id: b, texto: "AreaDoRetangulo" }
-        - { id: c, texto: "area_do_retangulo" }
-        - { id: d, texto: "AREADORETANGULO" }
+        - { id: b, texto: "area_do_retangulo" }
+        - { id: c, texto: "AREADORETANGULO" }
+        - { id: d, texto: "AreaDoRetangulo" }
       resposta_correta: a
       explicacao: "Primeira palavra minúscula, as seguintes começando com maiúscula, sem espaços nem underscores."
     - id: q6
@@ -82,30 +82,30 @@ quiz:
       enunciado: "Qual é o melhor uso de um comentário?"
       opcoes:
         - { id: a, texto: "Explicar POR QUE algo foi feito, quando não é óbvio pelo código" }
-        - { id: b, texto: "Repetir exatamente o que a linha já diz" }
-        - { id: c, texto: "Escrever o máximo de texto possível" }
-        - { id: d, texto: "Guardar senhas" }
+        - { id: b, texto: "Guardar senhas" }
+        - { id: c, texto: "Repetir exatamente o que a linha já diz" }
+        - { id: d, texto: "Escrever o máximo de texto possível" }
       resposta_correta: a
       explicacao: "Comentar '// soma 1 a x' em cima de 'x = x + 1' não ajuda ninguém. Explique a intenção."
     - id: q7
       tipo: multipla_escolha
       enunciado: "Por que a indentação (o recuo das linhas) é importante?"
       opcoes:
-        - { id: a, texto: "Mostra visualmente qual código está dentro de qual bloco, facilitando a leitura" }
+        - { id: a, texto: "Não tem importância nenhuma" }
         - { id: b, texto: "O Java não roda sem indentação" }
         - { id: c, texto: "Deixa o arquivo menor" }
-        - { id: d, texto: "Não tem importância nenhuma" }
-      resposta_correta: a
+        - { id: d, texto: "Mostra visualmente qual código está dentro de qual bloco, facilitando a leitura" }
+      resposta_correta: d
       explicacao: "O Java aceitaria tudo em uma linha só, mas ninguém conseguiria ler depois."
     - id: q8
       tipo: multipla_escolha
       enunciado: "Guardar o resultado de um cálculo em uma variável com nome claro, em vez de repetir a conta, serve para quê?"
       opcoes:
-        - { id: a, texto: "Evitar repetição e deixar claro o significado daquele valor" }
+        - { id: a, texto: "Nada, é sempre pior" }
         - { id: b, texto: "Ocupar mais memória de propósito" }
         - { id: c, texto: "Deixar o código mais difícil" }
-        - { id: d, texto: "Nada, é sempre pior" }
-      resposta_correta: a
+        - { id: d, texto: "Evitar repetição e deixar claro o significado daquele valor" }
+      resposta_correta: d
       explicacao: "Se a conta muda, você corrige em um lugar só — e quem lê entende o que aquele número representa."
 ---
 

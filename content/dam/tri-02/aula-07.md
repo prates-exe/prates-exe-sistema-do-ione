@@ -51,49 +51,49 @@ quiz:
       tipo: multipla_escolha
       enunciado: "Qual arquivo define a estrutura visual (os componentes) de uma tela Android?"
       opcoes:
-        - { id: a, texto: "O layout XML, como activity_main.xml" }
+        - { id: a, texto: "O AndroidManifest.xml" }
         - { id: b, texto: "O MainActivity.java" }
-        - { id: c, texto: "O AndroidManifest.xml" }
+        - { id: c, texto: "O layout XML, como activity_main.xml" }
         - { id: d, texto: "Nenhum, é tudo automático" }
-      resposta_correta: a
+      resposta_correta: c
       explicacao: "O XML define quais Views existem na tela e como estão organizadas."
     - id: q2
       tipo: multipla_escolha
       enunciado: "Como o código Java encontra um componente do layout XML para controlá-lo?"
       opcoes:
-        - { id: a, texto: "Usando findViewById, com o id definido no XML" }
-        - { id: b, texto: "O código encontra sozinho, sem precisar de id" }
+        - { id: a, texto: "O código encontra sozinho, sem precisar de id" }
+        - { id: b, texto: "Usando findViewById, com o id definido no XML" }
         - { id: c, texto: "Editando o AndroidManifest.xml" }
         - { id: d, texto: "Não é possível conectar XML e Java" }
-      resposta_correta: a
+      resposta_correta: b
       explicacao: "findViewById busca, pelo id declarado no android:id, a referência à View."
     - id: q3
       tipo: multipla_escolha
       enunciado: "Qual componente permite que o usuário DIGITE um texto?"
       opcoes:
         - { id: a, texto: "EditText" }
-        - { id: b, texto: "TextView" }
-        - { id: c, texto: "Button" }
-        - { id: d, texto: "LinearLayout" }
+        - { id: b, texto: "LinearLayout" }
+        - { id: c, texto: "TextView" }
+        - { id: d, texto: "Button" }
       resposta_correta: a
       explicacao: "TextView só exibe; EditText é o campo editável."
     - id: q4
       tipo: multipla_escolha
       enunciado: "Para que serve o LinearLayout?"
       opcoes:
-        - { id: a, texto: "É um contêiner que organiza as Views em linha ou em coluna" }
+        - { id: a, texto: "Serve para conectar com a internet" }
         - { id: b, texto: "É um botão especial" }
         - { id: c, texto: "É um campo de texto" }
-        - { id: d, texto: "Serve para conectar com a internet" }
-      resposta_correta: a
+        - { id: d, texto: "É um contêiner que organiza as Views em linha ou em coluna" }
+      resposta_correta: d
       explicacao: "Ele agrupa e posiciona os componentes; a direção vem do android:orientation."
     - id: q5
       tipo: multipla_escolha
       enunciado: "O que faz android:orientation=\"vertical\" em um LinearLayout?"
       opcoes:
         - { id: a, texto: "Empilha os componentes um embaixo do outro" }
-        - { id: b, texto: "Coloca os componentes lado a lado" }
-        - { id: c, texto: "Centraliza tudo na tela" }
+        - { id: b, texto: "Centraliza tudo na tela" }
+        - { id: c, texto: "Coloca os componentes lado a lado" }
         - { id: d, texto: "Deixa o texto em negrito" }
       resposta_correta: a
       explicacao: "vertical empilha; horizontal coloca lado a lado."
@@ -101,19 +101,19 @@ quiz:
       tipo: multipla_escolha
       enunciado: "O que o atributo android:onClick=\"saudar\" faz?"
       opcoes:
-        - { id: a, texto: "Diz que, ao clicar no botão, o método saudar do MainActivity deve ser executado" }
+        - { id: a, texto: "Fecha o aplicativo" }
         - { id: b, texto: "Muda o texto do botão para 'saudar'" }
         - { id: c, texto: "Cria uma variável chamada saudar" }
-        - { id: d, texto: "Fecha o aplicativo" }
-      resposta_correta: a
+        - { id: d, texto: "Diz que, ao clicar no botão, o método saudar do MainActivity deve ser executado" }
+      resposta_correta: d
       explicacao: "É a ponte entre o clique na tela e o código Java."
     - id: q7
       tipo: multipla_escolha
       enunciado: "Qual método lê o que o usuário digitou em um EditText?"
       opcoes:
         - { id: a, texto: "getText()" }
-        - { id: b, texto: "setText()" }
-        - { id: c, texto: "readText()" }
+        - { id: b, texto: "readText()" }
+        - { id: c, texto: "setText()" }
         - { id: d, texto: "findText()" }
       resposta_correta: a
       explicacao: "getText() lê o conteúdo; setText() escreve nele."
@@ -123,8 +123,8 @@ quiz:
       opcoes:
         - { id: a, texto: "Dá erro, porque o R.id daquele nome não foi gerado" }
         - { id: b, texto: "O Java cria a View automaticamente" }
-        - { id: c, texto: "O aplicativo abre normalmente" }
-        - { id: d, texto: "O XML é apagado" }
+        - { id: c, texto: "O XML é apagado" }
+        - { id: d, texto: "O aplicativo abre normalmente" }
       resposta_correta: a
       explicacao: "O nome no Java precisa ser exatamente igual ao do android:id — inclusive maiúsculas e minúsculas."
 ---

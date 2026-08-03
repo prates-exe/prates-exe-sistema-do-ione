@@ -1,4 +1,4 @@
--- Sistema do Ione — log de ações administrativas sensíveis
+-- Bitlab — log de ações administrativas sensíveis
 -- Registra criação/remoção de turmas e alunos para auditoria: quem fez o
 -- quê e quando. Só a professora pode ler ou escrever nessa tabela.
 create table if not exists eventos_admin (

@@ -4,7 +4,7 @@ mes_numero: 3
 numero_sequencial: 17
 duracao_minutos: 25
 tipo_sandbox: sql
-publicado: true
+publicado: false
 exercicio_inicial: |
   -- Aula 4 — Views: dando nome a uma consulta.
   -- Siga a atividade passo a passo.
@@ -35,31 +35,31 @@ quiz:
       tipo: multipla_escolha
       enunciado: "O que é uma View em banco de dados?"
       opcoes:
-        - { id: a, texto: "Uma consulta salva com um nome, que pode ser usada como se fosse uma tabela" }
-        - { id: b, texto: "Uma cópia dos dados em outra tabela" }
+        - { id: a, texto: "Uma cópia dos dados em outra tabela" }
+        - { id: b, texto: "Um backup do banco" }
         - { id: c, texto: "Um tipo de índice" }
-        - { id: d, texto: "Um backup do banco" }
-      resposta_correta: a
+        - { id: d, texto: "Uma consulta salva com um nome, que pode ser usada como se fosse uma tabela" }
+      resposta_correta: d
       explicacao: "A view guarda a CONSULTA, não os dados."
     - id: q2
       tipo: multipla_escolha
       enunciado: "Uma View armazena os dados fisicamente?"
       opcoes:
-        - { id: a, texto: "Não — ela guarda a consulta e busca os dados atualizados a cada uso" }
-        - { id: b, texto: "Sim, faz uma cópia de tudo" }
-        - { id: c, texto: "Só armazena a primeira linha" }
-        - { id: d, texto: "Depende do tamanho da tabela" }
-      resposta_correta: a
+        - { id: a, texto: "Só armazena a primeira linha" }
+        - { id: b, texto: "Depende do tamanho da tabela" }
+        - { id: c, texto: "Não — ela guarda a consulta e busca os dados atualizados a cada uso" }
+        - { id: d, texto: "Sim, faz uma cópia de tudo" }
+      resposta_correta: c
       explicacao: "Por isso a view nunca fica desatualizada."
     - id: q3
       tipo: multipla_escolha
       enunciado: "Qual comando cria uma view?"
       opcoes:
-        - { id: a, texto: "CREATE VIEW nome AS SELECT ..." }
-        - { id: b, texto: "CREATE TABLE nome AS VIEW" }
+        - { id: a, texto: "CREATE TABLE nome AS VIEW" }
+        - { id: b, texto: "CREATE VIEW nome AS SELECT ..." }
         - { id: c, texto: "INSERT VIEW" }
         - { id: d, texto: "SELECT VIEW" }
-      resposta_correta: a
+      resposta_correta: b
       explicacao: "Depois do AS vem a consulta que a view representa."
     - id: q4
       tipo: multipla_escolha
@@ -86,9 +86,9 @@ quiz:
       enunciado: "Qual é a principal vantagem de usar views em relatórios recorrentes?"
       opcoes:
         - { id: a, texto: "Escrever a consulta complexa uma vez e reaproveitar por um nome simples" }
-        - { id: b, texto: "Deixar o banco menor" }
+        - { id: b, texto: "Fazer backup automático" }
         - { id: c, texto: "Impedir que os dados sejam alterados" }
-        - { id: d, texto: "Fazer backup automático" }
+        - { id: d, texto: "Deixar o banco menor" }
       resposta_correta: a
       explicacao: "Se a regra do relatório mudar, você corrige a view em um lugar só."
     - id: q7
@@ -96,20 +96,20 @@ quiz:
       enunciado: "Qual comando remove uma view?"
       opcoes:
         - { id: a, texto: "DROP VIEW nome;" }
-        - { id: b, texto: "DELETE VIEW nome;" }
-        - { id: c, texto: "DROP TABLE nome;" }
-        - { id: d, texto: "REMOVE VIEW nome;" }
+        - { id: b, texto: "REMOVE VIEW nome;" }
+        - { id: c, texto: "DELETE VIEW nome;" }
+        - { id: d, texto: "DROP TABLE nome;" }
       resposta_correta: a
       explicacao: "E apagar a view NÃO apaga os dados das tabelas de origem."
     - id: q8
       tipo: multipla_escolha
       enunciado: "Uma view pode ser criada a partir de um JOIN entre várias tabelas?"
       opcoes:
-        - { id: a, texto: "Sim — é justamente aí que ela mais ajuda, escondendo a complexidade" }
-        - { id: b, texto: "Não, só de uma tabela" }
+        - { id: a, texto: "Não, só de uma tabela" }
+        - { id: b, texto: "Sim — é justamente aí que ela mais ajuda, escondendo a complexidade" }
         - { id: c, texto: "Só com no máximo duas tabelas" }
         - { id: d, texto: "Só em bancos NoSQL" }
-      resposta_correta: a
+      resposta_correta: b
       explicacao: "Quem usa a view faz um SELECT simples, sem precisar reescrever os JOINs."
 ---
 

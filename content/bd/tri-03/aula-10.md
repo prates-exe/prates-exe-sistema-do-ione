@@ -4,7 +4,7 @@ mes_numero: 3
 numero_sequencial: 22
 duracao_minutos: 25
 tipo_sandbox: sql
-publicado: true
+publicado: false
 exercicio_inicial: |
   -- Projeto Integrador — Parte 3: RELATORIOS
   -- Agora o banco vai responder perguntas de negocio.
@@ -32,81 +32,81 @@ quiz:
       tipo: multipla_escolha
       enunciado: "Por que um relatório deve mostrar nomes em vez de ids?"
       opcoes:
-        - { id: a, texto: "Porque quem lê o relatório precisa entender a informação, e ids não significam nada para ele" }
+        - { id: a, texto: "Não faz diferença" }
         - { id: b, texto: "Porque ids não podem ser exibidos" }
         - { id: c, texto: "Porque nomes ocupam menos espaço" }
-        - { id: d, texto: "Não faz diferença" }
-      resposta_correta: a
+        - { id: d, texto: "Porque quem lê o relatório precisa entender a informação, e ids não significam nada para ele" }
+      resposta_correta: d
       explicacao: "É exatamente para isso que fazemos o JOIN na hora da consulta."
     - id: q2
       tipo: multipla_escolha
       enunciado: "Como calcular o valor total de uma locação?"
       opcoes:
-        - { id: a, texto: "Multiplicando os dias pelo valor da diária do jogo, em uma coluna calculada" }
-        - { id: b, texto: "Guardando o total em uma coluna fixa desde o início" }
+        - { id: a, texto: "Guardando o total em uma coluna fixa desde o início" }
+        - { id: b, texto: "Multiplicando os dias pelo valor da diária do jogo, em uma coluna calculada" }
         - { id: c, texto: "Não é possível calcular em SQL" }
         - { id: d, texto: "Somando dias e diária" }
-      resposta_correta: a
+      resposta_correta: b
       explicacao: "Calcular na consulta evita redundância e garante que o valor esteja sempre correto."
     - id: q3
       tipo: multipla_escolha
       enunciado: "Quantos JOINs são necessários para mostrar cliente e jogo na mesma linha?"
       opcoes:
-        - { id: a, texto: "Dois — da tabela de locações para clientes e para jogos" }
-        - { id: b, texto: "Um só" }
-        - { id: c, texto: "Nenhum" }
-        - { id: d, texto: "Três" }
-      resposta_correta: a
+        - { id: a, texto: "Nenhum" }
+        - { id: b, texto: "Três" }
+        - { id: c, texto: "Um só" }
+        - { id: d, texto: "Dois — da tabela de locações para clientes e para jogos" }
+      resposta_correta: d
       explicacao: "Parte-se da associativa e liga-se aos dois lados."
     - id: q4
       tipo: multipla_escolha
       enunciado: "Para montar um ranking de clientes por gasto, o que se combina?"
       opcoes:
-        - { id: a, texto: "JOIN, GROUP BY por cliente, SUM do valor e ORDER BY decrescente" }
-        - { id: b, texto: "Apenas ORDER BY" }
-        - { id: c, texto: "Apenas WHERE" }
-        - { id: d, texto: "DELETE com WHERE" }
-      resposta_correta: a
+        - { id: a, texto: "Apenas ORDER BY" }
+        - { id: b, texto: "Apenas WHERE" }
+        - { id: c, texto: "DELETE com WHERE" }
+        - { id: d, texto: "JOIN, GROUP BY por cliente, SUM do valor e ORDER BY decrescente" }
+      resposta_correta: d
       explicacao: "Cada recurso resolve uma parte: juntar, agrupar, somar e ordenar."
     - id: q5
       tipo: multipla_escolha
       enunciado: "Qual recurso encontra os jogos que nunca foram alugados?"
       opcoes:
         - { id: a, texto: "LEFT JOIN combinado com IS NULL" }
-        - { id: b, texto: "INNER JOIN" }
+        - { id: b, texto: "DROP TABLE" }
         - { id: c, texto: "GROUP BY sozinho" }
-        - { id: d, texto: "DROP TABLE" }
+        - { id: d, texto: "INNER JOIN" }
       resposta_correta: a
       explicacao: "O INNER JOIN esconderia exatamente esses jogos."
     - id: q6
       tipo: multipla_escolha
       enunciado: "Por que colocar os relatórios em views em vez de reescrever as consultas?"
       opcoes:
-        - { id: a, texto: "Para reaproveitar por um nome simples e corrigir a regra em um lugar só" }
+        - { id: a, texto: "Não há motivo" }
         - { id: b, texto: "Para o banco ficar menor" }
-        - { id: c, texto: "Porque consultas não podem ser repetidas" }
-        - { id: d, texto: "Não há motivo" }
-      resposta_correta: a
+        - { id: c, texto: "Para reaproveitar por um nome simples e corrigir a regra em um lugar só" }
+        - { id: d, texto: "Porque consultas não podem ser repetidas" }
+      resposta_correta: c
       explicacao: "É o principal uso de views em sistemas reais: relatórios recorrentes."
     - id: q7
       tipo: multipla_escolha
       enunciado: "O que uma coluna calculada como 'l.dias * j.valor_diaria AS total' faz?"
       opcoes:
         - { id: a, texto: "Cria uma coluna no RESULTADO, calculada na hora, sem existir na tabela" }
-        - { id: b, texto: "Adiciona a coluna total na tabela permanentemente" }
-        - { id: c, texto: "Apaga as colunas originais" }
-        - { id: d, texto: "Dá erro" }
+        - { id: b, texto: "Dá erro" }
+        - { id: c, texto: "Adiciona a coluna total na tabela permanentemente" }
+        - { id: d, texto: "Apaga as colunas originais" }
       resposta_correta: a
       explicacao: "Ela existe só no resultado da consulta — as tabelas continuam iguais."
     - id: q8
       tipo: multipla_escolha
       enunciado: "Qual pergunta de negócio o relatório de 'jogos sem locação' responde?"
       opcoes:
-        - { id: a, texto: "Quais produtos estão parados no estoque, sem gerar receita" }
-        - { id: b, texto: "Quem é o melhor cliente" }
-        - { id: c, texto: "Qual o faturamento total" }
-        - { id: d, texto: "Quantos clientes existem" }
-      resposta_correta: a
+        - { id: a, texto: "Qual o faturamento total" }
+        - { id: b, texto: "Quantos clientes existem" }
+        - { id: c, texto: "Quem é o melhor cliente" }
+        - { id: d, texto: "Quais produtos estão parados no estoque, sem gerar receita" }
+      resposta_correta: d
       explicacao: "É informação que orienta decisões: promover, remover ou substituir esses títulos."
 ---
 

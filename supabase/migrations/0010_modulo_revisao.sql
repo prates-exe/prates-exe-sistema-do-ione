@@ -1,4 +1,4 @@
--- Sistema do Ione — módulo de revisão/reforço para a prova trimestral.
+-- Bitlab — módulo de revisão/reforço para a prova trimestral.
 -- Criado à parte dos módulos 1-6 (que seguem o currículo do zero deste
 -- sistema) porque este é conteúdo emergencial: revisão do 1º trimestre e
 -- reforço compactado do 2º trimestre, baseado no material real da escola,

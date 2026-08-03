@@ -27,80 +27,80 @@ quiz:
       enunciado: "Quais são as duas regras de ouro da Chave Primária (PK)?"
       opcoes:
         - { id: a, texto: "Nunca se repete e nunca fica nula" }
-        - { id: b, texto: "Sempre é texto e sempre tem 11 caracteres" }
+        - { id: b, texto: "Pode ficar nula, mas nunca repete" }
         - { id: c, texto: "Pode repetir, mas nunca fica nula" }
-        - { id: d, texto: "Pode ficar nula, mas nunca repete" }
+        - { id: d, texto: "Sempre é texto e sempre tem 11 caracteres" }
       resposta_correta: a
       explicacao: "Se repetisse, o banco não saberia qual registro é qual. Se fosse nula, não identificaria nada."
     - id: q2
       tipo: multipla_escolha
       enunciado: "Para que serve a Chave Primária?"
       opcoes:
-        - { id: a, texto: "Identificar de forma única cada registro dentro da própria tabela" }
+        - { id: a, texto: "Ligar uma tabela a outra" }
         - { id: b, texto: "Ordenar os resultados de uma consulta" }
-        - { id: c, texto: "Ligar uma tabela a outra" }
-        - { id: d, texto: "Definir a cor da tabela" }
-      resposta_correta: a
+        - { id: c, texto: "Definir a cor da tabela" }
+        - { id: d, texto: "Identificar de forma única cada registro dentro da própria tabela" }
+      resposta_correta: d
       explicacao: "É pela PK que o sistema aponta para uma linha específica sem confusão."
     - id: q3
       tipo: multipla_escolha
       enunciado: "Por que o NOME de uma pessoa é uma péssima escolha de chave primária?"
       opcoes:
-        - { id: a, texto: "Porque nomes se repetem — pode haver dois alunos chamados João Silva" }
-        - { id: b, texto: "Porque nome é sempre nulo" }
-        - { id: c, texto: "Porque VARCHAR não pode ser PK" }
-        - { id: d, texto: "Porque nome não existe em banco de dados" }
-      resposta_correta: a
+        - { id: a, texto: "Porque VARCHAR não pode ser PK" }
+        - { id: b, texto: "Porque nome não existe em banco de dados" }
+        - { id: c, texto: "Porque nome é sempre nulo" }
+        - { id: d, texto: "Porque nomes se repetem — pode haver dois alunos chamados João Silva" }
+      resposta_correta: d
       explicacao: "A PK precisa ser única. Nomes repetem com frequência, então quebram a regra."
     - id: q4
       tipo: multipla_escolha
       enunciado: "O que acontece se você tentar inserir dois registros com a mesma chave primária?"
       opcoes:
-        - { id: a, texto: "O banco recusa o segundo e mostra um erro" }
-        - { id: b, texto: "O banco aceita normalmente" }
-        - { id: c, texto: "O banco apaga o primeiro registro" }
-        - { id: d, texto: "A tabela é excluída" }
-      resposta_correta: a
+        - { id: a, texto: "O banco apaga o primeiro registro" }
+        - { id: b, texto: "O banco recusa o segundo e mostra um erro" }
+        - { id: c, texto: "A tabela é excluída" }
+        - { id: d, texto: "O banco aceita normalmente" }
+      resposta_correta: b
       explicacao: "É essa recusa que garante a integridade dos dados — o banco protege você do erro."
     - id: q5
       tipo: multipla_escolha
       enunciado: "Qual destes é um bom candidato a chave primária de uma tabela de alunos?"
       opcoes:
-        - { id: a, texto: "O número de matrícula, que é único para cada aluno" }
-        - { id: b, texto: "A idade" }
+        - { id: a, texto: "O nome da mãe" }
+        - { id: b, texto: "O número de matrícula, que é único para cada aluno" }
         - { id: c, texto: "A cidade onde mora" }
-        - { id: d, texto: "O nome da mãe" }
-      resposta_correta: a
+        - { id: d, texto: "A idade" }
+      resposta_correta: b
       explicacao: "Matrícula, CPF e id são únicos por natureza. Idade e cidade repetem muito."
     - id: q6
       tipo: multipla_escolha
       enunciado: "O que significa dizer que a PK não pode ser 'nula'?"
       opcoes:
-        - { id: a, texto: "Ela nunca pode ficar vazia, sem valor" }
-        - { id: b, texto: "Ela não pode ser o número zero" }
-        - { id: c, texto: "Ela precisa ser sempre negativa" }
+        - { id: a, texto: "Ela precisa ser sempre negativa" }
+        - { id: b, texto: "Ela nunca pode ficar vazia, sem valor" }
+        - { id: c, texto: "Ela não pode ser o número zero" }
         - { id: d, texto: "Ela não pode ser um número" }
-      resposta_correta: a
+      resposta_correta: b
       explicacao: "Nulo significa 'sem valor nenhum'. Um registro sem identidade não pode ser localizado."
     - id: q7
       tipo: multipla_escolha
       enunciado: "Na prática, por que se costuma criar uma coluna 'id' numérica em vez de usar um dado real como PK?"
       opcoes:
-        - { id: a, texto: "Porque um id artificial nunca muda e nunca repete, mesmo que os dados da pessoa mudem" }
-        - { id: b, texto: "Porque é mais bonito" }
-        - { id: c, texto: "Porque o banco exige que se chame id" }
+        - { id: a, texto: "Porque o banco exige que se chame id" }
+        - { id: b, texto: "Porque um id artificial nunca muda e nunca repete, mesmo que os dados da pessoa mudem" }
+        - { id: c, texto: "Porque é mais bonito" }
         - { id: d, texto: "Porque dados reais não podem ser guardados" }
-      resposta_correta: a
+      resposta_correta: b
       explicacao: "Uma pessoa pode mudar de nome ou telefone, mas o id dela no sistema continua o mesmo."
     - id: q8
       tipo: multipla_escolha
       enunciado: "Quantas chaves primárias uma tabela normalmente tem?"
       opcoes:
-        - { id: a, texto: "Uma" }
-        - { id: b, texto: "Uma para cada coluna" }
-        - { id: c, texto: "Nenhuma, é opcional e raramente usada" }
-        - { id: d, texto: "No mínimo três" }
-      resposta_correta: a
+        - { id: a, texto: "No mínimo três" }
+        - { id: b, texto: "Uma" }
+        - { id: c, texto: "Uma para cada coluna" }
+        - { id: d, texto: "Nenhuma, é opcional e raramente usada" }
+      resposta_correta: b
       explicacao: "Cada tabela tem uma identidade — uma chave primária."
 ---
 

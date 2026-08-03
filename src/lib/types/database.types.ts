@@ -12,7 +12,11 @@ export type Role = "professor" | "aluno";
 export type TrilhaSlug = "dam" | "bd";
 export type TipoSandbox = "sql" | "code" | "android" | "none";
 export type SandboxContexto = "curso" | "livre";
-export type StatusProgresso = "nao_iniciada" | "em_andamento" | "concluida";
+export type StatusProgresso =
+  | "nao_iniciada"
+  | "iniciada"
+  | "em_andamento"
+  | "concluida";
 
 export interface PerguntaQuiz {
   id: string;

@@ -44,3 +44,6 @@ scratch-*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# configuracao local do Claude Code (por maquina, nao do projeto)
+.claude/settings.local.json

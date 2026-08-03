@@ -1,4 +1,4 @@
--- Sistema do Ione — seed das trilhas e módulos (meses)
+-- Bitlab — seed das trilhas e módulos (meses)
 -- Rode depois de 0002_rls_policies.sql. Idempotente (on conflict do nothing).
 
 insert into trilhas (slug, nome, descricao) values

@@ -39,39 +39,39 @@ quiz:
       opcoes:
         - { id: a, texto: "Executa um bloco de código só se uma condição for verdadeira" }
         - { id: b, texto: "Repete um bloco de código várias vezes" }
-        - { id: c, texto: "Cria uma nova variável" }
-        - { id: d, texto: "Sempre executa, não importa a condição" }
+        - { id: c, texto: "Sempre executa, não importa a condição" }
+        - { id: d, texto: "Cria uma nova variável" }
       resposta_correta: a
       explicacao: "if testa uma condição: se ela for true, o bloco entre chaves é executado."
     - id: q2
       tipo: multipla_escolha
       enunciado: "Qual estrutura executa um bloco alternativo quando a condição do if é falsa?"
       opcoes:
-        - { id: a, texto: "else" }
-        - { id: b, texto: "elseif" }
-        - { id: c, texto: "otherwise" }
-        - { id: d, texto: "not" }
-      resposta_correta: a
+        - { id: a, texto: "not" }
+        - { id: b, texto: "otherwise" }
+        - { id: c, texto: "else" }
+        - { id: d, texto: "elseif" }
+      resposta_correta: c
       explicacao: "else define o que fazer quando a condição do if não é verdadeira."
     - id: q3
       tipo: multipla_escolha
       enunciado: "O que precisa haver dentro dos parênteses do if?"
       opcoes:
-        - { id: a, texto: "Uma condição que resulte em true ou false" }
-        - { id: b, texto: "Sempre um número" }
-        - { id: c, texto: "Sempre um texto" }
+        - { id: a, texto: "Sempre um número" }
+        - { id: b, texto: "Sempre um texto" }
+        - { id: c, texto: "Uma condição que resulte em true ou false" }
         - { id: d, texto: "Nada, os parênteses ficam vazios" }
-      resposta_correta: a
+      resposta_correta: c
       explicacao: "O if precisa de um boolean — por isso usamos operadores de comparação ali dentro."
     - id: q4
       tipo: multipla_escolha
       enunciado: "Em um encadeamento if / else if / else, o que acontece quando uma condição é verdadeira?"
       opcoes:
-        - { id: a, texto: "O bloco dela é executado e o Java para de testar as demais" }
-        - { id: b, texto: "Todos os blocos são executados" }
-        - { id: c, texto: "O Java continua testando todas as outras condições" }
-        - { id: d, texto: "O programa encerra" }
-      resposta_correta: a
+        - { id: a, texto: "O Java continua testando todas as outras condições" }
+        - { id: b, texto: "O bloco dela é executado e o Java para de testar as demais" }
+        - { id: c, texto: "O programa encerra" }
+        - { id: d, texto: "Todos os blocos são executados" }
+      resposta_correta: b
       explicacao: "O Java testa na ordem e para na primeira condição verdadeira. Por isso a ORDEM importa."
     - id: q5
       tipo: multipla_escolha
@@ -79,27 +79,27 @@ quiz:
       opcoes:
         - { id: a, texto: "A — porque 75 já satisfaz a primeira condição e o resto nem é testado" }
         - { id: b, texto: "B, porque 75 é maior que 70" }
-        - { id: c, texto: "Os dois" }
-        - { id: d, texto: "Nenhum" }
+        - { id: c, texto: "Nenhum" }
+        - { id: d, texto: "Os dois" }
       resposta_correta: a
       explicacao: "Erro clássico: condições encadeadas precisam ir da MAIS restritiva para a menos restritiva."
     - id: q6
       tipo: multipla_escolha
       enunciado: "Qual é o erro em: if (idade = 18) { ... }"
       opcoes:
-        - { id: a, texto: "Usou = (atribuição) em vez de == (comparação)" }
-        - { id: b, texto: "Faltou ponto e vírgula" }
-        - { id: c, texto: "if não aceita números" }
-        - { id: d, texto: "Não há erro" }
-      resposta_correta: a
+        - { id: a, texto: "Faltou ponto e vírgula" }
+        - { id: b, texto: "Não há erro" }
+        - { id: c, texto: "Usou = (atribuição) em vez de == (comparação)" }
+        - { id: d, texto: "if não aceita números" }
+      resposta_correta: c
       explicacao: "Um = atribui; dois == comparam. É o erro mais clássico de quem está começando."
     - id: q7
       tipo: multipla_escolha
       enunciado: "As chaves { } são obrigatórias em um if de uma linha só?"
       opcoes:
         - { id: a, texto: "Tecnicamente não, mas usar sempre evita bugs difíceis de achar" }
-        - { id: b, texto: "Sim, o código não compila sem elas" }
-        - { id: c, texto: "Nunca devem ser usadas" }
+        - { id: b, texto: "Nunca devem ser usadas" }
+        - { id: c, texto: "Sim, o código não compila sem elas" }
         - { id: d, texto: "Só em programas grandes" }
       resposta_correta: a
       explicacao: "Sem chaves, só a primeira linha pertence ao if — e isso já causou bugs famosos."
@@ -107,11 +107,11 @@ quiz:
       tipo: multipla_escolha
       enunciado: "Em 'if (idade >= 18) {...} else if (idade >= 12) {...} else {...}', quantas condições são testadas no total?"
       opcoes:
-        - { id: a, texto: "Duas, com um bloco final para quando nenhuma for verdadeira" }
-        - { id: b, texto: "Uma só" }
-        - { id: c, texto: "Três condições" }
-        - { id: d, texto: "Nenhuma, else if não existe em Java" }
-      resposta_correta: a
+        - { id: a, texto: "Uma só" }
+        - { id: b, texto: "Duas, com um bloco final para quando nenhuma for verdadeira" }
+        - { id: c, texto: "Nenhuma, else if não existe em Java" }
+        - { id: d, texto: "Três condições" }
+      resposta_correta: b
       explicacao: "O else final não testa nada: ele cobre todos os casos restantes."
 ---
 

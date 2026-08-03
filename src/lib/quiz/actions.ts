@@ -17,7 +17,19 @@ export interface QuizParaAluno {
   titulo: string;
   perguntas: PerguntaParaAluno[];
   notaMinimaAprovacao: number;
-  tentativasAnteriores: { nota: number; concluida_em: string }[];
+  /** Quantas vezes o aluno já enviou este quiz. */
+  totalTentativas: number;
+  /** Maior nota já obtida, para o aluno ver de onde partiu. */
+  melhorNota: number | null;
+  /** Se a melhor nota atingiu a nota mínima. */
+  aprovado: boolean;
+  /**
+   * As respostas do último envio, no formato { idDaPergunta: idDaOpcao }.
+   * Servem para remarcar as alternativas quando o aluno volta à aula — sem
+   * isso ele reabria a página com o formulário em branco, sem saber o que
+   * tinha respondido.
+   */
+  respostasAnteriores: Record<string, string>;
 }
 
 export async function getQuizParaAula(aulaId: string): Promise<QuizParaAluno | null> {
@@ -43,10 +55,13 @@ export async function getQuizParaAula(aulaId: string): Promise<QuizParaAluno | n
 
   const { data: tentativas } = await supabase
     .from("quiz_tentativas")
-    .select("nota, concluida_em")
+    .select("nota, respostas, concluida_em")
     .eq("quiz_id", quiz.id)
     .eq("aluno_id", user.id)
     .order("concluida_em", { ascending: false });
+
+  const historico = tentativas ?? [];
+  const melhorNota = historico.length > 0 ? Math.max(...historico.map((t) => t.nota)) : null;
 
   return {
     id: quiz.id,
@@ -58,7 +73,11 @@ export async function getQuizParaAula(aulaId: string): Promise<QuizParaAluno | n
       enunciado: p.enunciado,
       opcoes: p.opcoes,
     })),
-    tentativasAnteriores: tentativas ?? [],
+    totalTentativas: historico.length,
+    melhorNota,
+    aprovado: melhorNota !== null && melhorNota >= quiz.nota_minima_aprovacao,
+    // A primeira do array é a mais recente (a consulta ordena decrescente).
+    respostasAnteriores: historico[0]?.respostas ?? {},
   };
 }
 
@@ -113,26 +132,11 @@ export async function submeterQuiz(
   });
 
   if (aprovado) {
-    const { data: existente } = await supabase
-      .from("progresso_aulas")
-      .select("material_visualizado, exercicio_completo")
-      .eq("aluno_id", user.id)
-      .eq("aula_id", aulaId)
-      .maybeSingle();
-
+    // Marca apenas o quiz. Quem decide se a aula está concluída é o gatilho
+    // calcular_status_progresso no banco, que exige quiz E exercício — a
+    // regra fica em um lugar só, e não espalhada por cada tela.
     await supabase.from("progresso_aulas").upsert(
-      {
-        aluno_id: user.id,
-        aula_id: aulaId,
-        quiz_completo: true,
-        material_visualizado: existente?.material_visualizado ?? false,
-        exercicio_completo: existente?.exercicio_completo ?? false,
-        status:
-          (existente?.material_visualizado ?? false) || (existente?.exercicio_completo ?? false)
-            ? "concluida"
-            : "em_andamento",
-        concluida_em: new Date().toISOString(),
-      },
+      { aluno_id: user.id, aula_id: aulaId, quiz_completo: true },
       { onConflict: "aluno_id,aula_id" }
     );
   }

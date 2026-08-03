@@ -29,50 +29,50 @@ quiz:
       tipo: multipla_escolha
       enunciado: "Qual comando lê e devolve dados, sem alterar nada?"
       opcoes:
-        - { id: a, texto: "SELECT" }
-        - { id: b, texto: "UPDATE" }
-        - { id: c, texto: "INSERT" }
-        - { id: d, texto: "DELETE" }
-      resposta_correta: a
+        - { id: a, texto: "DELETE" }
+        - { id: b, texto: "INSERT" }
+        - { id: c, texto: "SELECT" }
+        - { id: d, texto: "UPDATE" }
+      resposta_correta: c
       explicacao: "SELECT é o comando central da DQL. Ele só consulta — é totalmente seguro."
     - id: q2
       tipo: multipla_escolha
       enunciado: "O que o asterisco significa em SELECT * FROM filmes?"
       opcoes:
-        - { id: a, texto: "Traga todas as colunas da tabela" }
+        - { id: a, texto: "Multiplique os valores" }
         - { id: b, texto: "Traga apenas a primeira coluna" }
-        - { id: c, texto: "Multiplique os valores" }
+        - { id: c, texto: "Traga todas as colunas da tabela" }
         - { id: d, texto: "Apague a tabela" }
-      resposta_correta: a
+      resposta_correta: c
       explicacao: "O * é um atalho para 'todas as colunas'."
     - id: q3
       tipo: multipla_escolha
       enunciado: "Como trazer apenas as colunas titulo e ano da tabela filmes?"
       opcoes:
-        - { id: a, texto: "SELECT titulo, ano FROM filmes;" }
-        - { id: b, texto: "SELECT * FROM titulo, ano;" }
-        - { id: c, texto: "GET titulo, ano FROM filmes;" }
-        - { id: d, texto: "SELECT FROM filmes titulo, ano;" }
-      resposta_correta: a
+        - { id: a, texto: "SELECT * FROM titulo, ano;" }
+        - { id: b, texto: "SELECT FROM filmes titulo, ano;" }
+        - { id: c, texto: "SELECT titulo, ano FROM filmes;" }
+        - { id: d, texto: "GET titulo, ano FROM filmes;" }
+      resposta_correta: c
       explicacao: "Basta listar as colunas desejadas, separadas por vírgula, no lugar do asterisco."
     - id: q4
       tipo: multipla_escolha
       enunciado: "Em SELECT * FROM filmes WHERE genero = 'Ação', o que o WHERE faz?"
       opcoes:
-        - { id: a, texto: "Filtra o resultado, trazendo só os filmes de ação" }
-        - { id: b, texto: "Ordena os filmes por gênero" }
-        - { id: c, texto: "Apaga os filmes de ação" }
-        - { id: d, texto: "Cria uma coluna nova" }
-      resposta_correta: a
+        - { id: a, texto: "Ordena os filmes por gênero" }
+        - { id: b, texto: "Apaga os filmes de ação" }
+        - { id: c, texto: "Cria uma coluna nova" }
+        - { id: d, texto: "Filtra o resultado, trazendo só os filmes de ação" }
+      resposta_correta: d
       explicacao: "O WHERE compara uma coluna com um valor e devolve só as linhas que atendem à condição."
     - id: q5
       tipo: multipla_escolha
       enunciado: "Qual operador usamos para 'maior ou igual a' em SQL?"
       opcoes:
         - { id: a, texto: ">=" }
-        - { id: b, texto: "=>" }
+        - { id: b, texto: "MAIOR" }
         - { id: c, texto: "&gt;&gt;" }
-        - { id: d, texto: "MAIOR" }
+        - { id: d, texto: "=>" }
       resposta_correta: a
       explicacao: "Os operadores são =, <>, <, >, <= e >=."
     - id: q6
@@ -81,28 +81,28 @@ quiz:
       opcoes:
         - { id: a, texto: "WHERE genero = 'Ação' AND ano > 2020" }
         - { id: b, texto: "WHERE genero = 'Ação' OR ano > 2020" }
-        - { id: c, texto: "WHERE genero = 'Ação' + ano > 2020" }
-        - { id: d, texto: "Não é possível ter duas condições" }
+        - { id: c, texto: "Não é possível ter duas condições" }
+        - { id: d, texto: "WHERE genero = 'Ação' + ano > 2020" }
       resposta_correta: a
       explicacao: "AND exige as duas; OR aceita pelo menos uma."
     - id: q7
       tipo: multipla_escolha
       enunciado: "Qual é a diferença entre AND e OR em um WHERE?"
       opcoes:
-        - { id: a, texto: "AND só traz linhas que atendem a todas as condições; OR traz as que atendem a pelo menos uma" }
-        - { id: b, texto: "Não há diferença" }
-        - { id: c, texto: "OR só funciona com números" }
-        - { id: d, texto: "AND apaga registros" }
-      resposta_correta: a
+        - { id: a, texto: "OR só funciona com números" }
+        - { id: b, texto: "AND apaga registros" }
+        - { id: c, texto: "AND só traz linhas que atendem a todas as condições; OR traz as que atendem a pelo menos uma" }
+        - { id: d, texto: "Não há diferença" }
+      resposta_correta: c
       explicacao: "É a mesma lógica dos operadores lógicos que vocês veem em programação."
     - id: q8
       tipo: multipla_escolha
       enunciado: "Por que rodar um SELECT antes de um DELETE é uma boa prática?"
       opcoes:
         - { id: a, texto: "Porque o SELECT mostra exatamente quais linhas seriam afetadas, sem alterar nada" }
-        - { id: b, texto: "Porque o SELECT apaga mais rápido" }
-        - { id: c, texto: "Porque o banco exige isso" }
-        - { id: d, texto: "Não é uma boa prática" }
+        - { id: b, texto: "Porque o banco exige isso" }
+        - { id: c, texto: "Não é uma boa prática" }
+        - { id: d, texto: "Porque o SELECT apaga mais rápido" }
       resposta_correta: a
       explicacao: "É a regra de ouro que vimos na aula anterior — conferir antes de alterar."
 ---

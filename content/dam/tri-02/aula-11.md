@@ -34,81 +34,81 @@ quiz:
       tipo: multipla_escolha
       enunciado: "Para que serve um laço de repetição?"
       opcoes:
-        - { id: a, texto: "Executar o mesmo bloco de código várias vezes, sem copiar e colar" }
-        - { id: b, texto: "Tomar decisões no programa" }
-        - { id: c, texto: "Criar variáveis" }
-        - { id: d, texto: "Encerrar o programa" }
-      resposta_correta: a
+        - { id: a, texto: "Encerrar o programa" }
+        - { id: b, texto: "Executar o mesmo bloco de código várias vezes, sem copiar e colar" }
+        - { id: c, texto: "Tomar decisões no programa" }
+        - { id: d, texto: "Criar variáveis" }
+      resposta_correta: b
       explicacao: "Quem decide é o if; quem repete é o for e o while."
     - id: q2
       tipo: multipla_escolha
       enunciado: "Quais são as três partes de um for, na ordem?"
       opcoes:
-        - { id: a, texto: "Inicialização, condição de parada e incremento" }
-        - { id: b, texto: "Condição, corpo e retorno" }
-        - { id: c, texto: "Nome, tipo e valor" }
-        - { id: d, texto: "Início, meio e fim do programa" }
-      resposta_correta: a
+        - { id: a, texto: "Início, meio e fim do programa" }
+        - { id: b, texto: "Nome, tipo e valor" }
+        - { id: c, texto: "Condição, corpo e retorno" }
+        - { id: d, texto: "Inicialização, condição de parada e incremento" }
+      resposta_correta: d
       explicacao: "for (int i = 1; i <= 5; i++) — começa em 1, repete enquanto i <= 5, soma 1 a cada volta."
     - id: q3
       tipo: multipla_escolha
       enunciado: "Quantas vezes executa: for (int i = 1; i <= 5; i++)?"
       opcoes:
-        - { id: a, texto: "5 vezes" }
+        - { id: a, texto: "Infinitas vezes" }
         - { id: b, texto: "4 vezes" }
-        - { id: c, texto: "6 vezes" }
-        - { id: d, texto: "Infinitas vezes" }
-      resposta_correta: a
+        - { id: c, texto: "5 vezes" }
+        - { id: d, texto: "6 vezes" }
+      resposta_correta: c
       explicacao: "i vale 1, 2, 3, 4 e 5 — cinco voltas."
     - id: q4
       tipo: multipla_escolha
       enunciado: "O que significa i++?"
       opcoes:
-        - { id: a, texto: "Some 1 ao valor de i" }
+        - { id: a, texto: "Compare i com 1" }
         - { id: b, texto: "Multiplique i por 2" }
-        - { id: c, texto: "Compare i com 1" }
+        - { id: c, texto: "Some 1 ao valor de i" }
         - { id: d, texto: "Apague a variável i" }
-      resposta_correta: a
+      resposta_correta: c
       explicacao: "i++ é uma forma curta de escrever i = i + 1. E i-- subtrai 1."
     - id: q5
       tipo: multipla_escolha
       enunciado: "Qual a principal diferença entre for e while?"
       opcoes:
-        - { id: a, texto: "O for é melhor quando você sabe quantas repetições serão; o while, quando depende de uma condição" }
-        - { id: b, texto: "O while não existe em Java" }
+        - { id: a, texto: "O while não existe em Java" }
+        - { id: b, texto: "Não há diferença nenhuma" }
         - { id: c, texto: "O for só funciona com números negativos" }
-        - { id: d, texto: "Não há diferença nenhuma" }
-      resposta_correta: a
+        - { id: d, texto: "O for é melhor quando você sabe quantas repetições serão; o while, quando depende de uma condição" }
+      resposta_correta: d
       explicacao: "Os dois fazem a mesma coisa, mas cada um deixa a intenção mais clara em um caso."
     - id: q6
       tipo: multipla_escolha
       enunciado: "O que é um laço infinito?"
       opcoes:
-        - { id: a, texto: "Um laço cuja condição nunca fica falsa, então ele nunca para" }
-        - { id: b, texto: "Um laço que roda exatamente mil vezes" }
-        - { id: c, texto: "Um erro de compilação" }
+        - { id: a, texto: "Um erro de compilação" }
+        - { id: b, texto: "Um laço cuja condição nunca fica falsa, então ele nunca para" }
+        - { id: c, texto: "Um laço que roda exatamente mil vezes" }
         - { id: d, texto: "Um laço sem corpo" }
-      resposta_correta: a
+      resposta_correta: b
       explicacao: "Geralmente acontece quando esquecemos de atualizar a variável de controle dentro do while."
     - id: q7
       tipo: multipla_escolha
       enunciado: "Qual erro faz um while virar laço infinito?"
       opcoes:
-        - { id: a, texto: "Esquecer de alterar a variável testada na condição dentro do laço" }
-        - { id: b, texto: "Usar chaves no corpo do laço" }
-        - { id: c, texto: "Declarar a variável antes do while" }
+        - { id: a, texto: "Declarar a variável antes do while" }
+        - { id: b, texto: "Esquecer de alterar a variável testada na condição dentro do laço" }
+        - { id: c, texto: "Usar chaves no corpo do laço" }
         - { id: d, texto: "Usar um int como contador" }
-      resposta_correta: a
+      resposta_correta: b
       explicacao: "Se n nunca diminui, a condição n >= 1 nunca fica falsa."
     - id: q8
       tipo: multipla_escolha
       enunciado: "Por que somar valores dentro de um laço exige uma variável declarada FORA dele?"
       opcoes:
-        - { id: a, texto: "Porque a soma precisa sobreviver entre as voltas e continuar existindo depois do laço" }
-        - { id: b, texto: "Porque o Java não permite variáveis dentro de laços" }
-        - { id: c, texto: "Só por questão de estilo" }
-        - { id: d, texto: "Para o programa rodar mais rápido" }
-      resposta_correta: a
+        - { id: a, texto: "Para o programa rodar mais rápido" }
+        - { id: b, texto: "Porque a soma precisa sobreviver entre as voltas e continuar existindo depois do laço" }
+        - { id: c, texto: "Porque o Java não permite variáveis dentro de laços" }
+        - { id: d, texto: "Só por questão de estilo" }
+      resposta_correta: b
       explicacao: "Se declarada dentro, ela seria recriada do zero a cada volta e some ao final."
 ---
 

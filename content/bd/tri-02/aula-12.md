@@ -38,81 +38,81 @@ quiz:
       tipo: multipla_escolha
       enunciado: "Qual é a ordem correta de trabalho ao montar um banco do zero?"
       opcoes:
-        - { id: a, texto: "Modelar as tabelas, criar com DDL, popular com DML e então consultar com DQL" }
+        - { id: a, texto: "A ordem não importa" }
         - { id: b, texto: "Consultar, inserir, criar as tabelas e depois modelar" }
         - { id: c, texto: "Inserir os dados antes de criar as tabelas" }
-        - { id: d, texto: "A ordem não importa" }
-      resposta_correta: a
+        - { id: d, texto: "Modelar as tabelas, criar com DDL, popular com DML e então consultar com DQL" }
+      resposta_correta: d
       explicacao: "Sem estrutura não há onde inserir; sem dados não há o que consultar."
     - id: q2
       tipo: multipla_escolha
       enunciado: "Em um sistema de clínica, o valor e a data pertencem a qual tabela?"
       opcoes:
-        - { id: a, texto: "À tabela consultas, porque são dados da relação entre paciente e médico" }
-        - { id: b, texto: "À tabela pacientes" }
-        - { id: c, texto: "À tabela medicos" }
-        - { id: d, texto: "A nenhuma, não devem ser guardados" }
-      resposta_correta: a
+        - { id: a, texto: "À tabela pacientes" }
+        - { id: b, texto: "A nenhuma, não devem ser guardados" }
+        - { id: c, texto: "À tabela consultas, porque são dados da relação entre paciente e médico" }
+        - { id: d, texto: "À tabela medicos" }
+      resposta_correta: c
       explicacao: "Um paciente não tem 'uma data'; a consulta é que tem. Esse raciocínio é a essência da modelagem."
     - id: q3
       tipo: multipla_escolha
       enunciado: "Um médico atende vários pacientes e um paciente consulta vários médicos. Qual é a cardinalidade?"
       opcoes:
         - { id: a, texto: "N:M, resolvida com uma tabela associativa" }
-        - { id: b, texto: "1:1" }
-        - { id: c, texto: "1:N com FK em pacientes" }
-        - { id: d, texto: "Não há relacionamento" }
+        - { id: b, texto: "Não há relacionamento" }
+        - { id: c, texto: "1:1" }
+        - { id: d, texto: "1:N com FK em pacientes" }
       resposta_correta: a
       explicacao: "Muitos dos dois lados sempre exige a terceira tabela."
     - id: q4
       tipo: multipla_escolha
       enunciado: "Quais grupos de comandos SQL você usa ao construir e usar um banco?"
       opcoes:
-        - { id: a, texto: "DDL para a estrutura, DML para os dados e DQL para as consultas" }
-        - { id: b, texto: "Apenas DDL" }
-        - { id: c, texto: "Apenas DQL" }
+        - { id: a, texto: "Apenas DDL" }
+        - { id: b, texto: "Apenas DQL" }
+        - { id: c, texto: "DDL para a estrutura, DML para os dados e DQL para as consultas" }
         - { id: d, texto: "HTML, CSS e JavaScript" }
-      resposta_correta: a
+      resposta_correta: c
       explicacao: "CREATE TABLE (DDL), INSERT/UPDATE/DELETE (DML), SELECT (DQL)."
     - id: q5
       tipo: multipla_escolha
       enunciado: "Para saber quanto cada médico faturou, quais recursos você combina?"
       opcoes:
-        - { id: a, texto: "INNER JOIN com GROUP BY e SUM" }
-        - { id: b, texto: "Apenas DELETE" }
-        - { id: c, texto: "Apenas CREATE TABLE" }
-        - { id: d, texto: "Somente ORDER BY" }
-      resposta_correta: a
+        - { id: a, texto: "Somente ORDER BY" }
+        - { id: b, texto: "Apenas CREATE TABLE" }
+        - { id: c, texto: "Apenas DELETE" }
+        - { id: d, texto: "INNER JOIN com GROUP BY e SUM" }
+      resposta_correta: d
       explicacao: "JOIN traz o nome, GROUP BY agrupa por médico e SUM soma os valores."
     - id: q6
       tipo: multipla_escolha
       enunciado: "Antes de rodar um UPDATE que corrige um valor, qual é a prática segura?"
       opcoes:
-        - { id: a, texto: "Rodar um SELECT com o mesmo WHERE para conferir quais linhas serão afetadas" }
-        - { id: b, texto: "Apagar a tabela e recriar" }
-        - { id: c, texto: "Rodar sem WHERE, é mais rápido" }
+        - { id: a, texto: "Rodar sem WHERE, é mais rápido" }
+        - { id: b, texto: "Rodar um SELECT com o mesmo WHERE para conferir quais linhas serão afetadas" }
+        - { id: c, texto: "Apagar a tabela e recriar" }
         - { id: d, texto: "Nunca usar UPDATE" }
-      resposta_correta: a
+      resposta_correta: b
       explicacao: "A regra de ouro da Aula 6: conferir antes de alterar."
     - id: q7
       tipo: multipla_escolha
       enunciado: "Por que separar pacientes e médicos em tabelas diferentes, em vez de uma tabela 'pessoas' única?"
       opcoes:
-        - { id: a, texto: "Porque têm atributos e papéis diferentes no sistema, como especialidade e data de nascimento" }
-        - { id: b, texto: "Porque o SQL não permite mais de 3 colunas" }
-        - { id: c, texto: "Porque tabelas grandes não funcionam" }
+        - { id: a, texto: "Porque o SQL não permite mais de 3 colunas" }
+        - { id: b, texto: "Porque tabelas grandes não funcionam" }
+        - { id: c, texto: "Porque têm atributos e papéis diferentes no sistema, como especialidade e data de nascimento" }
         - { id: d, texto: "Não há motivo, é indiferente" }
-      resposta_correta: a
+      resposta_correta: c
       explicacao: "Cada tabela trata de um assunto, com os atributos que fazem sentido para ele."
     - id: q8
       tipo: multipla_escolha
       enunciado: "O que caracteriza um bom modelo de banco de dados?"
       opcoes:
-        - { id: a, texto: "Sem redundância, com relacionamentos claros e cada tabela tratando de um assunto" }
+        - { id: a, texto: "Nenhuma chave estrangeira" }
         - { id: b, texto: "O menor número possível de tabelas" }
-        - { id: c, texto: "Todos os dados em uma tabela só, para facilitar" }
-        - { id: d, texto: "Nenhuma chave estrangeira" }
-      resposta_correta: a
+        - { id: c, texto: "Sem redundância, com relacionamentos claros e cada tabela tratando de um assunto" }
+        - { id: d, texto: "Todos os dados em uma tabela só, para facilitar" }
+      resposta_correta: c
       explicacao: "É a soma de tudo que você aprendeu neste trimestre."
 ---
 

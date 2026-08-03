@@ -1,106 +1,121 @@
-# Sistema do Ione
+# Bitlab
 
-Plataforma gratuita para acompanhar as turmas de **Desenvolvimento de Aplicativos (DAM)** e
-**Banco de Dados (BD)**: cada aluno tem seu próprio login, cada aula tem material + quiz, e o
-curso de Banco de Dados (todos os 6 meses) e os dois primeiros meses de DAM têm um terminal
-embutido no navegador para praticar (SQL de um lado, Java do outro), com progresso salvo
-automaticamente.
+Plataforma de ensino para as turmas de **Banco de Dados** e **Desenvolvimento de
+Aplicativos** do curso técnico. O aluno entra com login próprio, lê o material da aula,
+resolve um desafio prático **dentro do navegador** e responde um quiz. O professor
+acompanha quem fez o quê.
 
-## O que já está pronto
+A parte prática é o motivo de o projeto existir. Os computadores do laboratório da escola
+não aguentam o Android Studio — uma aula de 50 minutos virava dez minutos só para abrir um
+arquivo. Aqui o aluno escreve SQL e monta telas de Android sem instalar nada: tudo roda no
+navegador ou em serviços gratuitos.
 
-- Login separado para professora (admin) e alunos, sem autocadastro — só a professora cria contas.
-- Painel da professora: criar turmas, cadastrar alunos (usuário + senha provisória gerados
-  automaticamente), ver o progresso de cada um.
-- Terminal de SQL no navegador (roda 100% no seu computador, sem servidor — usa SQLite via
-  WebAssembly), com apontamento de erro em português, mais um espaço de prática livre.
-- Terminal de código Java (meses 1 e 2 de DAM), executado por um serviço gratuito externo
-  (wandbox.org), com espaço de prática livre também.
-- Quiz por aula, corrigido no servidor (o aluno nunca recebe o gabarito antes de responder).
-- Currículo completo do **Mês 1** de BD (8 aulas) e do **Mês 1** de DAM (12 aulas), já escrito,
-  pronto para revisar e publicar.
+## O que o aluno faz
 
-**Ainda falta**: o conteúdo dos meses 2 a 6 dos dois cursos (a estrutura para adicionar já existe
-— veja "Adicionando mais aulas" abaixo).
+- **Banco de Dados**: um terminal SQL de verdade, com um banco SQLite pessoal que ele
+  carrega de aula em aula. As tabelas criadas na aula 3 continuam lá na aula 9. Erros de
+  sintaxe são traduzidos para português apontando o trecho com problema.
+- **Desenvolvimento de Aplicativos**: um editor de layout XML com **prévia da tela do
+  celular ao vivo** e arrastar-e-soltar de componentes, mais um editor Java onde ele
+  escreve a `MainActivity`. Ao executar, o app é simulado e a prévia mostra o resultado
+  dos cliques.
+- **Prática livre**: as duas bancadas também existem soltas, sem aula e sem nota, para
+  quem quiser brincar.
+- **Quiz** por aula, corrigido no servidor. O aluno pode refazer quantas vezes quiser, e
+  ao voltar para a aula encontra as respostas anteriores já marcadas.
+- **Perfil e conquistas**: apelido, avatar, nível e troféus por aula concluída.
 
-## Passo a passo para colocar no ar (gratuito)
+Uma aula só conta como concluída quando o aluno **passou no quiz e terminou o desafio** —
+não basta um dos dois.
 
-### 1. Crie um projeto no Supabase (banco de dados + login)
+## O que o professor faz
 
-1. Crie uma conta gratuita em [supabase.com](https://supabase.com).
-2. Crie um novo projeto (escolha uma senha de banco de dados forte e guarde-a).
-3. Em **Project Settings > API**, copie:
-   - **Project URL**
-   - **anon public key**
-   - **service_role key** (fique atenta: essa chave é secreta, nunca compartilhe)
+- Cria turmas e contas de aluno (usuário e senha provisória gerados automaticamente).
+- Acompanha, por turma, quantas aulas cada aluno concluiu, quantos quizzes passou e
+  quantos desafios entregou.
+- Consulta o currículo publicado de cada curso.
 
-### 2. Configure as variáveis de ambiente
+Não existe autocadastro: a única forma de criar um aluno é pelo painel do professor.
 
-Copie `.env.local.example` para `.env.local` e cole os três valores do passo anterior.
+## Conteúdo já publicado
 
-### 3. Rode as migrações do banco
+| Curso | 2º trimestre | 3º trimestre |
+|---|---|---|
+| Banco de Dados | 12 aulas | 13 aulas |
+| Desenvolvimento de Aplicativos | 14 aulas | 14 aulas |
 
-No Supabase, vá em **SQL Editor > New query** e rode, **nessa ordem**, o conteúdo de cada arquivo:
+As aulas são arquivos Markdown em `content/`, versionados junto com o código. Cada uma tem
+material, critérios de correção do desafio e um quiz de 8 perguntas.
 
-1. `supabase/migrations/0001_init_schema.sql`
-2. `supabase/migrations/0002_rls_policies.sql`
-3. `supabase/migrations/0003_seed_trilhas.sql`
-4. `supabase/migrations/0004_sql_rascunho.sql`
-5. `supabase/migrations/0005_eventos_admin.sql`
+## Instalação
 
-### 4. Instale as dependências e crie sua conta de professora
+Precisa de Node.js 20 ou mais novo.
+
+### 1. Banco de dados (Supabase)
+
+Crie um projeto gratuito em [supabase.com](https://supabase.com) — escolha a região
+**São Paulo**, que é a mais perto e a que dá menos atraso nas consultas.
+
+Em **Project Settings > API**, copie a *Project URL*, a *anon key* e a *service_role key*.
+A última é secreta e nunca deve sair do servidor.
+
+### 2. Variáveis de ambiente
+
+```bash
+cp .env.local.example .env.local
+```
+
+Cole os três valores no arquivo. Ele já está no `.gitignore` e nunca vai para o
+repositório.
+
+### 3. Migrações
+
+No painel do Supabase, em **SQL Editor > New query**, rode o conteúdo de cada arquivo de
+`supabase/migrations/` **na ordem numérica**, do `0001` ao `0014`. Cada uma é escrita para
+poder rodar mais de uma vez sem estragar nada.
+
+### 4. Dependências e conta de professor
 
 ```bash
 npm install
+```
+
+```bash
 npm run create-professor -- "seu@email.com" "sua-senha" "Seu Nome"
 ```
 
-Não existe cadastro público no sistema (por segurança) — esse comando cria a única conta que
-entra como professora. Guarde o e-mail e a senha usados.
-
-### 5. Publique o currículo do Mês 1
+### 5. Publicar o currículo
 
 ```bash
 npm run seed
 ```
 
-Isso lê os arquivos em `content/bd/mes-01` e `content/dam/mes-01` e publica as aulas e quizzes no
-banco.
+O script lê `content/` e grava as aulas e quizzes no banco. Rodar de novo atualiza o que
+mudou sem duplicar nada, e despublica aulas cujo arquivo tenha sido apagado.
 
-### 6. Rode localmente
+### 6. Rodar
 
 ```bash
 npm run dev
 ```
 
-Acesse [http://localhost:3000](http://localhost:3000), entre com o e-mail/senha de professora,
-crie uma turma e um aluno de teste.
+## Colocar no ar
 
-### 7. Coloque online de graça (Vercel)
+O passo a passo completo (GitHub, Vercel, região, variáveis de ambiente) está em
+[DEPLOY.md](DEPLOY.md).
 
-1. Crie uma conta gratuita em [vercel.com](https://vercel.com).
-2. Importe este repositório.
-3. Nas configurações do projeto na Vercel, adicione as mesmas três variáveis de ambiente do
-   `.env.local`.
-4. Em **Settings > Functions > Function Region**, escolha **São Paulo (gru1)** — como o banco de
-   dados (Supabase) está nessa região, isso evita que cada consulta viaje até outro continente e
-   volta, o que deixa a navegação bem mais rápida para os alunos.
-5. Publique. O link gerado pela Vercel é o que os alunos vão usar para entrar.
+## Escrever uma aula nova
 
-## Adicionando mais aulas (meses 2 a 6)
+Crie `content/<bd|dam>/tri-0<2|3>/aula-NN.md` com um cabeçalho YAML seguido do material em
+Markdown. O jeito mais rápido é copiar uma aula existente e trocar o conteúdo. Os campos
+do cabeçalho estão documentados em [DOCUMENTATION.md](DOCUMENTATION.md#o-formato-de-uma-aula).
+Depois rode `npm run seed`.
 
-Cada aula é um arquivo Markdown em `content/<bd|dam>/mes-XX/aula-YY.md`, com um cabeçalho no topo
-(`titulo`, `mes_numero`, `semana_numero`, `numero_sequencial`, `tipo_sandbox`, `publicado`, e
-opcionalmente `quiz`) seguido do material da aula. Use os arquivos do mês 1 como modelo. Depois de
-criar os arquivos, rode `npm run seed` de novo — ele atualiza o que já existe e adiciona o que é
-novo, sem duplicar nada.
+## Como isso tudo funciona por dentro
 
-## Avisos importantes
+[DOCUMENTATION.md](DOCUMENTATION.md) explica a arquitetura e, principalmente, **por que**
+cada decisão foi tomada — inclusive as alternativas que foram testadas e descartadas.
 
-- O terminal de SQL usa **SQLite** (não é literalmente MySQL) — os comandos básicos que os alunos
-  vão aprender (CREATE TABLE, INSERT, SELECT, JOIN etc.) são os mesmos, mas alguns recursos bem
-  específicos do MySQL não existem aqui.
-- O projeto gratuito do Supabase pausa depois de ~7 dias sem uso. Se isso acontecer, basta acessar
-  o painel do Supabase para reativar — nenhum dado é perdido.
-- A execução de código Java depende de um serviço público gratuito de terceiros (wandbox.org).
-  Ele não tem garantia de disponibilidade — se ficar fora do ar, o sistema mostra uma mensagem de
-  erro amigável e o resto da plataforma continua funcionando normalmente.
+## Licença
+
+Código livre para uso e adaptação por outras escolas e professores.

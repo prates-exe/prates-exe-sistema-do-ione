@@ -4,7 +4,7 @@ mes_numero: 3
 numero_sequencial: 15
 duracao_minutos: 25
 tipo_sandbox: sql
-publicado: true
+publicado: false
 exercicio_inicial: |
   -- Aula 2 — a diferenca entre INNER JOIN e LEFT JOIN.
   -- Siga a atividade passo a passo.
@@ -32,80 +32,80 @@ quiz:
       tipo: multipla_escolha
       enunciado: "Qual a diferença entre INNER JOIN e LEFT JOIN?"
       opcoes:
-        - { id: a, texto: "O INNER só traz quem tem par nos dois lados; o LEFT traz tudo da tabela da esquerda, mesmo sem par" }
+        - { id: a, texto: "O LEFT JOIN é mais rápido" }
         - { id: b, texto: "Não há diferença" }
-        - { id: c, texto: "O LEFT JOIN é mais rápido" }
-        - { id: d, texto: "O INNER JOIN não usa ON" }
-      resposta_correta: a
+        - { id: c, texto: "O INNER JOIN não usa ON" }
+        - { id: d, texto: "O INNER só traz quem tem par nos dois lados; o LEFT traz tudo da tabela da esquerda, mesmo sem par" }
+      resposta_correta: d
       explicacao: "Por isso o LEFT JOIN é a escolha certa quando você precisa ver também os que estão sem correspondência."
     - id: q2
       tipo: multipla_escolha
       enunciado: "O que aparece nas colunas da tabela da direita quando não há correspondência em um LEFT JOIN?"
       opcoes:
-        - { id: a, texto: "NULL" }
-        - { id: b, texto: "Zero" }
+        - { id: a, texto: "A linha some do resultado" }
+        - { id: b, texto: "NULL" }
         - { id: c, texto: "Texto vazio" }
-        - { id: d, texto: "A linha some do resultado" }
-      resposta_correta: a
+        - { id: d, texto: "Zero" }
+      resposta_correta: b
       explicacao: "NULL significa ausência de valor — é o sinal de que não houve par."
     - id: q3
       tipo: multipla_escolha
       enunciado: "Qual tabela é a 'da esquerda' em: FROM turmas LEFT JOIN estudantes?"
       opcoes:
-        - { id: a, texto: "turmas, a que aparece no FROM" }
-        - { id: b, texto: "estudantes" }
-        - { id: c, texto: "As duas ao mesmo tempo" }
-        - { id: d, texto: "Depende do ON" }
-      resposta_correta: a
+        - { id: a, texto: "As duas ao mesmo tempo" }
+        - { id: b, texto: "Depende do ON" }
+        - { id: c, texto: "estudantes" }
+        - { id: d, texto: "turmas, a que aparece no FROM" }
+      resposta_correta: d
       explicacao: "A da esquerda é sempre a do FROM; é dela que todas as linhas são preservadas."
     - id: q4
       tipo: multipla_escolha
       enunciado: "Para listar TODAS as turmas, inclusive as sem alunos, qual você usa?"
       opcoes:
         - { id: a, texto: "LEFT JOIN, partindo de turmas" }
-        - { id: b, texto: "INNER JOIN" }
+        - { id: b, texto: "CREATE TABLE" }
         - { id: c, texto: "DELETE" }
-        - { id: d, texto: "CREATE TABLE" }
+        - { id: d, texto: "INNER JOIN" }
       resposta_correta: a
       explicacao: "O INNER JOIN esconderia justamente as turmas vazias."
     - id: q5
       tipo: multipla_escolha
       enunciado: "Como encontrar exatamente as turmas SEM nenhum aluno?"
       opcoes:
-        - { id: a, texto: "LEFT JOIN combinado com WHERE ... IS NULL" }
+        - { id: a, texto: "Apenas ORDER BY" }
         - { id: b, texto: "INNER JOIN com WHERE" }
-        - { id: c, texto: "Apenas ORDER BY" }
+        - { id: c, texto: "LEFT JOIN combinado com WHERE ... IS NULL" }
         - { id: d, texto: "Não é possível" }
-      resposta_correta: a
+      resposta_correta: c
       explicacao: "O LEFT traz todas; o IS NULL filtra só as que ficaram sem par."
     - id: q6
       tipo: multipla_escolha
       enunciado: "Por que COUNT(*) dá resultado errado ao contar alunos por turma com LEFT JOIN?"
       opcoes:
-        - { id: a, texto: "Porque a linha da turma vazia existe, então COUNT(*) conta 1 em vez de 0" }
+        - { id: a, texto: "Não dá resultado errado" }
         - { id: b, texto: "Porque COUNT não funciona com JOIN" }
-        - { id: c, texto: "Porque o LEFT JOIN duplica linhas" }
-        - { id: d, texto: "Não dá resultado errado" }
-      resposta_correta: a
+        - { id: c, texto: "Porque a linha da turma vazia existe, então COUNT(*) conta 1 em vez de 0" }
+        - { id: d, texto: "Porque o LEFT JOIN duplica linhas" }
+      resposta_correta: c
       explicacao: "A solução é contar uma coluna da tabela da direita, como COUNT(estudantes.id)."
     - id: q7
       tipo: multipla_escolha
       enunciado: "O que COUNT(estudantes.id) faz com valores NULL?"
       opcoes:
-        - { id: a, texto: "Ignora os NULL, contando apenas os valores reais" }
-        - { id: b, texto: "Conta os NULL como se fossem zero" }
-        - { id: c, texto: "Dá erro" }
+        - { id: a, texto: "Dá erro" }
+        - { id: b, texto: "Ignora os NULL, contando apenas os valores reais" }
+        - { id: c, texto: "Conta os NULL como se fossem zero" }
         - { id: d, texto: "Conta todos igualmente" }
-      resposta_correta: a
+      resposta_correta: b
       explicacao: "É justamente por isso que a turma vazia passa a aparecer com 0."
     - id: q8
       tipo: multipla_escolha
       enunciado: "Em um relatório gerencial, por que ver os registros SEM par costuma ser importante?"
       opcoes:
         - { id: a, texto: "Porque é ali que estão os problemas: turmas vazias, produtos sem venda, clientes sem pedido" }
-        - { id: b, texto: "Não é importante" }
-        - { id: c, texto: "Porque deixa o relatório maior" }
-        - { id: d, texto: "Só por curiosidade" }
+        - { id: b, texto: "Só por curiosidade" }
+        - { id: c, texto: "Não é importante" }
+        - { id: d, texto: "Porque deixa o relatório maior" }
       resposta_correta: a
       explicacao: "Muitas decisões dependem de enxergar exatamente o que está faltando."
 ---

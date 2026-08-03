@@ -47,78 +47,78 @@ quiz:
       enunciado: "Qual operador compara se dois valores são iguais em Java?"
       opcoes:
         - { id: a, texto: "==" }
-        - { id: b, texto: "=" }
-        - { id: c, texto: "equals" }
-        - { id: d, texto: "<>" }
+        - { id: b, texto: "equals" }
+        - { id: c, texto: "<>" }
+        - { id: d, texto: "=" }
       resposta_correta: a
       explicacao: "== compara; um único = atribui um valor a uma variável. Confundir os dois é o erro mais comum de iniciante."
     - id: q2
       tipo: multipla_escolha
       enunciado: "Qual o resultado de 7 / 2 quando os dois são int?"
       opcoes:
-        - { id: a, texto: "3 — a parte decimal é descartada" }
-        - { id: b, texto: "3.5" }
-        - { id: c, texto: "4" }
-        - { id: d, texto: "Erro de compilação" }
-      resposta_correta: a
+        - { id: a, texto: "4" }
+        - { id: b, texto: "Erro de compilação" }
+        - { id: c, texto: "3 — a parte decimal é descartada" }
+        - { id: d, texto: "3.5" }
+      resposta_correta: c
       explicacao: "Divisão entre inteiros dá inteiro. O 0.5 é simplesmente jogado fora, sem arredondar."
     - id: q3
       tipo: multipla_escolha
       enunciado: "O que o operador % (módulo) retorna?"
       opcoes:
-        - { id: a, texto: "O resto da divisão" }
-        - { id: b, texto: "A porcentagem de um número" }
-        - { id: c, texto: "A soma dos dois números" }
+        - { id: a, texto: "A porcentagem de um número" }
+        - { id: b, texto: "A soma dos dois números" }
+        - { id: c, texto: "O resto da divisão" }
         - { id: d, texto: "Sempre zero" }
-      resposta_correta: a
+      resposta_correta: c
       explicacao: "10 % 3 dá 1, porque 3 cabe 3 vezes em 10 e sobra 1."
     - id: q4
       tipo: multipla_escolha
       enunciado: "Como saber se um número é par usando o operador %?"
       opcoes:
-        - { id: a, texto: "Testando se numero % 2 == 0" }
-        - { id: b, texto: "Testando se numero % 2 == 1" }
-        - { id: c, texto: "Testando se numero / 2 == 0" }
-        - { id: d, texto: "Não é possível" }
-      resposta_correta: a
+        - { id: a, texto: "Testando se numero % 2 == 1" }
+        - { id: b, texto: "Testando se numero / 2 == 0" }
+        - { id: c, texto: "Não é possível" }
+        - { id: d, texto: "Testando se numero % 2 == 0" }
+      resposta_correta: d
       explicacao: "Se o resto da divisão por 2 é zero, o número é par. É um truque muito usado."
     - id: q5
       tipo: multipla_escolha
       enunciado: "Qual operador significa 'diferente de' em Java?"
       opcoes:
-        - { id: a, texto: "!=" }
-        - { id: b, texto: "<>" }
-        - { id: c, texto: "=/=" }
-        - { id: d, texto: "NOT" }
-      resposta_correta: a
+        - { id: a, texto: "NOT" }
+        - { id: b, texto: "!=" }
+        - { id: c, texto: "<>" }
+        - { id: d, texto: "=/=" }
+      resposta_correta: b
       explicacao: "O ponto de exclamação significa negação em Java, então != é 'não igual'."
     - id: q6
       tipo: multipla_escolha
       enunciado: "Qual é o resultado de uma comparação como (a > b)?"
       opcoes:
-        - { id: a, texto: "Um boolean: true ou false" }
-        - { id: b, texto: "Um número inteiro" }
-        - { id: c, texto: "Um texto" }
-        - { id: d, texto: "Sempre true" }
-      resposta_correta: a
+        - { id: a, texto: "Um número inteiro" }
+        - { id: b, texto: "Um texto" }
+        - { id: c, texto: "Sempre true" }
+        - { id: d, texto: "Um boolean: true ou false" }
+      resposta_correta: d
       explicacao: "Toda comparação devolve um boolean, e é isso que usamos depois no if."
     - id: q7
       tipo: multipla_escolha
       enunciado: "Como fazer 10 / 3 resultar em 3.333 em vez de 3?"
       opcoes:
-        - { id: a, texto: "Fazendo pelo menos um dos números ser double, por exemplo (double) a / b" }
-        - { id: b, texto: "Usando % em vez de /" }
+        - { id: a, texto: "Usando % em vez de /" }
+        - { id: b, texto: "Fazendo pelo menos um dos números ser double, por exemplo (double) a / b" }
         - { id: c, texto: "Não é possível em Java" }
         - { id: d, texto: "Trocando / por //" }
-      resposta_correta: a
+      resposta_correta: b
       explicacao: "Se um dos lados é double, o Java faz a divisão com casas decimais."
     - id: q8
       tipo: multipla_escolha
       enunciado: "Por que System.out.println(\"Soma: \" + a + b); com a=10 e b=3 mostra 'Soma: 103'?"
       opcoes:
         - { id: a, texto: "Porque o + vira concatenação de texto e junta os números como se fossem letras" }
-        - { id: b, texto: "Porque a soma está errada" }
-        - { id: c, texto: "Porque o Java soma da direita para a esquerda" }
+        - { id: b, texto: "Porque o Java soma da direita para a esquerda" }
+        - { id: c, texto: "Porque a soma está errada" }
         - { id: d, texto: "Porque falta um ponto e vírgula" }
       resposta_correta: a
       explicacao: "É preciso usar parênteses: (\"Soma: \" + (a + b)), para a conta acontecer primeiro."

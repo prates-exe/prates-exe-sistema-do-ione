@@ -27,21 +27,21 @@ quiz:
       tipo: multipla_escolha
       enunciado: "O que significa a sigla SQL?"
       opcoes:
-        - { id: a, texto: "Structured Query Language (Linguagem de Consulta Estruturada)" }
-        - { id: b, texto: "Sistema de Questões Lógicas" }
-        - { id: c, texto: "Simple Query List" }
-        - { id: d, texto: "Software de Quadros Lineares" }
-      resposta_correta: a
+        - { id: a, texto: "Sistema de Questões Lógicas" }
+        - { id: b, texto: "Software de Quadros Lineares" }
+        - { id: c, texto: "Structured Query Language (Linguagem de Consulta Estruturada)" }
+        - { id: d, texto: "Simple Query List" }
+      resposta_correta: c
       explicacao: "SQL é a linguagem usada para conversar com bancos de dados relacionais."
     - id: q2
       tipo: multipla_escolha
       enunciado: "Qual comando SQL cria a estrutura de uma nova tabela?"
       opcoes:
-        - { id: a, texto: "CREATE TABLE" }
-        - { id: b, texto: "INSERT INTO" }
+        - { id: a, texto: "INSERT INTO" }
+        - { id: b, texto: "NEW TABLE" }
         - { id: c, texto: "SELECT" }
-        - { id: d, texto: "NEW TABLE" }
-      resposta_correta: a
+        - { id: d, texto: "CREATE TABLE" }
+      resposta_correta: d
       explicacao: "CREATE TABLE define a estrutura. INSERT INTO coloca dados nela depois."
     - id: q3
       tipo: multipla_escolha
@@ -57,51 +57,51 @@ quiz:
       tipo: multipla_escolha
       enunciado: "Em uma tabela, o que representa cada LINHA?"
       opcoes:
-        - { id: a, texto: "Um registro completo — por exemplo, todos os dados de um aluno" }
-        - { id: b, texto: "Uma característica, como 'nome'" }
-        - { id: c, texto: "O nome da tabela" }
+        - { id: a, texto: "O nome da tabela" }
+        - { id: b, texto: "Um registro completo — por exemplo, todos os dados de um aluno" }
+        - { id: c, texto: "Uma característica, como 'nome'" }
         - { id: d, texto: "O banco de dados inteiro" }
-      resposta_correta: a
+      resposta_correta: b
       explicacao: "Linha = registro (uma entidade completa). Coluna = atributo (uma característica)."
     - id: q5
       tipo: multipla_escolha
       enunciado: "Em uma tabela, o que representa cada COLUNA?"
       opcoes:
-        - { id: a, texto: "Um atributo — uma característica que todos os registros têm" }
-        - { id: b, texto: "Um registro completo" }
-        - { id: c, texto: "Uma consulta salva" }
-        - { id: d, texto: "Um usuário do sistema" }
-      resposta_correta: a
+        - { id: a, texto: "Um usuário do sistema" }
+        - { id: b, texto: "Uma consulta salva" }
+        - { id: c, texto: "Um atributo — uma característica que todos os registros têm" }
+        - { id: d, texto: "Um registro completo" }
+      resposta_correta: c
       explicacao: "A coluna 'idade' é um atributo: todos os alunos têm uma idade."
     - id: q6
       tipo: multipla_escolha
       enunciado: "O que é o 'campo' em uma tabela?"
       opcoes:
-        - { id: a, texto: "O cruzamento de uma linha com uma coluna — um dado específico" }
-        - { id: b, texto: "O nome da tabela" }
-        - { id: c, texto: "Um sinônimo de tabela" }
+        - { id: a, texto: "Um sinônimo de tabela" }
+        - { id: b, texto: "O cruzamento de uma linha com uma coluna — um dado específico" }
+        - { id: c, texto: "O nome da tabela" }
         - { id: d, texto: "O programa que gerencia o banco" }
-      resposta_correta: a
+      resposta_correta: b
       explicacao: "A idade do aluno João, especificamente, é um campo."
     - id: q7
       tipo: multipla_escolha
       enunciado: "Qual erro de sintaxe existe em: CREATE TABLE alunos (id INTEGER, nome VARCHAR(100)"
       opcoes:
         - { id: a, texto: "Falta fechar o parêntese e o ponto e vírgula no final" }
-        - { id: b, texto: "Não pode ter duas colunas" }
-        - { id: c, texto: "VARCHAR não existe" }
-        - { id: d, texto: "Não há erro nenhum" }
+        - { id: b, texto: "Não há erro nenhum" }
+        - { id: c, texto: "Não pode ter duas colunas" }
+        - { id: d, texto: "VARCHAR não existe" }
       resposta_correta: a
       explicacao: "Todo CREATE TABLE fecha os parênteses e termina com ponto e vírgula."
     - id: q8
       tipo: multipla_escolha
       enunciado: "Depois de criar uma tabela vazia, o que acontece se você rodar SELECT * nela?"
       opcoes:
-        - { id: a, texto: "Ela aparece sem nenhuma linha — o que confirma que foi criada corretamente" }
+        - { id: a, texto: "A tabela é apagada" }
         - { id: b, texto: "Dá erro, porque tabela vazia não pode ser consultada" }
-        - { id: c, texto: "O banco cria linhas automaticamente" }
-        - { id: d, texto: "A tabela é apagada" }
-      resposta_correta: a
+        - { id: c, texto: "Ela aparece sem nenhuma linha — o que confirma que foi criada corretamente" }
+        - { id: d, texto: "O banco cria linhas automaticamente" }
+      resposta_correta: c
       explicacao: "Uma tabela recém-criada existe, mas está vazia até você usar INSERT."
 ---
 

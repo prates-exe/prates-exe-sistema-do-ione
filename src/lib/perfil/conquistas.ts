@@ -15,21 +15,36 @@ export function montarConquistas(params: {
   const conquistas: Conquista[] = RANKS.map((rank) => ({
     id: `rank-${rank.nome}`,
     titulo: rank.nome,
-    descricao: rank.minimo === 0 ? "Comece sua jornada" : `Alcance ${rank.minimo} pontos`,
+    descricao:
+      rank.minimo === 0 ? rank.descricao : `${rank.descricao} · ${rank.minimo} pontos`,
     desbloqueada: params.pontosTotais >= rank.minimo,
   }));
 
-  conquistas.push({
-    id: "primeira-aula",
-    titulo: "Primeiros passos",
-    descricao: "Conclua sua primeira aula",
-    desbloqueada: params.totalAulasConcluidas >= 1,
-  });
+  conquistas.push(
+    {
+      id: "primeira-aula",
+      titulo: "Primeiros passos",
+      descricao: "Conclua sua primeira aula",
+      desbloqueada: params.totalAulasConcluidas >= 1,
+    },
+    {
+      id: "cinco-aulas",
+      titulo: "Pegando o ritmo",
+      descricao: "Conclua 5 aulas",
+      desbloqueada: params.totalAulasConcluidas >= 5,
+    },
+    {
+      id: "quinze-aulas",
+      titulo: "Isso já é hábito",
+      descricao: "Conclua 15 aulas",
+      desbloqueada: params.totalAulasConcluidas >= 15,
+    }
+  );
 
   for (const trilha of params.trilhas) {
     conquistas.push({
       id: `trilha-${trilha.slug}`,
-      titulo: `Mestre em ${trilha.nome}`,
+      titulo: `${trilha.nome}: fim de linha`,
       descricao: `Conclua todas as aulas publicadas de ${trilha.nome}`,
       desbloqueada: trilha.completa,
     });

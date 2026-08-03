@@ -4,7 +4,7 @@ mes_numero: 3
 numero_sequencial: 22
 duracao_minutos: 25
 tipo_sandbox: code
-publicado: true
+publicado: false
 exercicio_inicial: |
   class Main {
     // Este metodo FUNCIONA, mas esta escrito de forma pessima.
@@ -39,30 +39,30 @@ quiz:
       tipo: multipla_escolha
       enunciado: "O que é refatorar um código?"
       opcoes:
-        - { id: a, texto: "Melhorar a forma como está escrito sem mudar o que ele faz" }
-        - { id: b, texto: "Adicionar funcionalidades novas" }
-        - { id: c, texto: "Corrigir um erro" }
+        - { id: a, texto: "Corrigir um erro" }
+        - { id: b, texto: "Melhorar a forma como está escrito sem mudar o que ele faz" }
+        - { id: c, texto: "Adicionar funcionalidades novas" }
         - { id: d, texto: "Apagar e reescrever do zero" }
-      resposta_correta: a
+      resposta_correta: b
       explicacao: "Refatorar mantém o comportamento idêntico e melhora a estrutura."
     - id: q2
       tipo: multipla_escolha
       enunciado: "Por que refatorar, se o código já funciona?"
       opcoes:
-        - { id: a, texto: "Porque código confuso é difícil de corrigir e evoluir depois" }
-        - { id: b, texto: "Porque deixa o app mais rápido sempre" }
-        - { id: c, texto: "Porque o compilador exige" }
-        - { id: d, texto: "Não vale a pena refatorar" }
-      resposta_correta: a
+        - { id: a, texto: "Não vale a pena refatorar" }
+        - { id: b, texto: "Porque código confuso é difícil de corrigir e evoluir depois" }
+        - { id: c, texto: "Porque deixa o app mais rápido sempre" }
+        - { id: d, texto: "Porque o compilador exige" }
+      resposta_correta: b
       explicacao: "O custo do código ruim aparece na manutenção, não no dia em que foi escrito."
     - id: q3
       tipo: multipla_escolha
       enunciado: "Qual é o problema de um método chamado 'f' com parâmetros 'p' e 'a'?"
       opcoes:
         - { id: a, texto: "Os nomes não dizem nada; quem lê precisa decifrar o código para entender" }
-        - { id: b, texto: "Nomes curtos não compilam" }
-        - { id: c, texto: "Deixa o programa lento" }
-        - { id: d, texto: "Nenhum problema" }
+        - { id: b, texto: "Deixa o programa lento" }
+        - { id: c, texto: "Nenhum problema" }
+        - { id: d, texto: "Nomes curtos não compilam" }
       resposta_correta: a
       explicacao: "classificarImc(peso, altura) se explica sozinho."
     - id: q4
@@ -71,8 +71,8 @@ quiz:
       opcoes:
         - { id: a, texto: "Reduz o nível de indentação e deixa a sequência de faixas visível" }
         - { id: b, texto: "É mais rápido de executar" }
-        - { id: c, texto: "Permite mais condições" }
-        - { id: d, texto: "Nenhuma vantagem" }
+        - { id: c, texto: "Nenhuma vantagem" }
+        - { id: d, texto: "Permite mais condições" }
       resposta_correta: a
       explicacao: "Aninhamento profundo é um dos maiores inimigos da legibilidade."
     - id: q5
@@ -99,21 +99,21 @@ quiz:
       tipo: multipla_escolha
       enunciado: "Para que serve organizar as classes em pacotes?"
       opcoes:
-        - { id: a, texto: "Agrupar arquivos por responsabilidade, facilitando encontrar as coisas quando o projeto cresce" }
-        - { id: b, texto: "Deixar o app mais rápido" }
+        - { id: a, texto: "Deixar o app mais rápido" }
+        - { id: b, texto: "Nenhuma finalidade prática" }
         - { id: c, texto: "Reduzir o tamanho do APK" }
-        - { id: d, texto: "Nenhuma finalidade prática" }
-      resposta_correta: a
+        - { id: d, texto: "Agrupar arquivos por responsabilidade, facilitando encontrar as coisas quando o projeto cresce" }
+      resposta_correta: d
       explicacao: "Telas, modelos e utilitários em pacotes separados é a organização mais comum."
     - id: q8
       tipo: multipla_escolha
       enunciado: "O que é um 'code review'?"
       opcoes:
-        - { id: a, texto: "Outra pessoa lê o seu código e dá sugestões antes que ele seja considerado pronto" }
-        - { id: b, texto: "Rodar o app para ver se funciona" }
-        - { id: c, texto: "Apagar o código antigo" }
-        - { id: d, texto: "Um tipo de teste automático" }
-      resposta_correta: a
+        - { id: a, texto: "Um tipo de teste automático" }
+        - { id: b, texto: "Apagar o código antigo" }
+        - { id: c, texto: "Outra pessoa lê o seu código e dá sugestões antes que ele seja considerado pronto" }
+        - { id: d, texto: "Rodar o app para ver se funciona" }
+      resposta_correta: c
       explicacao: "É prática padrão no mercado — e é o que a turma vai fazer no Code Review coletivo."
 ---
 

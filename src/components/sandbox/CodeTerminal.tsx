@@ -95,7 +95,7 @@ export function CodeTerminal({
 
   function aoMudar(novoValor: string) {
     setValor(novoValor);
-    scheduleSave(novoValor, 2000);
+    scheduleSave(novoValor, 800);
   }
 
   async function executar() {
@@ -147,7 +147,6 @@ export function CodeTerminal({
               {
                 aluno_id: alunoId,
                 aula_id: aulaId,
-                status: "em_andamento",
                 exercicio_completo: true,
               },
               { onConflict: "aluno_id,aula_id" }

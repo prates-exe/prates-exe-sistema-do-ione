@@ -4,7 +4,7 @@ mes_numero: 3
 numero_sequencial: 13
 duracao_minutos: 25
 tipo_sandbox: sql
-publicado: true
+publicado: false
 exercicio_inicial: |
   -- Aula 1 do 3º trimestre — um script completo, do zero ao relatorio.
   -- Voce vai usar DDL, DML e DQL na mesma atividade.
@@ -45,71 +45,71 @@ quiz:
       tipo: multipla_escolha
       enunciado: "Qual é a ordem lógica de trabalho ao montar um banco?"
       opcoes:
-        - { id: a, texto: "Criar a estrutura, inserir os dados e então consultar" }
+        - { id: a, texto: "A ordem é indiferente" }
         - { id: b, texto: "Consultar, criar e depois inserir" }
-        - { id: c, texto: "Inserir antes de criar a tabela" }
-        - { id: d, texto: "A ordem é indiferente" }
-      resposta_correta: a
+        - { id: c, texto: "Criar a estrutura, inserir os dados e então consultar" }
+        - { id: d, texto: "Inserir antes de criar a tabela" }
+      resposta_correta: c
       explicacao: "Sem estrutura não há onde inserir; sem dados não há o que consultar."
     - id: q3
       tipo: multipla_escolha
       enunciado: "Qual comando remove linhas mantendo a tabela no banco?"
       opcoes:
-        - { id: a, texto: "DELETE" }
-        - { id: b, texto: "DROP TABLE" }
-        - { id: c, texto: "CREATE TABLE" }
-        - { id: d, texto: "SELECT" }
-      resposta_correta: a
+        - { id: a, texto: "SELECT" }
+        - { id: b, texto: "CREATE TABLE" }
+        - { id: c, texto: "DELETE" }
+        - { id: d, texto: "DROP TABLE" }
+      resposta_correta: c
       explicacao: "DROP TABLE elimina a tabela inteira; DELETE só tira linhas."
     - id: q4
       tipo: multipla_escolha
       enunciado: "Qual é o risco de um UPDATE sem WHERE?"
       opcoes:
-        - { id: a, texto: "Alterar todas as linhas da tabela de uma vez" }
-        - { id: b, texto: "Não alterar nada" }
+        - { id: a, texto: "Não alterar nada" }
+        - { id: b, texto: "Alterar todas as linhas da tabela de uma vez" }
         - { id: c, texto: "Apagar a tabela" }
         - { id: d, texto: "Criar linhas novas" }
-      resposta_correta: a
+      resposta_correta: b
       explicacao: "Sem filtro, o comando não tem limite — é um dos erros mais caros que existem."
     - id: q5
       tipo: multipla_escolha
       enunciado: "Qual a ordem correta de escrita de uma consulta completa?"
       opcoes:
         - { id: a, texto: "SELECT, FROM, WHERE, GROUP BY, ORDER BY" }
-        - { id: b, texto: "FROM, SELECT, ORDER BY, WHERE" }
-        - { id: c, texto: "WHERE, SELECT, FROM, GROUP BY" }
-        - { id: d, texto: "A ordem não importa" }
+        - { id: b, texto: "WHERE, SELECT, FROM, GROUP BY" }
+        - { id: c, texto: "A ordem não importa" }
+        - { id: d, texto: "FROM, SELECT, ORDER BY, WHERE" }
       resposta_correta: a
       explicacao: "Essa sequência é fixa em SQL e cai em prova."
     - id: q6
       tipo: multipla_escolha
       enunciado: "Para contar quantos livros existem por autor, o que você usa?"
       opcoes:
-        - { id: a, texto: "COUNT com GROUP BY autor" }
-        - { id: b, texto: "Apenas ORDER BY" }
-        - { id: c, texto: "DELETE com WHERE" }
-        - { id: d, texto: "CREATE TABLE" }
-      resposta_correta: a
+        - { id: a, texto: "CREATE TABLE" }
+        - { id: b, texto: "DELETE com WHERE" }
+        - { id: c, texto: "Apenas ORDER BY" }
+        - { id: d, texto: "COUNT com GROUP BY autor" }
+      resposta_correta: d
       explicacao: "O GROUP BY separa por autor e o COUNT conta dentro de cada grupo."
     - id: q7
       tipo: multipla_escolha
       enunciado: "Por que guardar 'disponivel' como 1 e 0 em vez de texto 'sim' e 'nao'?"
       opcoes:
-        - { id: a, texto: "Fica padronizado e evita variações de escrita como Sim, SIM, s, sim" }
-        - { id: b, texto: "Porque texto não pode ser guardado" }
-        - { id: c, texto: "Porque números ocupam mais espaço" }
-        - { id: d, texto: "Não faz diferença nenhuma" }
-      resposta_correta: a
+        - { id: a, texto: "Porque texto não pode ser guardado" }
+        - { id: b, texto: "Fica padronizado e evita variações de escrita como Sim, SIM, s, sim" }
+        - { id: c, texto: "Não faz diferença nenhuma" }
+        - { id: d, texto: "Porque números ocupam mais espaço" }
+      resposta_correta: b
       explicacao: "Padronização é o que garante que os filtros funcionem sempre."
     - id: q8
       tipo: multipla_escolha
       enunciado: "Antes de rodar um DELETE, qual é a prática segura?"
       opcoes:
-        - { id: a, texto: "Rodar um SELECT com o mesmo WHERE para conferir o que será afetado" }
-        - { id: b, texto: "Apagar a tabela e recriar" }
+        - { id: a, texto: "Apagar a tabela e recriar" }
+        - { id: b, texto: "Nunca usar DELETE" }
         - { id: c, texto: "Rodar sem WHERE, é mais rápido" }
-        - { id: d, texto: "Nunca usar DELETE" }
-      resposta_correta: a
+        - { id: d, texto: "Rodar um SELECT com o mesmo WHERE para conferir o que será afetado" }
+      resposta_correta: d
       explicacao: "Conferir antes de alterar é a regra de ouro do trabalho com dados."
 ---
 

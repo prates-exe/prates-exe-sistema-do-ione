@@ -4,7 +4,7 @@ mes_numero: 3
 numero_sequencial: 23
 duracao_minutos: 25
 tipo_sandbox: code
-publicado: true
+publicado: false
 exercicio_inicial: |
   class Main {
     public static void main(String[] args) {
@@ -36,81 +36,81 @@ quiz:
       tipo: multipla_escolha
       enunciado: "Por que desempenho importa mais em celular do que em computador?"
       opcoes:
-        - { id: a, texto: "Porque o celular tem menos recursos e depende de bateria" }
+        - { id: a, texto: "Porque a tela é menor" }
         - { id: b, texto: "Porque celulares não têm processador" }
-        - { id: c, texto: "Não importa mais" }
-        - { id: d, texto: "Porque a tela é menor" }
-      resposta_correta: a
+        - { id: c, texto: "Porque o celular tem menos recursos e depende de bateria" }
+        - { id: d, texto: "Não importa mais" }
+      resposta_correta: c
       explicacao: "Processamento desnecessário consome bateria e trava aparelhos mais simples."
     - id: q2
       tipo: multipla_escolha
       enunciado: "Por que concatenar String dentro de um laço é ineficiente?"
       opcoes:
-        - { id: a, texto: "Porque String é imutável: cada concatenação cria um novo objeto na memória" }
-        - { id: b, texto: "Porque o laço fica infinito" }
-        - { id: c, texto: "Porque String não aceita o operador +" }
-        - { id: d, texto: "Não é ineficiente" }
-      resposta_correta: a
+        - { id: a, texto: "Não é ineficiente" }
+        - { id: b, texto: "Porque String não aceita o operador +" }
+        - { id: c, texto: "Porque String é imutável: cada concatenação cria um novo objeto na memória" }
+        - { id: d, texto: "Porque o laço fica infinito" }
+      resposta_correta: c
       explicacao: "Com poucos itens não se nota; com milhares, o app engasga."
     - id: q3
       tipo: multipla_escolha
       enunciado: "Qual classe é indicada para montar textos dentro de laços?"
       opcoes:
-        - { id: a, texto: "StringBuilder" }
-        - { id: b, texto: "Integer" }
+        - { id: a, texto: "Math" }
+        - { id: b, texto: "StringBuilder" }
         - { id: c, texto: "ArrayList" }
-        - { id: d, texto: "Math" }
-      resposta_correta: a
+        - { id: d, texto: "Integer" }
+      resposta_correta: b
       explicacao: "Ela acumula o texto em um só objeto, em vez de criar um novo a cada volta."
     - id: q4
       tipo: multipla_escolha
       enunciado: "Por que a RecyclerView economiza recursos em listas longas?"
       opcoes:
         - { id: a, texto: "Porque reaproveita as views que saem da tela, criando apenas as visíveis" }
-        - { id: b, texto: "Porque carrega tudo de uma vez" }
-        - { id: c, texto: "Porque não usa Adapter" }
-        - { id: d, texto: "Ela não economiza" }
+        - { id: b, texto: "Ela não economiza" }
+        - { id: c, texto: "Porque carrega tudo de uma vez" }
+        - { id: d, texto: "Porque não usa Adapter" }
       resposta_correta: a
       explicacao: "Uma lista de mil itens não cria mil componentes."
     - id: q5
       tipo: multipla_escolha
       enunciado: "O que mais consome bateria em um aplicativo típico?"
       opcoes:
-        - { id: a, texto: "Uso constante de rede, GPS e sensores" }
-        - { id: b, texto: "A quantidade de linhas de código" }
-        - { id: c, texto: "O tamanho do arquivo XML" }
+        - { id: a, texto: "A quantidade de linhas de código" }
+        - { id: b, texto: "O tamanho do arquivo XML" }
+        - { id: c, texto: "Uso constante de rede, GPS e sensores" }
         - { id: d, texto: "A quantidade de comentários" }
-      resposta_correta: a
+      resposta_correta: c
       explicacao: "Rádio, GPS e sensores são os grandes consumidores; a CPU vem depois."
     - id: q6
       tipo: multipla_escolha
       enunciado: "Qual é a boa prática ao usar o GPS?"
       opcoes:
-        - { id: a, texto: "Ligar apenas quando necessário e desligar assim que obtiver a informação" }
-        - { id: b, texto: "Manter sempre ligado, por garantia" }
-        - { id: c, texto: "Ligar no onCreate e nunca desligar" }
-        - { id: d, texto: "Nunca usar GPS" }
-      resposta_correta: a
+        - { id: a, texto: "Manter sempre ligado, por garantia" }
+        - { id: b, texto: "Nunca usar GPS" }
+        - { id: c, texto: "Ligar apenas quando necessário e desligar assim que obtiver a informação" }
+        - { id: d, texto: "Ligar no onCreate e nunca desligar" }
+      resposta_correta: c
       explicacao: "GPS ligado em segundo plano é uma das principais causas de bateria drenada."
     - id: q7
       tipo: multipla_escolha
       enunciado: "Por que evitar buscar os mesmos dados da internet repetidamente?"
       opcoes:
-        - { id: a, texto: "Porque gasta bateria, dados móveis e deixa o app mais lento sem necessidade" }
-        - { id: b, texto: "Porque a API pode ficar com raiva" }
-        - { id: c, texto: "Porque não é possível repetir requisições" }
-        - { id: d, texto: "Não há problema em repetir" }
-      resposta_correta: a
+        - { id: a, texto: "Porque não é possível repetir requisições" }
+        - { id: b, texto: "Não há problema em repetir" }
+        - { id: c, texto: "Porque a API pode ficar com raiva" }
+        - { id: d, texto: "Porque gasta bateria, dados móveis e deixa o app mais lento sem necessidade" }
+      resposta_correta: d
       explicacao: "Guardar localmente o que já foi buscado (cache) resolve os três problemas."
     - id: q8
       tipo: multipla_escolha
       enunciado: "Qual é a ordem correta de prioridades ao otimizar?"
       opcoes:
-        - { id: a, texto: "Primeiro fazer funcionar e ficar legível; depois medir e otimizar o que realmente é lento" }
-        - { id: b, texto: "Otimizar tudo desde a primeira linha" }
+        - { id: a, texto: "Otimizar tudo desde a primeira linha" }
+        - { id: b, texto: "Primeiro fazer funcionar e ficar legível; depois medir e otimizar o que realmente é lento" }
         - { id: c, texto: "Nunca otimizar" }
         - { id: d, texto: "Otimizar antes de escrever o código" }
-      resposta_correta: a
+      resposta_correta: b
       explicacao: "Otimizar no escuro deixa o código ilegível sem ganho real."
 ---
 

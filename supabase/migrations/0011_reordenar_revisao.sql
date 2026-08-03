@@ -1,4 +1,4 @@
--- Sistema do Ione — a revisão precisa aparecer primeiro na lista do aluno
+-- Bitlab — a revisão precisa aparecer primeiro na lista do aluno
 -- (é o que ele deve fazer agora) e as divisões por trimestre precisam ficar
 -- visíveis, não escondidas atrás de um "Mês 7" genérico.
 --

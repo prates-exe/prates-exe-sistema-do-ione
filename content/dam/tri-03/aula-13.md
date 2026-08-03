@@ -4,7 +4,7 @@ mes_numero: 3
 numero_sequencial: 27
 duracao_minutos: 25
 tipo_sandbox: android
-publicado: true
+publicado: false
 layout_inicial: |
   <LinearLayout
       xmlns:android="http://schemas.android.com/apk/res/android"
@@ -53,20 +53,20 @@ quiz:
       tipo: multipla_escolha
       enunciado: "Qual é a sequência correta dentro de um método de clique?"
       opcoes:
-        - { id: a, texto: "Ler os campos, validar, processar e mostrar o retorno" }
-        - { id: b, texto: "Mostrar o retorno antes de ler os campos" }
-        - { id: c, texto: "Processar antes de ler" }
-        - { id: d, texto: "A ordem não importa" }
-      resposta_correta: a
+        - { id: a, texto: "A ordem não importa" }
+        - { id: b, texto: "Ler os campos, validar, processar e mostrar o retorno" }
+        - { id: c, texto: "Mostrar o retorno antes de ler os campos" }
+        - { id: d, texto: "Processar antes de ler" }
+      resposta_correta: b
       explicacao: "Validar entre ler e processar evita a maior parte dos travamentos."
     - id: q2
       tipo: multipla_escolha
       enunciado: "Por que validar ANTES de converter o texto em número?"
       opcoes:
         - { id: a, texto: "Porque evita a exceção antes que ela aconteça, em vez de só capturá-la" }
-        - { id: b, texto: "Porque validar é mais rápido" }
-        - { id: c, texto: "Não é preciso validar" }
-        - { id: d, texto: "Porque o Android exige" }
+        - { id: b, texto: "Porque o Android exige" }
+        - { id: c, texto: "Porque validar é mais rápido" }
+        - { id: d, texto: "Não é preciso validar" }
       resposta_correta: a
       explicacao: "Validar e tratar são complementares, mas prevenir é melhor."
     - id: q3
@@ -74,28 +74,28 @@ quiz:
       enunciado: "O que o 'return' antecipado faz em um método de validação?"
       opcoes:
         - { id: a, texto: "Interrompe o método ali mesmo, impedindo que o restante rode com dados inválidos" }
-        - { id: b, texto: "Reinicia o aplicativo" }
-        - { id: c, texto: "Devolve o valor zero" }
-        - { id: d, texto: "Não faz nada em métodos void" }
+        - { id: b, texto: "Não faz nada em métodos void" }
+        - { id: c, texto: "Reinicia o aplicativo" }
+        - { id: d, texto: "Devolve o valor zero" }
       resposta_correta: a
       explicacao: "É um padrão muito usado: valida, avisa e sai."
     - id: q4
       tipo: multipla_escolha
       enunciado: "Qual mensagem de erro é melhor para um campo vazio?"
       opcoes:
-        - { id: a, texto: "\"Preencha o nome do produto\"" }
+        - { id: a, texto: "Nenhuma mensagem" }
         - { id: b, texto: "\"Erro\"" }
         - { id: c, texto: "\"NullPointerException\"" }
-        - { id: d, texto: "Nenhuma mensagem" }
-      resposta_correta: a
+        - { id: d, texto: "\"Preencha o nome do produto\"" }
+      resposta_correta: d
       explicacao: "Diz o que houve e o que fazer — a lição da aula de acessibilidade."
     - id: q5
       tipo: multipla_escolha
       enunciado: "Ao revisar o projeto, o que verificar na interface?"
       opcoes:
         - { id: a, texto: "Rótulos claros, dicas nos campos, contraste adequado e retorno após as ações" }
-        - { id: b, texto: "Apenas se as cores são bonitas" }
-        - { id: c, texto: "Apenas o número de telas" }
+        - { id: b, texto: "Apenas o número de telas" }
+        - { id: c, texto: "Apenas se as cores são bonitas" }
         - { id: d, texto: "Nada, interface não se revisa" }
       resposta_correta: a
       explicacao: "É a lista das aulas 1 a 4 deste trimestre."
@@ -103,21 +103,21 @@ quiz:
       tipo: multipla_escolha
       enunciado: "Por que testar os casos extremos antes de entregar?"
       opcoes:
-        - { id: a, texto: "Porque é neles que o app quebra, e o usuário vai encontrá-los" }
-        - { id: b, texto: "Para gastar tempo" }
-        - { id: c, texto: "Porque o caminho feliz nunca funciona" }
+        - { id: a, texto: "Para gastar tempo" }
+        - { id: b, texto: "Porque o caminho feliz nunca funciona" }
+        - { id: c, texto: "Porque é neles que o app quebra, e o usuário vai encontrá-los" }
         - { id: d, texto: "Não é necessário" }
-      resposta_correta: a
+      resposta_correta: c
       explicacao: "Campo vazio, texto onde se espera número, valor zero: sempre teste esses."
     - id: q7
       tipo: multipla_escolha
       enunciado: "O que caracteriza um projeto pronto para apresentar?"
       opcoes:
-        - { id: a, texto: "Funciona, trata erros, tem interface clara, está documentado e foi testado" }
-        - { id: b, texto: "Apenas compila sem erro" }
-        - { id: c, texto: "Tem muitas telas" }
-        - { id: d, texto: "Tem muitas linhas de código" }
-      resposta_correta: a
+        - { id: a, texto: "Apenas compila sem erro" }
+        - { id: b, texto: "Funciona, trata erros, tem interface clara, está documentado e foi testado" }
+        - { id: c, texto: "Tem muitas linhas de código" }
+        - { id: d, texto: "Tem muitas telas" }
+      resposta_correta: b
       explicacao: "É a soma de tudo que você viu neste trimestre."
     - id: q8
       tipo: multipla_escolha
@@ -125,8 +125,8 @@ quiz:
       opcoes:
         - { id: a, texto: "Pedir a um colega que use o app sem instruções e observar onde ele trava" }
         - { id: b, texto: "Testar sozinho, do jeito que você sabe que funciona" }
-        - { id: c, texto: "Não testar para não achar problemas" }
-        - { id: d, texto: "Apenas ler o código" }
+        - { id: c, texto: "Apenas ler o código" }
+        - { id: d, texto: "Não testar para não achar problemas" }
       resposta_correta: a
       explicacao: "É exatamente o objetivo dos testes cruzados previstos no planejamento."
 ---

@@ -4,7 +4,7 @@ mes_numero: 3
 numero_sequencial: 16
 duracao_minutos: 25
 tipo_sandbox: android
-publicado: true
+publicado: false
 layout_inicial: |
   <LinearLayout
       xmlns:android="http://schemas.android.com/apk/res/android"
@@ -57,80 +57,80 @@ quiz:
       enunciado: "O que significa um layout ser responsivo?"
       opcoes:
         - { id: a, texto: "Adaptar-se bem a diferentes tamanhos e orientações de tela" }
-        - { id: b, texto: "Responder rápido aos toques" }
-        - { id: c, texto: "Ter muitas cores" }
-        - { id: d, texto: "Funcionar sem internet" }
+        - { id: b, texto: "Funcionar sem internet" }
+        - { id: c, texto: "Responder rápido aos toques" }
+        - { id: d, texto: "Ter muitas cores" }
       resposta_correta: a
       explicacao: "Celulares variam muito de tamanho — o layout precisa dar conta de todos."
     - id: q2
       tipo: multipla_escolha
       enunciado: "Qual a diferença entre match_parent e wrap_content?"
       opcoes:
-        - { id: a, texto: "match_parent ocupa todo o espaço disponível; wrap_content ocupa apenas o necessário para o conteúdo" }
+        - { id: a, texto: "wrap_content ocupa a tela inteira" }
         - { id: b, texto: "São a mesma coisa" }
-        - { id: c, texto: "match_parent é só para textos" }
-        - { id: d, texto: "wrap_content ocupa a tela inteira" }
-      resposta_correta: a
+        - { id: c, texto: "match_parent ocupa todo o espaço disponível; wrap_content ocupa apenas o necessário para o conteúdo" }
+        - { id: d, texto: "match_parent é só para textos" }
+      resposta_correta: c
       explicacao: "É a decisão mais básica de layout no Android."
     - id: q3
       tipo: multipla_escolha
       enunciado: "Por que definir larguras fixas em pixels é uma má prática?"
       opcoes:
-        - { id: a, texto: "Porque o que cabe em uma tela grande estoura ou sobra em uma pequena" }
-        - { id: b, texto: "Porque pixels não existem no Android" }
-        - { id: c, texto: "Porque deixa o app lento" }
+        - { id: a, texto: "Porque deixa o app lento" }
+        - { id: b, texto: "Porque o que cabe em uma tela grande estoura ou sobra em uma pequena" }
+        - { id: c, texto: "Porque pixels não existem no Android" }
         - { id: d, texto: "Não é má prática" }
-      resposta_correta: a
+      resposta_correta: b
       explicacao: "Larguras fixas quebram assim que o aparelho muda."
     - id: q4
       tipo: multipla_escolha
       enunciado: "O que acontece com um layout horizontal em uma tela estreita?"
       opcoes:
-        - { id: a, texto: "Os elementos podem ficar espremidos ou sair da área visível" }
-        - { id: b, texto: "Ele vira vertical automaticamente" }
-        - { id: c, texto: "O app fecha" }
+        - { id: a, texto: "O app fecha" }
+        - { id: b, texto: "Os elementos podem ficar espremidos ou sair da área visível" }
+        - { id: c, texto: "Ele vira vertical automaticamente" }
         - { id: d, texto: "Nada muda" }
-      resposta_correta: a
+      resposta_correta: b
       explicacao: "Por isso formulários costumam ser empilhados na vertical."
     - id: q5
       tipo: multipla_escolha
       enunciado: "O que acontece com a Activity quando o usuário gira o celular?"
       opcoes:
         - { id: a, texto: "Por padrão ela é destruída e recriada, passando de novo pelo onCreate" }
-        - { id: b, texto: "Nada acontece" }
-        - { id: c, texto: "O app é encerrado" }
-        - { id: d, texto: "A tela congela" }
+        - { id: b, texto: "A tela congela" }
+        - { id: c, texto: "Nada acontece" }
+        - { id: d, texto: "O app é encerrado" }
       resposta_correta: a
       explicacao: "É por isso que dados não salvos podem se perder ao girar a tela."
     - id: q6
       tipo: multipla_escolha
       enunciado: "Como evitar perder o que o usuário digitou ao girar a tela?"
       opcoes:
-        - { id: a, texto: "Salvando os dados antes da destruição, por exemplo no onPause" }
-        - { id: b, texto: "Impedindo o usuário de girar" }
-        - { id: c, texto: "Não é possível evitar" }
-        - { id: d, texto: "Removendo os campos de texto" }
-      resposta_correta: a
+        - { id: a, texto: "Impedindo o usuário de girar" }
+        - { id: b, texto: "Não é possível evitar" }
+        - { id: c, texto: "Removendo os campos de texto" }
+        - { id: d, texto: "Salvando os dados antes da destruição, por exemplo no onPause" }
+      resposta_correta: d
       explicacao: "É a mesma lição do ciclo de vida: salve no onPause."
     - id: q7
       tipo: multipla_escolha
       enunciado: "Em uma tela de formulário, qual orientação de LinearLayout costuma funcionar melhor?"
       opcoes:
-        - { id: a, texto: "vertical, empilhando os campos um sob o outro" }
+        - { id: a, texto: "Tanto faz" }
         - { id: b, texto: "horizontal, tudo lado a lado" }
-        - { id: c, texto: "Tanto faz" }
+        - { id: c, texto: "vertical, empilhando os campos um sob o outro" }
         - { id: d, texto: "Nenhuma das duas" }
-      resposta_correta: a
+      resposta_correta: c
       explicacao: "Campos lado a lado ficam estreitos demais para digitar em um celular."
     - id: q8
       tipo: multipla_escolha
       enunciado: "Por que testar o app em mais de um tamanho de tela?"
       opcoes:
-        - { id: a, texto: "Porque um layout que parece perfeito em um aparelho pode quebrar em outro" }
-        - { id: b, texto: "Porque é exigência da Play Store" }
-        - { id: c, texto: "Para gastar mais tempo" }
-        - { id: d, texto: "Não é necessário" }
-      resposta_correta: a
+        - { id: a, texto: "Não é necessário" }
+        - { id: b, texto: "Para gastar mais tempo" }
+        - { id: c, texto: "Porque um layout que parece perfeito em um aparelho pode quebrar em outro" }
+        - { id: d, texto: "Porque é exigência da Play Store" }
+      resposta_correta: c
       explicacao: "O aparelho do desenvolvedor nunca representa todos os usuários."
 ---
 

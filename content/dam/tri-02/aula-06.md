@@ -54,40 +54,40 @@ quiz:
       tipo: multipla_escolha
       enunciado: "Como descobrir se um número é par?"
       opcoes:
-        - { id: a, texto: "Testando se numero % 2 == 0" }
-        - { id: b, texto: "Testando se numero / 2 == 0" }
-        - { id: c, texto: "Testando se numero > 2" }
-        - { id: d, texto: "Não é possível" }
-      resposta_correta: a
+        - { id: a, texto: "Testando se numero / 2 == 0" }
+        - { id: b, texto: "Testando se numero > 2" }
+        - { id: c, texto: "Não é possível" }
+        - { id: d, texto: "Testando se numero % 2 == 0" }
+      resposta_correta: d
       explicacao: "O resto da divisão por 2 é zero apenas para números pares."
     - id: q2
       tipo: multipla_escolha
       enunciado: "Por que (nota1 + nota2 + nota3) / 3 precisa dos parênteses?"
       opcoes:
-        - { id: a, texto: "Sem eles, só a nota3 seria dividida por 3, por causa da precedência" }
-        - { id: b, texto: "Os parênteses são opcionais" }
+        - { id: a, texto: "Os parênteses são opcionais" }
+        - { id: b, texto: "Para deixar mais bonito" }
         - { id: c, texto: "Sem eles o código não compila" }
-        - { id: d, texto: "Para deixar mais bonito" }
-      resposta_correta: a
+        - { id: d, texto: "Sem eles, só a nota3 seria dividida por 3, por causa da precedência" }
+      resposta_correta: d
       explicacao: "Divisão tem precedência sobre soma, então é preciso somar tudo primeiro."
     - id: q3
       tipo: multipla_escolha
       enunciado: "Se as notas fossem int em vez de double, o que aconteceria com a média?"
       opcoes:
-        - { id: a, texto: "A parte decimal seria descartada, dando um resultado errado" }
-        - { id: b, texto: "Nada mudaria" }
-        - { id: c, texto: "O programa não compilaria" }
-        - { id: d, texto: "A média seria arredondada para cima" }
-      resposta_correta: a
+        - { id: a, texto: "Nada mudaria" }
+        - { id: b, texto: "O programa não compilaria" }
+        - { id: c, texto: "A média seria arredondada para cima" }
+        - { id: d, texto: "A parte decimal seria descartada, dando um resultado errado" }
+      resposta_correta: d
       explicacao: "É a divisão inteira da Aula 2 — por isso médias sempre usam double."
     - id: q4
       tipo: multipla_escolha
       enunciado: "Para achar o maior entre três números com if, quantas comparações no mínimo são necessárias?"
       opcoes:
         - { id: a, texto: "Duas — compara o primeiro par e depois o vencedor com o terceiro" }
-        - { id: b, texto: "Uma só" }
+        - { id: b, texto: "Nenhuma, o Java descobre sozinho" }
         - { id: c, texto: "Seis" }
-        - { id: d, texto: "Nenhuma, o Java descobre sozinho" }
+        - { id: d, texto: "Uma só" }
       resposta_correta: a
       explicacao: "É o mesmo raciocínio de um torneio: dois se enfrentam, o vencedor enfrenta o terceiro."
     - id: q5
@@ -95,40 +95,40 @@ quiz:
       enunciado: "Qual é a fórmula do IMC?"
       opcoes:
         - { id: a, texto: "peso dividido pela altura ao quadrado" }
-        - { id: b, texto: "peso multiplicado pela altura" }
-        - { id: c, texto: "altura dividida pelo peso" }
-        - { id: d, texto: "peso mais altura" }
+        - { id: b, texto: "peso mais altura" }
+        - { id: c, texto: "peso multiplicado pela altura" }
+        - { id: d, texto: "altura dividida pelo peso" }
       resposta_correta: a
       explicacao: "IMC = peso / (altura * altura)."
     - id: q6
       tipo: multipla_escolha
       enunciado: "Por que escrever peso / altura * altura (sem parênteses) dá resultado errado?"
       opcoes:
-        - { id: a, texto: "Porque o Java divide primeiro e depois multiplica, em vez de elevar ao quadrado" }
+        - { id: a, texto: "Porque altura é double" }
         - { id: b, texto: "Porque não compila" }
-        - { id: c, texto: "Porque altura é double" }
+        - { id: c, texto: "Porque o Java divide primeiro e depois multiplica, em vez de elevar ao quadrado" }
         - { id: d, texto: "Não dá errado" }
-      resposta_correta: a
+      resposta_correta: c
       explicacao: "Divisão e multiplicação têm a mesma precedência e são resolvidas da esquerda para a direita."
     - id: q7
       tipo: multipla_escolha
       enunciado: "Ao classificar faixas de IMC com else if, qual cuidado é essencial?"
       opcoes:
-        - { id: a, texto: "Colocar as condições em ordem, sem deixar faixas se sobreporem" }
+        - { id: a, texto: "Testar sempre do maior para o menor apenas" }
         - { id: b, texto: "Usar sempre || entre elas" }
-        - { id: c, texto: "Testar sempre do maior para o menor apenas" }
+        - { id: c, texto: "Colocar as condições em ordem, sem deixar faixas se sobreporem" }
         - { id: d, texto: "Não usar else" }
-      resposta_correta: a
+      resposta_correta: c
       explicacao: "É a mesma lição da Aula 4: o Java para na primeira condição verdadeira."
     - id: q8
       tipo: multipla_escolha
       enunciado: "Qual é a melhor forma de testar se um programa com if está correto?"
       opcoes:
-        - { id: a, texto: "Rodar com valores diferentes que caiam em cada um dos caminhos possíveis" }
-        - { id: b, texto: "Rodar uma vez só e confiar" }
+        - { id: a, texto: "Rodar uma vez só e confiar" }
+        - { id: b, texto: "Apagar o else" }
         - { id: c, texto: "Ler o código sem executar" }
-        - { id: d, texto: "Apagar o else" }
-      resposta_correta: a
+        - { id: d, texto: "Rodar com valores diferentes que caiam em cada um dos caminhos possíveis" }
+      resposta_correta: d
       explicacao: "Um if só está testado de verdade quando você viu todos os caminhos funcionando."
 ---
 

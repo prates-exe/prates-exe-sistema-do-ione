@@ -29,51 +29,51 @@ quiz:
       tipo: multipla_escolha
       enunciado: "Para guardar a data de nascimento de um aluno, o tipo mais adequado é:"
       opcoes:
-        - { id: a, texto: "DATE" }
+        - { id: a, texto: "INT" }
         - { id: b, texto: "VARCHAR" }
-        - { id: c, texto: "INT" }
-        - { id: d, texto: "BOOLEAN" }
-      resposta_correta: a
+        - { id: c, texto: "BOOLEAN" }
+        - { id: d, texto: "DATE" }
+      resposta_correta: d
       explicacao: "DATE faz o banco entender aquilo como data de verdade, permitindo comparar e ordenar por período."
     - id: q2
       tipo: multipla_escolha
       enunciado: "Para guardar o nome completo de um cliente, o tipo mais adequado é:"
       opcoes:
-        - { id: a, texto: "VARCHAR" }
-        - { id: b, texto: "INT" }
+        - { id: a, texto: "PRIMARY KEY" }
+        - { id: b, texto: "VARCHAR" }
         - { id: c, texto: "DATE" }
-        - { id: d, texto: "PRIMARY KEY" }
-      resposta_correta: a
+        - { id: d, texto: "INT" }
+      resposta_correta: b
       explicacao: "Texto usa VARCHAR. PRIMARY KEY não é um tipo, é uma restrição."
     - id: q3
       tipo: multipla_escolha
       enunciado: "Para guardar a quantidade de produtos em estoque, o tipo mais adequado é:"
       opcoes:
-        - { id: a, texto: "INT" }
-        - { id: b, texto: "VARCHAR" }
-        - { id: c, texto: "DATE" }
+        - { id: a, texto: "VARCHAR" }
+        - { id: b, texto: "DATE" }
+        - { id: c, texto: "INT" }
         - { id: d, texto: "TEXT longo" }
-      resposta_correta: a
+      resposta_correta: c
       explicacao: "Quantidade é contagem: número inteiro, ou seja, INT."
     - id: q4
       tipo: multipla_escolha
       enunciado: "O que significa o número em VARCHAR(100)?"
       opcoes:
-        - { id: a, texto: "O limite máximo de caracteres que aquela coluna aceita" }
-        - { id: b, texto: "A quantidade de linhas da tabela" }
-        - { id: c, texto: "O número da coluna na tabela" }
-        - { id: d, texto: "O valor inicial da coluna" }
-      resposta_correta: a
+        - { id: a, texto: "O número da coluna na tabela" }
+        - { id: b, texto: "O valor inicial da coluna" }
+        - { id: c, texto: "A quantidade de linhas da tabela" }
+        - { id: d, texto: "O limite máximo de caracteres que aquela coluna aceita" }
+      resposta_correta: d
       explicacao: "VARCHAR(100) aceita textos de até 100 caracteres."
     - id: q5
       tipo: multipla_escolha
       enunciado: "Por que guardar uma data como VARCHAR (texto) é uma má ideia?"
       opcoes:
-        - { id: a, texto: "O banco não entende como data, então não consegue ordenar nem comparar períodos corretamente" }
+        - { id: a, texto: "Porque o VARCHAR não aceita números" }
         - { id: b, texto: "Porque ocupa menos espaço" }
-        - { id: c, texto: "Porque o VARCHAR não aceita números" }
-        - { id: d, texto: "Não é má ideia, tanto faz" }
-      resposta_correta: a
+        - { id: c, texto: "Não é má ideia, tanto faz" }
+        - { id: d, texto: "O banco não entende como data, então não consegue ordenar nem comparar períodos corretamente" }
+      resposta_correta: d
       explicacao: "Como texto, '02/01/2026' viria antes de '10/12/2025' na ordenação — o que está errado."
     - id: q6
       tipo: multipla_escolha
@@ -89,21 +89,21 @@ quiz:
       tipo: multipla_escolha
       enunciado: "Escolher o tipo errado para uma coluna causa qual problema?"
       opcoes:
-        - { id: a, texto: "Perda de integridade: o banco aceita valores sem sentido e as consultas ficam incorretas" }
-        - { id: b, texto: "Nenhum, o banco corrige sozinho" }
-        - { id: c, texto: "A tabela é apagada" }
-        - { id: d, texto: "Só afeta a cor da tela" }
-      resposta_correta: a
+        - { id: a, texto: "Só afeta a cor da tela" }
+        - { id: b, texto: "A tabela é apagada" }
+        - { id: c, texto: "Nenhum, o banco corrige sozinho" }
+        - { id: d, texto: "Perda de integridade: o banco aceita valores sem sentido e as consultas ficam incorretas" }
+      resposta_correta: d
       explicacao: "O tipo é a primeira linha de defesa da qualidade dos dados."
     - id: q8
       tipo: multipla_escolha
       enunciado: "Em CREATE TABLE livros (id INTEGER PRIMARY KEY, titulo VARCHAR(150)), quantas colunas a tabela terá?"
       opcoes:
-        - { id: a, texto: "Duas: id e titulo" }
-        - { id: b, texto: "Uma só" }
-        - { id: c, texto: "Três" }
-        - { id: d, texto: "Nenhuma, porque está vazia" }
-      resposta_correta: a
+        - { id: a, texto: "Uma só" }
+        - { id: b, texto: "Duas: id e titulo" }
+        - { id: c, texto: "Nenhuma, porque está vazia" }
+        - { id: d, texto: "Três" }
+      resposta_correta: b
       explicacao: "Cada item separado por vírgula dentro dos parênteses é uma coluna."
 ---
 

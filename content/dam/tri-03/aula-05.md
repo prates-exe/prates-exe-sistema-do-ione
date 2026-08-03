@@ -4,7 +4,7 @@ mes_numero: 3
 numero_sequencial: 19
 duracao_minutos: 25
 tipo_sandbox: code
-publicado: true
+publicado: false
 exercicio_inicial: |
   class Main {
     // Metodo que queremos testar
@@ -52,67 +52,67 @@ quiz:
       opcoes:
         - { id: a, texto: "Para encontrar falhas antes que o usuário encontre" }
         - { id: b, texto: "Porque é exigência do compilador" }
-        - { id: c, texto: "Para deixar o app maior" }
-        - { id: d, texto: "Não é necessário testar" }
+        - { id: c, texto: "Não é necessário testar" }
+        - { id: d, texto: "Para deixar o app maior" }
       resposta_correta: a
       explicacao: "Corrigir um erro durante o desenvolvimento é muito mais barato do que depois de publicado."
     - id: q2
       tipo: multipla_escolha
       enunciado: "O que é um caso de teste?"
       opcoes:
-        - { id: a, texto: "Uma entrada específica com o resultado que se espera obter" }
-        - { id: b, texto: "Um erro encontrado no app" }
-        - { id: c, texto: "Um tipo de variável" }
-        - { id: d, texto: "Uma tela do aplicativo" }
-      resposta_correta: a
+        - { id: a, texto: "Um tipo de variável" }
+        - { id: b, texto: "Uma entrada específica com o resultado que se espera obter" }
+        - { id: c, texto: "Uma tela do aplicativo" }
+        - { id: d, texto: "Um erro encontrado no app" }
+      resposta_correta: b
       explicacao: "Sem o resultado esperado definido antes, não dá para dizer se o teste passou."
     - id: q3
       tipo: multipla_escolha
       enunciado: "O que são valores de fronteira e por que testá-los?"
       opcoes:
-        - { id: a, texto: "Valores no limite exato de uma condição, onde a maioria dos erros se esconde" }
-        - { id: b, texto: "Os maiores valores possíveis" }
-        - { id: c, texto: "Valores aleatórios" }
+        - { id: a, texto: "Os maiores valores possíveis" }
+        - { id: b, texto: "Valores aleatórios" }
+        - { id: c, texto: "Valores no limite exato de uma condição, onde a maioria dos erros se esconde" }
         - { id: d, texto: "Valores que não importam" }
-      resposta_correta: a
+      resposta_correta: c
       explicacao: "Trocar < por <= é um erro comum, e só aparece testando exatamente o limite."
     - id: q4
       tipo: multipla_escolha
       enunciado: "Testar apenas o 'caminho feliz' é suficiente?"
       opcoes:
-        - { id: a, texto: "Não — é preciso testar também entradas inválidas e casos extremos" }
+        - { id: a, texto: "Sim, entradas inválidas não acontecem" }
         - { id: b, texto: "Sim, se funcionar uma vez está pronto" }
-        - { id: c, texto: "Sim, entradas inválidas não acontecem" }
-        - { id: d, texto: "Depende do tamanho do app" }
-      resposta_correta: a
+        - { id: c, texto: "Depende do tamanho do app" }
+        - { id: d, texto: "Não — é preciso testar também entradas inválidas e casos extremos" }
+      resposta_correta: d
       explicacao: "O usuário real vai digitar coisas que você não imaginou."
     - id: q5
       tipo: multipla_escolha
       enunciado: "Qual a diferença entre testar no emulador e em um aparelho real?"
       opcoes:
-        - { id: a, texto: "O aparelho real revela desempenho, toque e condições que o emulador não reproduz bem" }
-        - { id: b, texto: "Não há diferença" }
+        - { id: a, texto: "Não há diferença" }
+        - { id: b, texto: "O aparelho real revela desempenho, toque e condições que o emulador não reproduz bem" }
         - { id: c, texto: "O emulador é sempre mais confiável" }
         - { id: d, texto: "Aparelho real não pode ser usado para testes" }
-      resposta_correta: a
+      resposta_correta: b
       explicacao: "Coisas como lentidão, tamanho do dedo e falta de sinal só aparecem de verdade no aparelho."
     - id: q6
       tipo: multipla_escolha
       enunciado: "O que é teste de regressão?"
       opcoes:
-        - { id: a, texto: "Testar de novo o que já funcionava, para garantir que uma mudança não quebrou nada" }
+        - { id: a, texto: "Apagar os testes antigos" }
         - { id: b, texto: "Testar apenas funções novas" }
-        - { id: c, texto: "Voltar o app para a versão anterior" }
-        - { id: d, texto: "Apagar os testes antigos" }
-      resposta_correta: a
+        - { id: c, texto: "Testar de novo o que já funcionava, para garantir que uma mudança não quebrou nada" }
+        - { id: d, texto: "Voltar o app para a versão anterior" }
+      resposta_correta: c
       explicacao: "É muito comum uma correção em um lugar quebrar outro."
     - id: q7
       tipo: multipla_escolha
       enunciado: "Por que registrar os resultados dos testes?"
       opcoes:
         - { id: a, texto: "Para saber o que já foi verificado e acompanhar a correção das falhas encontradas" }
-        - { id: b, texto: "Só para preencher papel" }
-        - { id: c, texto: "Porque o Android exige" }
+        - { id: b, texto: "Porque o Android exige" }
+        - { id: c, texto: "Só para preencher papel" }
         - { id: d, texto: "Não é preciso registrar" }
       resposta_correta: a
       explicacao: "Sem registro, você testa as mesmas coisas duas vezes e esquece as outras."
@@ -121,9 +121,9 @@ quiz:
       enunciado: "Por que pedir que outra pessoa teste o seu app?"
       opcoes:
         - { id: a, texto: "Porque quem fez conhece o caminho certo e inconscientemente evita os erros" }
-        - { id: b, texto: "Para dividir o trabalho" }
-        - { id: c, texto: "Porque o desenvolvedor não pode testar" }
-        - { id: d, texto: "Não faz diferença" }
+        - { id: b, texto: "Não faz diferença" }
+        - { id: c, texto: "Para dividir o trabalho" }
+        - { id: d, texto: "Porque o desenvolvedor não pode testar" }
       resposta_correta: a
       explicacao: "É por isso que o planejamento prevê testes cruzados entre colegas."
 ---

@@ -58,81 +58,81 @@ quiz:
       tipo: multipla_escolha
       enunciado: "Em um app Android, qual arquivo define O QUE APARECE na tela?"
       opcoes:
-        - { id: a, texto: "O layout XML" }
-        - { id: b, texto: "O MainActivity.java" }
-        - { id: c, texto: "O banco SQLite" }
+        - { id: a, texto: "O banco SQLite" }
+        - { id: b, texto: "O layout XML" }
+        - { id: c, texto: "O MainActivity.java" }
         - { id: d, texto: "O arquivo JSON" }
-      resposta_correta: a
+      resposta_correta: b
       explicacao: "XML define a aparência; Java define o comportamento."
     - id: q2
       tipo: multipla_escolha
       enunciado: "Qual é a sequência correta dentro de um método de clique que faz um cálculo?"
       opcoes:
-        - { id: a, texto: "Ler os campos com findViewById, calcular, e escrever o resultado com setText" }
-        - { id: b, texto: "Escrever o resultado antes de ler os campos" }
-        - { id: c, texto: "Calcular antes de criar o layout" }
-        - { id: d, texto: "Apagar a tela e recriar" }
-      resposta_correta: a
+        - { id: a, texto: "Escrever o resultado antes de ler os campos" }
+        - { id: b, texto: "Ler os campos com findViewById, calcular, e escrever o resultado com setText" }
+        - { id: c, texto: "Apagar a tela e recriar" }
+        - { id: d, texto: "Calcular antes de criar o layout" }
+      resposta_correta: b
       explicacao: "Ler, processar, mostrar — é o padrão de praticamente toda interação."
     - id: q3
       tipo: multipla_escolha
       enunciado: "Por que o texto lido de um EditText precisa ser convertido antes de virar conta?"
       opcoes:
-        - { id: a, texto: "Porque getText devolve texto, e não dá para fazer contas com texto" }
-        - { id: b, texto: "Porque o EditText só aceita letras" }
-        - { id: c, texto: "Não precisa converter" }
-        - { id: d, texto: "Porque o Java não faz divisão" }
-      resposta_correta: a
+        - { id: a, texto: "Porque o Java não faz divisão" }
+        - { id: b, texto: "Não precisa converter" }
+        - { id: c, texto: "Porque getText devolve texto, e não dá para fazer contas com texto" }
+        - { id: d, texto: "Porque o EditText só aceita letras" }
+      resposta_correta: c
       explicacao: "Usamos Double.parseDouble(...) para transformar o texto digitado em número."
     - id: q4
       tipo: multipla_escolha
       enunciado: "Qual a vantagem de separar o cálculo em um método próprio?"
       opcoes:
-        - { id: a, texto: "O código do clique fica legível e o cálculo pode ser reaproveitado e corrigido em um lugar só" }
-        - { id: b, texto: "Deixa o app mais lento" }
+        - { id: a, texto: "Não há vantagem" }
+        - { id: b, texto: "O código do clique fica legível e o cálculo pode ser reaproveitado e corrigido em um lugar só" }
         - { id: c, texto: "É obrigatório no Android" }
-        - { id: d, texto: "Não há vantagem" }
-      resposta_correta: a
+        - { id: d, texto: "Deixa o app mais lento" }
+      resposta_correta: b
       explicacao: "É exatamente o que você viu na Aula 13 sobre métodos."
     - id: q5
       tipo: multipla_escolha
       enunciado: "Se o app precisasse GUARDAR o histórico de IMCs mesmo fechando, o que usaria?"
       opcoes:
-        - { id: a, texto: "SQLite, o banco local do aparelho" }
-        - { id: b, texto: "Uma variável comum" }
+        - { id: a, texto: "Uma variável comum" }
+        - { id: b, texto: "Nada, não é possível" }
         - { id: c, texto: "O arquivo de layout" }
-        - { id: d, texto: "Nada, não é possível" }
-      resposta_correta: a
+        - { id: d, texto: "SQLite, o banco local do aparelho" }
+      resposta_correta: d
       explicacao: "Variáveis somem quando o app fecha; o banco local persiste."
     - id: q6
       tipo: multipla_escolha
       enunciado: "E para MOSTRAR esse histórico em uma lista longa na tela?"
       opcoes:
-        - { id: a, texto: "Uma RecyclerView alimentada por um Adapter" }
-        - { id: b, texto: "Vários TextView criados manualmente" }
-        - { id: c, texto: "Uma Intent" }
-        - { id: d, texto: "Um EditText" }
-      resposta_correta: a
+        - { id: a, texto: "Um EditText" }
+        - { id: b, texto: "Uma Intent" }
+        - { id: c, texto: "Uma RecyclerView alimentada por um Adapter" }
+        - { id: d, texto: "Vários TextView criados manualmente" }
+      resposta_correta: c
       explicacao: "RecyclerView + Adapter é o par padrão para listas no Android."
     - id: q7
       tipo: multipla_escolha
       enunciado: "Em qual método do ciclo de vida seria mais seguro salvar o que o usuário digitou?"
       opcoes:
         - { id: a, texto: "onPause" }
-        - { id: b, texto: "onCreate" }
-        - { id: c, texto: "onResume" }
-        - { id: d, texto: "Nenhum" }
+        - { id: b, texto: "onResume" }
+        - { id: c, texto: "Nenhum" }
+        - { id: d, texto: "onCreate" }
       resposta_correta: a
       explicacao: "É o primeiro aviso de que a tela vai sair da frente, e o mais garantido de executar."
     - id: q8
       tipo: multipla_escolha
       enunciado: "O que este projeto demonstra sobre como um app é construído?"
       opcoes:
-        - { id: a, texto: "Que interface, lógica, métodos e dados trabalham juntos, cada um com seu papel" }
-        - { id: b, texto: "Que tudo deve ficar em um único método" }
-        - { id: c, texto: "Que o layout é opcional" }
-        - { id: d, texto: "Que não é preciso testar" }
-      resposta_correta: a
+        - { id: a, texto: "Que não é preciso testar" }
+        - { id: b, texto: "Que o layout é opcional" }
+        - { id: c, texto: "Que tudo deve ficar em um único método" }
+        - { id: d, texto: "Que interface, lógica, métodos e dados trabalham juntos, cada um com seu papel" }
+      resposta_correta: d
       explicacao: "É a soma de tudo que você viu neste trimestre."
 ---
 

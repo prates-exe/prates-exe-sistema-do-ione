@@ -34,17 +34,29 @@ export default async function ProgressoTurmaPage({
     alunoIds.length > 0 && aulaIds.length > 0
       ? supabase
           .from("progresso_aulas")
-          .select("aluno_id, status, quiz_completo")
+          .select("aluno_id, status, quiz_completo, exercicio_completo")
           .in("aluno_id", alunoIds)
           .in("aula_id", aulaIds)
-      : Promise.resolve({ data: [] as { aluno_id: string; status: string; quiz_completo: boolean }[] }),
+      : Promise.resolve({
+          data: [] as {
+            aluno_id: string;
+            status: string;
+            quiz_completo: boolean;
+            exercicio_completo: boolean;
+          }[],
+        }),
   ]);
 
-  const porAluno = new Map<string, { concluidas: number; quizzesAprovados: number }>();
+  const porAluno = new Map<
+    string,
+    { concluidas: number; quizzesAprovados: number; exerciciosFeitos: number }
+  >();
   for (const p of progresso ?? []) {
-    const atual = porAluno.get(p.aluno_id) ?? { concluidas: 0, quizzesAprovados: 0 };
+    const atual =
+      porAluno.get(p.aluno_id) ?? { concluidas: 0, quizzesAprovados: 0, exerciciosFeitos: 0 };
     if (p.status === "concluida") atual.concluidas++;
     if (p.quiz_completo) atual.quizzesAprovados++;
+    if (p.exercicio_completo) atual.exerciciosFeitos++;
     porAluno.set(p.aluno_id, atual);
   }
 
@@ -59,11 +71,14 @@ export default async function ProgressoTurmaPage({
               <th className="px-4 py-2.5">Aluno</th>
               <th className="px-4 py-2.5">Aulas concluídas</th>
               <th className="px-4 py-2.5">Quizzes aprovados</th>
+              <th className="px-4 py-2.5">Exercícios feitos</th>
             </tr>
           </thead>
           <tbody>
             {perfis?.map((perfil) => {
-              const dados = porAluno.get(perfil.id) ?? { concluidas: 0, quizzesAprovados: 0 };
+              const dados =
+                porAluno.get(perfil.id) ??
+                { concluidas: 0, quizzesAprovados: 0, exerciciosFeitos: 0 };
               const pct = totalAulas > 0 ? Math.round((dados.concluidas / totalAulas) * 100) : 0;
               return (
                 <tr key={perfil.id} className="border-t border-slate-100">
@@ -81,12 +96,15 @@ export default async function ProgressoTurmaPage({
                   <td className="px-4 py-2.5 text-slate-600">
                     {dados.quizzesAprovados} / {totalAulas}
                   </td>
+                  <td className="px-4 py-2.5 text-slate-600">
+                    {dados.exerciciosFeitos} / {totalAulas}
+                  </td>
                 </tr>
               );
             })}
             {perfis?.length === 0 && (
               <tr>
-                <td colSpan={3} className="px-4 py-6 text-center text-slate-500">
+                <td colSpan={4} className="px-4 py-6 text-center text-slate-500">
                   Nenhum aluno nesta turma ainda.
                 </td>
               </tr>

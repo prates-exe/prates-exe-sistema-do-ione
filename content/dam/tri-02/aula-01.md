@@ -35,40 +35,40 @@ quiz:
       tipo: multipla_escolha
       enunciado: "O que é uma variável em programação?"
       opcoes:
-        - { id: a, texto: "Um espaço na memória com um nome, onde guardamos um valor que pode mudar" }
-        - { id: b, texto: "Um comando que apaga dados" }
-        - { id: c, texto: "O nome do arquivo do programa" }
-        - { id: d, texto: "Uma linha de comentário" }
-      resposta_correta: a
+        - { id: a, texto: "Um comando que apaga dados" }
+        - { id: b, texto: "Um espaço na memória com um nome, onde guardamos um valor que pode mudar" }
+        - { id: c, texto: "Uma linha de comentário" }
+        - { id: d, texto: "O nome do arquivo do programa" }
+      resposta_correta: b
       explicacao: "Variável é como uma caixinha com etiqueta: tem nome, tem tipo e guarda um valor."
     - id: q2
       tipo: multipla_escolha
       enunciado: "Qual tipo usamos para guardar um número inteiro, como a idade?"
       opcoes:
         - { id: a, texto: "int" }
-        - { id: b, texto: "double" }
-        - { id: c, texto: "String" }
-        - { id: d, texto: "boolean" }
+        - { id: b, texto: "String" }
+        - { id: c, texto: "boolean" }
+        - { id: d, texto: "double" }
       resposta_correta: a
       explicacao: "int guarda inteiros, sem casas decimais."
     - id: q3
       tipo: multipla_escolha
       enunciado: "Qual tipo usamos para um número com casas decimais, como 1.75?"
       opcoes:
-        - { id: a, texto: "double" }
-        - { id: b, texto: "int" }
-        - { id: c, texto: "char" }
-        - { id: d, texto: "boolean" }
-      resposta_correta: a
+        - { id: a, texto: "boolean" }
+        - { id: b, texto: "char" }
+        - { id: c, texto: "double" }
+        - { id: d, texto: "int" }
+      resposta_correta: c
       explicacao: "double guarda números com parte decimal."
     - id: q4
       tipo: multipla_escolha
       enunciado: "Qual tipo guarda apenas verdadeiro ou falso?"
       opcoes:
         - { id: a, texto: "boolean" }
-        - { id: b, texto: "int" }
-        - { id: c, texto: "String" }
-        - { id: d, texto: "char" }
+        - { id: b, texto: "char" }
+        - { id: c, texto: "int" }
+        - { id: d, texto: "String" }
       resposta_correta: a
       explicacao: "boolean só aceita true ou false."
     - id: q5
@@ -77,19 +77,19 @@ quiz:
       opcoes:
         - { id: a, texto: "Aspas simples são para um único caractere (char); aspas duplas são para texto (String)" }
         - { id: b, texto: "Não há diferença" }
-        - { id: c, texto: "Aspas simples são para números" }
-        - { id: d, texto: "Aspas duplas só funcionam em comentários" }
+        - { id: c, texto: "Aspas duplas só funcionam em comentários" }
+        - { id: d, texto: "Aspas simples são para números" }
       resposta_correta: a
       explicacao: "'A' é um char. \"A\" é uma String. São coisas diferentes para o Java."
     - id: q6
       tipo: multipla_escolha
       enunciado: "Qual destes nomes de variável é INVÁLIDO em Java?"
       opcoes:
-        - { id: a, texto: "2idade" }
-        - { id: b, texto: "idade" }
-        - { id: c, texto: "idadeAluno" }
-        - { id: d, texto: "_idade" }
-      resposta_correta: a
+        - { id: a, texto: "idadeAluno" }
+        - { id: b, texto: "2idade" }
+        - { id: c, texto: "_idade" }
+        - { id: d, texto: "idade" }
+      resposta_correta: b
       explicacao: "Nome de variável não pode começar com número."
     - id: q7
       tipo: multipla_escolha
@@ -105,11 +105,11 @@ quiz:
       tipo: multipla_escolha
       enunciado: "O que o sinal + faz em System.out.println(\"Idade: \" + idade); ?"
       opcoes:
-        - { id: a, texto: "Junta (concatena) o texto com o valor da variável" }
-        - { id: b, texto: "Soma dois números" }
-        - { id: c, texto: "Cria uma variável nova" }
-        - { id: d, texto: "Apaga o texto" }
-      resposta_correta: a
+        - { id: a, texto: "Apaga o texto" }
+        - { id: b, texto: "Cria uma variável nova" }
+        - { id: c, texto: "Junta (concatena) o texto com o valor da variável" }
+        - { id: d, texto: "Soma dois números" }
+      resposta_correta: c
       explicacao: "Quando um dos lados é texto, o + concatena em vez de somar."
 ---
 

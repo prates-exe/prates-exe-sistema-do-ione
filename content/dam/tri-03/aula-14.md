@@ -4,7 +4,7 @@ mes_numero: 3
 numero_sequencial: 28
 duracao_minutos: 25
 tipo_sandbox: none
-publicado: true
+publicado: false
 quiz:
   titulo: "Quiz — Apresentação e carreira"
   nota_minima_aprovacao: 60
@@ -13,50 +13,50 @@ quiz:
       tipo: multipla_escolha
       enunciado: "Por onde se deve começar a apresentação de um projeto?"
       opcoes:
-        - { id: a, texto: "Pelo problema que ele resolve e para quem" }
-        - { id: b, texto: "Pelo código-fonte, linha por linha" }
-        - { id: c, texto: "Pela lista de tecnologias" }
-        - { id: d, texto: "Pelas dificuldades que você teve" }
-      resposta_correta: a
+        - { id: a, texto: "Pela lista de tecnologias" }
+        - { id: b, texto: "Pelas dificuldades que você teve" }
+        - { id: c, texto: "Pelo código-fonte, linha por linha" }
+        - { id: d, texto: "Pelo problema que ele resolve e para quem" }
+      resposta_correta: d
       explicacao: "As pessoas se conectam com o problema; a solução só faz sentido depois dele."
     - id: q2
       tipo: multipla_escolha
       enunciado: "O que é uma demonstração ao vivo bem preparada?"
       opcoes:
-        - { id: a, texto: "Um roteiro curto e ensaiado, mostrando o app funcionando com dados já preparados" }
+        - { id: a, texto: "Apenas ler o código" }
         - { id: b, texto: "Improvisar e ver o que acontece" }
         - { id: c, texto: "Mostrar todas as telas sem ordem" }
-        - { id: d, texto: "Apenas ler o código" }
-      resposta_correta: a
+        - { id: d, texto: "Um roteiro curto e ensaiado, mostrando o app funcionando com dados já preparados" }
+      resposta_correta: d
       explicacao: "Cadastro na hora, com a mão tremendo, é o jeito mais rápido de a demo dar errado."
     - id: q3
       tipo: multipla_escolha
       enunciado: "O que fazer se algo der errado durante a apresentação?"
       opcoes:
-        - { id: a, texto: "Manter a calma, explicar o que deveria acontecer e seguir — ter capturas de tela como reserva ajuda" }
-        - { id: b, texto: "Encerrar a apresentação" }
+        - { id: a, texto: "Fingir que não aconteceu nada" }
+        - { id: b, texto: "Manter a calma, explicar o que deveria acontecer e seguir — ter capturas de tela como reserva ajuda" }
         - { id: c, texto: "Culpar o computador e insistir até funcionar" }
-        - { id: d, texto: "Fingir que não aconteceu nada" }
-      resposta_correta: a
+        - { id: d, texto: "Encerrar a apresentação" }
+      resposta_correta: b
       explicacao: "Saber lidar com imprevisto passa mais profissionalismo do que uma demo perfeita."
     - id: q4
       tipo: multipla_escolha
       enunciado: "Por que citar as limitações do projeto na apresentação?"
       opcoes:
-        - { id: a, texto: "Porque mostra consciência técnica e que você sabe qual seria o próximo passo" }
-        - { id: b, texto: "Porque enfraquece o trabalho" }
-        - { id: c, texto: "Porque é obrigatório por lei" }
-        - { id: d, texto: "Não se deve citar" }
-      resposta_correta: a
+        - { id: a, texto: "Porque é obrigatório por lei" }
+        - { id: b, texto: "Não se deve citar" }
+        - { id: c, texto: "Porque enfraquece o trabalho" }
+        - { id: d, texto: "Porque mostra consciência técnica e que você sabe qual seria o próximo passo" }
+      resposta_correta: d
       explicacao: "Quem conhece os limites do próprio trabalho demonstra domínio, não fraqueza."
     - id: q5
       tipo: multipla_escolha
       enunciado: "O que mais pesa em um portfólio de desenvolvedor iniciante?"
       opcoes:
         - { id: a, texto: "Poucos projetos bem documentados e explicados, em vez de muitos jogados sem contexto" }
-        - { id: b, texto: "A quantidade total de repositórios" }
-        - { id: c, texto: "O número de linhas de código" }
-        - { id: d, texto: "Ter usado muitas tecnologias diferentes" }
+        - { id: b, texto: "Ter usado muitas tecnologias diferentes" }
+        - { id: c, texto: "A quantidade total de repositórios" }
+        - { id: d, texto: "O número de linhas de código" }
       resposta_correta: a
       explicacao: "Qualidade e clareza superam quantidade em qualquer avaliação séria."
     - id: q6
@@ -64,30 +64,30 @@ quiz:
       enunciado: "O que é um projeto pessoal e por que ele importa na carreira?"
       opcoes:
         - { id: a, texto: "Algo que você constrói por conta própria, mostrando iniciativa e capacidade de terminar" }
-        - { id: b, texto: "Um trabalho copiado de um tutorial" }
+        - { id: b, texto: "Não importa" }
         - { id: c, texto: "Um projeto que ninguém pode ver" }
-        - { id: d, texto: "Não importa" }
+        - { id: d, texto: "Um trabalho copiado de um tutorial" }
       resposta_correta: a
       explicacao: "Terminar um projeto até o fim é uma habilidade mais rara do que parece."
     - id: q7
       tipo: multipla_escolha
       enunciado: "Quais caminhos existem na área de desenvolvimento mobile?"
       opcoes:
-        - { id: a, texto: "Desenvolvimento Android e iOS, cross-platform, UX/UI, QA e back-end para apps" }
-        - { id: b, texto: "Apenas programar telas em Android" }
-        - { id: c, texto: "Apenas publicar apps na loja" }
+        - { id: a, texto: "Apenas programar telas em Android" }
+        - { id: b, texto: "Apenas publicar apps na loja" }
+        - { id: c, texto: "Desenvolvimento Android e iOS, cross-platform, UX/UI, QA e back-end para apps" }
         - { id: d, texto: "Somente trabalhar em grandes empresas" }
-      resposta_correta: a
+      resposta_correta: c
       explicacao: "A área é ampla — várias funções envolvem apps sem ser exclusivamente programar."
     - id: q8
       tipo: multipla_escolha
       enunciado: "O que mais ajuda a continuar evoluindo depois do curso?"
       opcoes:
-        - { id: a, texto: "Construir projetos próprios, ler documentação oficial e estudar de forma contínua" }
-        - { id: b, texto: "Esperar alguém ensinar tudo" }
-        - { id: c, texto: "Decorar código de tutoriais" }
-        - { id: d, texto: "Parar de estudar depois de formado" }
-      resposta_correta: a
+        - { id: a, texto: "Esperar alguém ensinar tudo" }
+        - { id: b, texto: "Parar de estudar depois de formado" }
+        - { id: c, texto: "Construir projetos próprios, ler documentação oficial e estudar de forma contínua" }
+        - { id: d, texto: "Decorar código de tutoriais" }
+      resposta_correta: c
       explicacao: "A tecnologia muda rápido; aprender a aprender é a habilidade mais duradoura."
 ---
 

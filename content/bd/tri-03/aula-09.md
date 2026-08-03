@@ -4,7 +4,7 @@ mes_numero: 3
 numero_sequencial: 21
 duracao_minutos: 25
 tipo_sandbox: sql
-publicado: true
+publicado: false
 exercicio_inicial: |
   -- Projeto Integrador — Parte 2: ESTRUTURA E DADOS
   -- Crie a tabela associativa e popule as tres tabelas.
@@ -41,81 +41,81 @@ quiz:
       tipo: multipla_escolha
       enunciado: "Por que a tabela associativa precisa ser criada DEPOIS das outras duas?"
       opcoes:
-        - { id: a, texto: "Porque as chaves estrangeiras dela apontam para tabelas que precisam já existir" }
-        - { id: b, texto: "Por preferência pessoal" }
+        - { id: a, texto: "Por preferência pessoal" }
+        - { id: b, texto: "Porque as chaves estrangeiras dela apontam para tabelas que precisam já existir" }
         - { id: c, texto: "Porque tabelas associativas são menores" }
         - { id: d, texto: "Não precisa, a ordem é indiferente" }
-      resposta_correta: a
+      resposta_correta: b
       explicacao: "A FK referencia uma tabela existente; sem ela, o CREATE falha."
     - id: q2
       tipo: multipla_escolha
       enunciado: "Em que ordem os dados devem ser inseridos?"
       opcoes:
         - { id: a, texto: "Primeiro clientes e jogos, depois as locações que apontam para eles" }
-        - { id: b, texto: "Primeiro as locações" }
-        - { id: c, texto: "Tanto faz" }
-        - { id: d, texto: "Tudo ao mesmo tempo" }
+        - { id: b, texto: "Tanto faz" }
+        - { id: c, texto: "Tudo ao mesmo tempo" }
+        - { id: d, texto: "Primeiro as locações" }
       resposta_correta: a
       explicacao: "A locação aponta para um cliente e um jogo que precisam existir de verdade."
     - id: q3
       tipo: multipla_escolha
       enunciado: "Por que inserir várias linhas em um único INSERT?"
       opcoes:
-        - { id: a, texto: "Deixa o script mais curto e legível, com um comando em vez de dez" }
-        - { id: b, texto: "É a única forma que funciona" }
-        - { id: c, texto: "Insere dados diferentes" }
-        - { id: d, texto: "Não há vantagem" }
-      resposta_correta: a
+        - { id: a, texto: "Insere dados diferentes" }
+        - { id: b, texto: "Não há vantagem" }
+        - { id: c, texto: "É a única forma que funciona" }
+        - { id: d, texto: "Deixa o script mais curto e legível, com um comando em vez de dez" }
+      resposta_correta: d
       explicacao: "VALUES (...), (...), (...); insere várias linhas de uma vez."
     - id: q4
       tipo: multipla_escolha
       enunciado: "Qual formato de data usamos no SQL deste terminal?"
       opcoes:
-        - { id: a, texto: "'2026-08-15', entre aspas, no formato ano-mes-dia" }
-        - { id: b, texto: "15/08/2026 sem aspas" }
-        - { id: c, texto: "Qualquer formato serve" }
-        - { id: d, texto: "Datas não podem ser inseridas" }
-      resposta_correta: a
+        - { id: a, texto: "Datas não podem ser inseridas" }
+        - { id: b, texto: "Qualquer formato serve" }
+        - { id: c, texto: "'2026-08-15', entre aspas, no formato ano-mes-dia" }
+        - { id: d, texto: "15/08/2026 sem aspas" }
+      resposta_correta: c
       explicacao: "O formato ano-mes-dia é o padrão internacional e ordena corretamente."
     - id: q5
       tipo: multipla_escolha
       enunciado: "Por que é importante ter dados de teste VARIADOS?"
       opcoes:
-        - { id: a, texto: "Porque só com variedade os relatórios e agrupamentos revelam algo útil" }
-        - { id: b, texto: "Para o banco ficar maior" }
-        - { id: c, texto: "Não é importante" }
-        - { id: d, texto: "Para gastar mais tempo" }
-      resposta_correta: a
+        - { id: a, texto: "Não é importante" }
+        - { id: b, texto: "Para gastar mais tempo" }
+        - { id: c, texto: "Para o banco ficar maior" }
+        - { id: d, texto: "Porque só com variedade os relatórios e agrupamentos revelam algo útil" }
+      resposta_correta: d
       explicacao: "Se todos os clientes tiverem uma locação só, o ranking não mostra nada."
     - id: q6
       tipo: multipla_escolha
       enunciado: "Por que deixar de propósito um jogo nunca alugado?"
       opcoes:
-        - { id: a, texto: "Para poder testar o LEFT JOIN e encontrar itens sem movimento" }
-        - { id: b, texto: "Por engano" }
+        - { id: a, texto: "Por engano" }
+        - { id: b, texto: "Não faz sentido" }
         - { id: c, texto: "Para o banco ficar incompleto" }
-        - { id: d, texto: "Não faz sentido" }
-      resposta_correta: a
+        - { id: d, texto: "Para poder testar o LEFT JOIN e encontrar itens sem movimento" }
+      resposta_correta: d
       explicacao: "Dados de teste devem cobrir os casos extremos, não só o caminho feliz."
     - id: q7
       tipo: multipla_escolha
       enunciado: "O que acontece se você inserir uma locação com cliente_id que não existe?"
       opcoes:
-        - { id: a, texto: "O relacionamento fica quebrado e essa locação some dos relatórios com INNER JOIN" }
-        - { id: b, texto: "O cliente é criado automaticamente" }
-        - { id: c, texto: "Nada de errado acontece" }
-        - { id: d, texto: "A tabela é apagada" }
-      resposta_correta: a
+        - { id: a, texto: "A tabela é apagada" }
+        - { id: b, texto: "Nada de errado acontece" }
+        - { id: c, texto: "O cliente é criado automaticamente" }
+        - { id: d, texto: "O relacionamento fica quebrado e essa locação some dos relatórios com INNER JOIN" }
+      resposta_correta: d
       explicacao: "É por isso que a ordem de inserção importa."
     - id: q8
       tipo: multipla_escolha
       enunciado: "Por que guardar 'dias' em vez de calcular a diferença entre duas datas?"
       opcoes:
-        - { id: a, texto: "Simplifica o cálculo do valor total, que é dias vezes valor da diária" }
-        - { id: b, texto: "Porque datas não podem ser guardadas" }
-        - { id: c, texto: "Porque ocupa menos espaço" }
+        - { id: a, texto: "Porque datas não podem ser guardadas" }
+        - { id: b, texto: "Porque ocupa menos espaço" }
+        - { id: c, texto: "Simplifica o cálculo do valor total, que é dias vezes valor da diária" }
         - { id: d, texto: "Não há motivo" }
-      resposta_correta: a
+      resposta_correta: c
       explicacao: "É uma decisão de projeto: simplifica agora, e você pode evoluir depois."
 ---
 

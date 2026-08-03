@@ -4,7 +4,7 @@ mes_numero: 3
 numero_sequencial: 19
 duracao_minutos: 25
 tipo_sandbox: sql
-publicado: true
+publicado: false
 exercicio_inicial: |
   -- Aula 7 — consolidando tudo antes do Projeto Integrador.
   -- Um cenario, quatro recursos: JOIN, LEFT JOIN, subconsulta e View.
@@ -38,81 +38,81 @@ quiz:
       tipo: multipla_escolha
       enunciado: "Quando usar INNER JOIN em vez de LEFT JOIN?"
       opcoes:
-        - { id: a, texto: "Quando você só quer os registros que têm correspondência nos dois lados" }
-        - { id: b, texto: "Sempre, o LEFT JOIN é inútil" }
-        - { id: c, texto: "Apenas com três ou mais tabelas" }
-        - { id: d, texto: "Quando quer ver os registros sem par" }
-      resposta_correta: a
+        - { id: a, texto: "Apenas com três ou mais tabelas" }
+        - { id: b, texto: "Quando quer ver os registros sem par" }
+        - { id: c, texto: "Quando você só quer os registros que têm correspondência nos dois lados" }
+        - { id: d, texto: "Sempre, o LEFT JOIN é inútil" }
+      resposta_correta: c
       explicacao: "Para ver quem NÃO tem par, o certo é o LEFT JOIN."
     - id: q2
       tipo: multipla_escolha
       enunciado: "Qual combinação encontra registros sem correspondência?"
       opcoes:
-        - { id: a, texto: "LEFT JOIN com WHERE ... IS NULL" }
-        - { id: b, texto: "INNER JOIN com WHERE" }
-        - { id: c, texto: "GROUP BY com HAVING" }
-        - { id: d, texto: "ORDER BY com DESC" }
-      resposta_correta: a
+        - { id: a, texto: "ORDER BY com DESC" }
+        - { id: b, texto: "GROUP BY com HAVING" }
+        - { id: c, texto: "INNER JOIN com WHERE" }
+        - { id: d, texto: "LEFT JOIN com WHERE ... IS NULL" }
+      resposta_correta: d
       explicacao: "É um dos padrões mais úteis do SQL."
     - id: q3
       tipo: multipla_escolha
       enunciado: "Quando uma subconsulta é a melhor escolha?"
       opcoes:
-        - { id: a, texto: "Quando você só precisa FILTRAR por um valor calculado, sem mostrar colunas da outra tabela" }
-        - { id: b, texto: "Sempre que houver duas tabelas" }
-        - { id: c, texto: "Apenas em views" }
-        - { id: d, texto: "Nunca, o JOIN sempre é melhor" }
-      resposta_correta: a
+        - { id: a, texto: "Apenas em views" }
+        - { id: b, texto: "Nunca, o JOIN sempre é melhor" }
+        - { id: c, texto: "Quando você só precisa FILTRAR por um valor calculado, sem mostrar colunas da outra tabela" }
+        - { id: d, texto: "Sempre que houver duas tabelas" }
+      resposta_correta: c
       explicacao: "Se você precisa MOSTRAR dados da outra tabela, o JOIN é o caminho."
     - id: q4
       tipo: multipla_escolha
       enunciado: "Por que não se pode usar AVG() diretamente dentro do WHERE?"
       opcoes:
-        - { id: a, texto: "Porque o WHERE filtra linha a linha, antes da agregação acontecer" }
-        - { id: b, texto: "Porque AVG só funciona com JOIN" }
-        - { id: c, texto: "Porque AVG não existe" }
-        - { id: d, texto: "Pode usar normalmente" }
-      resposta_correta: a
+        - { id: a, texto: "Porque AVG só funciona com JOIN" }
+        - { id: b, texto: "Porque o WHERE filtra linha a linha, antes da agregação acontecer" }
+        - { id: c, texto: "Pode usar normalmente" }
+        - { id: d, texto: "Porque AVG não existe" }
+      resposta_correta: b
       explicacao: "Por isso a média precisa vir de uma subconsulta."
     - id: q5
       tipo: multipla_escolha
       enunciado: "O que uma View armazena?"
       opcoes:
-        - { id: a, texto: "A consulta, não os dados — por isso está sempre atualizada" }
-        - { id: b, texto: "Uma cópia dos dados" }
+        - { id: a, texto: "Uma cópia dos dados" }
+        - { id: b, texto: "A consulta, não os dados — por isso está sempre atualizada" }
         - { id: c, texto: "Apenas a primeira linha do resultado" }
         - { id: d, texto: "O backup da tabela" }
-      resposta_correta: a
+      resposta_correta: b
       explicacao: "A cada SELECT na view, a consulta original é executada de novo."
     - id: q6
       tipo: multipla_escolha
       enunciado: "É possível fazer uma subconsulta sobre uma View?"
       opcoes:
-        - { id: a, texto: "Sim — a view é usada como se fosse uma tabela" }
+        - { id: a, texto: "Só em bancos NoSQL" }
         - { id: b, texto: "Não, views não aceitam consultas" }
-        - { id: c, texto: "Só com INNER JOIN" }
-        - { id: d, texto: "Só em bancos NoSQL" }
-      resposta_correta: a
+        - { id: c, texto: "Sim — a view é usada como se fosse uma tabela" }
+        - { id: d, texto: "Só com INNER JOIN" }
+      resposta_correta: c
       explicacao: "É isso que permite combinar os recursos e simplificar consultas complexas."
     - id: q7
       tipo: multipla_escolha
       enunciado: "Em um relatório, por que colocar a consulta em uma View?"
       opcoes:
-        - { id: a, texto: "Para reaproveitar por um nome simples e corrigir a regra em um lugar só" }
-        - { id: b, texto: "Para deixar o banco menor" }
-        - { id: c, texto: "Para impedir alterações nos dados" }
-        - { id: d, texto: "Não há vantagem" }
-      resposta_correta: a
+        - { id: a, texto: "Para impedir alterações nos dados" }
+        - { id: b, texto: "Para reaproveitar por um nome simples e corrigir a regra em um lugar só" }
+        - { id: c, texto: "Não há vantagem" }
+        - { id: d, texto: "Para deixar o banco menor" }
+      resposta_correta: b
       explicacao: "É o principal uso de views: relatórios recorrentes."
     - id: q8
       tipo: multipla_escolha
       enunciado: "Qual a ordem de trabalho ao construir um relatório do zero?"
       opcoes:
-        - { id: a, texto: "Escrever e testar a consulta, e só depois transformá-la em view" }
-        - { id: b, texto: "Criar a view primeiro e testar depois" }
-        - { id: c, texto: "Criar a view sem testar" }
+        - { id: a, texto: "Criar a view primeiro e testar depois" }
+        - { id: b, texto: "Criar a view sem testar" }
+        - { id: c, texto: "Escrever e testar a consulta, e só depois transformá-la em view" }
         - { id: d, texto: "Não é preciso testar" }
-      resposta_correta: a
+      resposta_correta: c
       explicacao: "Uma view criada com consulta errada só esconde o erro atrás de um nome bonito."
 ---
 

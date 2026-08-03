@@ -1,4 +1,4 @@
--- Sistema do Ione — o currículo passa a ser organizado por trimestre, não
+-- Bitlab — o currículo passa a ser organizado por trimestre, não
 -- por mês/semana. O aluno vê "Aula 1, Aula 2, ..." em sequência dentro do
 -- trimestre, que é como a professora conduz de fato: cada aula de 50 min do
 -- laboratório equivale a duas aulas do site (DAM 6/semana, BD 4/semana).

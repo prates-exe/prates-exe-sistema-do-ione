@@ -39,59 +39,59 @@ quiz:
       tipo: multipla_escolha
       enunciado: "O que o operador && (E) exige para o resultado ser true?"
       opcoes:
-        - { id: a, texto: "Que as duas condições sejam verdadeiras" }
-        - { id: b, texto: "Que pelo menos uma condição seja verdadeira" }
+        - { id: a, texto: "Nada, sempre retorna true" }
+        - { id: b, texto: "Que as duas condições sejam verdadeiras" }
         - { id: c, texto: "Que nenhuma condição seja verdadeira" }
-        - { id: d, texto: "Nada, sempre retorna true" }
-      resposta_correta: a
+        - { id: d, texto: "Que pelo menos uma condição seja verdadeira" }
+      resposta_correta: b
       explicacao: "&& só é true quando ambos os lados são true."
     - id: q2
       tipo: multipla_escolha
       enunciado: "O que o operador || (OU) exige para o resultado ser true?"
       opcoes:
-        - { id: a, texto: "Que pelo menos uma das condições seja verdadeira" }
-        - { id: b, texto: "Que as duas condições sejam verdadeiras" }
-        - { id: c, texto: "Que as duas sejam falsas" }
-        - { id: d, texto: "Nada, sempre retorna false" }
-      resposta_correta: a
+        - { id: a, texto: "Que as duas sejam falsas" }
+        - { id: b, texto: "Que pelo menos uma das condições seja verdadeira" }
+        - { id: c, texto: "Nada, sempre retorna false" }
+        - { id: d, texto: "Que as duas condições sejam verdadeiras" }
+      resposta_correta: b
       explicacao: "|| é true quando pelo menos um dos lados é true."
     - id: q3
       tipo: multipla_escolha
       enunciado: "O que o operador ! (negação) faz?"
       opcoes:
-        - { id: a, texto: "Inverte o valor: true vira false e false vira true" }
-        - { id: b, texto: "Soma 1 ao valor" }
-        - { id: c, texto: "Transforma em texto" }
+        - { id: a, texto: "Soma 1 ao valor" }
+        - { id: b, texto: "Transforma em texto" }
+        - { id: c, texto: "Inverte o valor: true vira false e false vira true" }
         - { id: d, texto: "Não faz nada" }
-      resposta_correta: a
+      resposta_correta: c
       explicacao: "!true é false, e !false é true."
     - id: q4
       tipo: multipla_escolha
       enunciado: "Com a = true e b = false, quanto vale (a && b)?"
       opcoes:
-        - { id: a, texto: "false" }
-        - { id: b, texto: "true" }
+        - { id: a, texto: "true" }
+        - { id: b, texto: "Depende da ordem" }
         - { id: c, texto: "Dá erro" }
-        - { id: d, texto: "Depende da ordem" }
-      resposta_correta: a
+        - { id: d, texto: "false" }
+      resposta_correta: d
       explicacao: "&& exige os dois verdadeiros; como b é false, o resultado é false."
     - id: q5
       tipo: multipla_escolha
       enunciado: "Com a = true e b = false, quanto vale (a || b)?"
       opcoes:
-        - { id: a, texto: "true" }
-        - { id: b, texto: "false" }
+        - { id: a, texto: "false" }
+        - { id: b, texto: "true" }
         - { id: c, texto: "Dá erro" }
         - { id: d, texto: "Nenhum dos dois" }
-      resposta_correta: a
+      resposta_correta: b
       explicacao: "|| basta um verdadeiro; como a é true, o resultado é true."
     - id: q6
       tipo: multipla_escolha
       enunciado: "Como escrever 'a idade está entre 13 e 17 (inclusive)' em Java?"
       opcoes:
         - { id: a, texto: "idade >= 13 && idade <= 17" }
-        - { id: b, texto: "13 <= idade <= 17" }
-        - { id: c, texto: "idade >= 13 || idade <= 17" }
+        - { id: b, texto: "idade >= 13 || idade <= 17" }
+        - { id: c, texto: "13 <= idade <= 17" }
         - { id: d, texto: "idade == 13..17" }
       resposta_correta: a
       explicacao: "Java não aceita comparação em cadeia como na matemática — é preciso usar && entre duas comparações completas."
@@ -100,8 +100,8 @@ quiz:
       enunciado: "Por que 'idade >= 13 || idade <= 17' está errado para representar uma faixa?"
       opcoes:
         - { id: a, texto: "Porque com || qualquer idade satisfaz pelo menos uma das partes, então dá sempre true" }
-        - { id: b, texto: "Porque || não existe em Java" }
-        - { id: c, texto: "Porque falta ponto e vírgula" }
+        - { id: b, texto: "Porque falta ponto e vírgula" }
+        - { id: c, texto: "Porque || não existe em Java" }
         - { id: d, texto: "Não está errado" }
       resposta_correta: a
       explicacao: "A idade 40 satisfaz '>= 13' e a idade 5 satisfaz '<= 17'. Para faixa, use sempre &&."
@@ -109,11 +109,11 @@ quiz:
       tipo: multipla_escolha
       enunciado: "Em (idade >= 18 && temCarteira), o que acontece se idade for 15?"
       opcoes:
-        - { id: a, texto: "O Java já sabe que o resultado é false e nem chega a olhar temCarteira" }
-        - { id: b, texto: "Ele testa temCarteira mesmo assim" }
-        - { id: c, texto: "Dá erro de execução" }
-        - { id: d, texto: "O resultado vira true" }
-      resposta_correta: a
+        - { id: a, texto: "O resultado vira true" }
+        - { id: b, texto: "Dá erro de execução" }
+        - { id: c, texto: "Ele testa temCarteira mesmo assim" }
+        - { id: d, texto: "O Java já sabe que o resultado é false e nem chega a olhar temCarteira" }
+      resposta_correta: d
       explicacao: "Isso se chama avaliação em curto-circuito: se o primeiro lado do && já é false, o resto é ignorado."
 ---
 

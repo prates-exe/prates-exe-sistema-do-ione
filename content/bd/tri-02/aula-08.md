@@ -29,11 +29,11 @@ quiz:
       tipo: multipla_escolha
       enunciado: "Para que serve a cláusula ORDER BY?"
       opcoes:
-        - { id: a, texto: "Organizar o resultado da consulta em uma ordem definida" }
-        - { id: b, texto: "Filtrar quais linhas aparecem" }
-        - { id: c, texto: "Criar uma tabela nova" }
-        - { id: d, texto: "Apagar registros" }
-      resposta_correta: a
+        - { id: a, texto: "Apagar registros" }
+        - { id: b, texto: "Criar uma tabela nova" }
+        - { id: c, texto: "Filtrar quais linhas aparecem" }
+        - { id: d, texto: "Organizar o resultado da consulta em uma ordem definida" }
+      resposta_correta: d
       explicacao: "Quem filtra é o WHERE; quem ordena é o ORDER BY."
     - id: q2
       tipo: multipla_escolha
@@ -49,61 +49,61 @@ quiz:
       tipo: multipla_escolha
       enunciado: "Qual palavra usamos para ordenar do maior para o menor?"
       opcoes:
-        - { id: a, texto: "DESC" }
-        - { id: b, texto: "ASC" }
-        - { id: c, texto: "DOWN" }
-        - { id: d, texto: "REVERSE" }
-      resposta_correta: a
+        - { id: a, texto: "DOWN" }
+        - { id: b, texto: "REVERSE" }
+        - { id: c, texto: "ASC" }
+        - { id: d, texto: "DESC" }
+      resposta_correta: d
       explicacao: "ASC é crescente (padrão) e DESC é decrescente."
     - id: q4
       tipo: multipla_escolha
       enunciado: "Qual função conta quantos registros existem?"
       opcoes:
-        - { id: a, texto: "COUNT" }
+        - { id: a, texto: "MAX" }
         - { id: b, texto: "SUM" }
         - { id: c, texto: "AVG" }
-        - { id: d, texto: "MAX" }
-      resposta_correta: a
+        - { id: d, texto: "COUNT" }
+      resposta_correta: d
       explicacao: "COUNT conta, SUM soma, AVG calcula média, MAX e MIN pegam maior e menor."
     - id: q5
       tipo: multipla_escolha
       enunciado: "Qual função calcula a MÉDIA de uma coluna numérica?"
       opcoes:
-        - { id: a, texto: "AVG" }
-        - { id: b, texto: "SUM" }
+        - { id: a, texto: "SUM" }
+        - { id: b, texto: "AVG" }
         - { id: c, texto: "COUNT" }
         - { id: d, texto: "MIN" }
-      resposta_correta: a
+      resposta_correta: b
       explicacao: "AVG vem de average, média em inglês."
     - id: q6
       tipo: multipla_escolha
       enunciado: "Para que serve o GROUP BY?"
       opcoes:
-        - { id: a, texto: "Agrupar as linhas por uma coluna, aplicando a função de agregação a cada grupo separadamente" }
-        - { id: b, texto: "Ordenar os resultados" }
-        - { id: c, texto: "Filtrar linhas" }
-        - { id: d, texto: "Criar grupos de usuários do banco" }
-      resposta_correta: a
+        - { id: a, texto: "Criar grupos de usuários do banco" }
+        - { id: b, texto: "Filtrar linhas" }
+        - { id: c, texto: "Ordenar os resultados" }
+        - { id: d, texto: "Agrupar as linhas por uma coluna, aplicando a função de agregação a cada grupo separadamente" }
+      resposta_correta: d
       explicacao: "Em vez de um total único, o GROUP BY dá um total por categoria."
     - id: q7
       tipo: multipla_escolha
       enunciado: "O que a consulta SELECT cidade, SUM(valor) FROM vendas GROUP BY cidade; devolve?"
       opcoes:
-        - { id: a, texto: "O total vendido em cada cidade, uma linha por cidade" }
+        - { id: a, texto: "Apenas a cidade com maior venda" }
         - { id: b, texto: "O total geral de todas as vendas, em uma linha só" }
-        - { id: c, texto: "Todas as vendas, sem resumo" }
-        - { id: d, texto: "Apenas a cidade com maior venda" }
-      resposta_correta: a
+        - { id: c, texto: "O total vendido em cada cidade, uma linha por cidade" }
+        - { id: d, texto: "Todas as vendas, sem resumo" }
+      resposta_correta: c
       explicacao: "O GROUP BY cidade cria um grupo por cidade e a soma é feita dentro de cada grupo."
     - id: q8
       tipo: multipla_escolha
       enunciado: "Quando SELECT, WHERE e ORDER BY aparecem juntos, qual é a ordem correta de escrita?"
       opcoes:
-        - { id: a, texto: "SELECT colunas → FROM tabela → WHERE filtro → ORDER BY critério" }
-        - { id: b, texto: "ORDER BY → WHERE → SELECT → FROM" }
-        - { id: c, texto: "WHERE → SELECT → FROM → ORDER BY" }
-        - { id: d, texto: "A ordem não importa" }
-      resposta_correta: a
+        - { id: a, texto: "WHERE → SELECT → FROM → ORDER BY" }
+        - { id: b, texto: "A ordem não importa" }
+        - { id: c, texto: "ORDER BY → WHERE → SELECT → FROM" }
+        - { id: d, texto: "SELECT colunas → FROM tabela → WHERE filtro → ORDER BY critério" }
+      resposta_correta: d
       explicacao: "Essa ordem é fixa em SQL e cai em prova com frequência."
 ---
 

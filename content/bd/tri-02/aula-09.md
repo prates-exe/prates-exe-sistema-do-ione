@@ -32,11 +32,11 @@ quiz:
       tipo: multipla_escolha
       enunciado: "Para que serve o INNER JOIN?"
       opcoes:
-        - { id: a, texto: "Combinar linhas de duas tabelas relacionadas em um único resultado" }
-        - { id: b, texto: "Criar uma tabela nova" }
-        - { id: c, texto: "Apagar registros duplicados" }
-        - { id: d, texto: "Ordenar o resultado" }
-      resposta_correta: a
+        - { id: a, texto: "Ordenar o resultado" }
+        - { id: b, texto: "Apagar registros duplicados" }
+        - { id: c, texto: "Combinar linhas de duas tabelas relacionadas em um único resultado" }
+        - { id: d, texto: "Criar uma tabela nova" }
+      resposta_correta: c
       explicacao: "O JOIN monta um resultado único juntando informações que estavam separadas."
     - id: q2
       tipo: multipla_escolha
@@ -44,8 +44,8 @@ quiz:
       opcoes:
         - { id: a, texto: "ON" }
         - { id: b, texto: "WHERE" }
-        - { id: c, texto: "GROUP BY" }
-        - { id: d, texto: "AS" }
+        - { id: c, texto: "AS" }
+        - { id: d, texto: "GROUP BY" }
       resposta_correta: a
       explicacao: "O ON diz quais colunas ligam as duas tabelas, normalmente FK = PK."
     - id: q3
@@ -62,21 +62,21 @@ quiz:
       tipo: multipla_escolha
       enunciado: "O que acontece com um item cuja categoria_id é NULL em um INNER JOIN?"
       opcoes:
-        - { id: a, texto: "Ele NÃO aparece no resultado, porque não encontra par na outra tabela" }
-        - { id: b, texto: "Ele aparece com a categoria em branco" }
-        - { id: c, texto: "O comando dá erro" }
+        - { id: a, texto: "O comando dá erro" }
+        - { id: b, texto: "Ele NÃO aparece no resultado, porque não encontra par na outra tabela" }
+        - { id: c, texto: "Ele aparece com a categoria em branco" }
         - { id: d, texto: "Ele aparece duplicado" }
-      resposta_correta: a
+      resposta_correta: b
       explicacao: "O INNER JOIN só traz linhas que têm correspondência dos DOIS lados."
     - id: q5
       tipo: multipla_escolha
       enunciado: "Por que escrevemos itens.nome em vez de só nome em um JOIN?"
       opcoes:
-        - { id: a, texto: "Porque as duas tabelas têm uma coluna chamada nome, e é preciso dizer de qual delas se trata" }
-        - { id: b, texto: "Por questão de estilo apenas" }
-        - { id: c, texto: "Porque o SQL exige o ponto sempre" }
-        - { id: d, texto: "Para deixar a consulta mais lenta" }
-      resposta_correta: a
+        - { id: a, texto: "Porque o SQL exige o ponto sempre" }
+        - { id: b, texto: "Para deixar a consulta mais lenta" }
+        - { id: c, texto: "Por questão de estilo apenas" }
+        - { id: d, texto: "Porque as duas tabelas têm uma coluna chamada nome, e é preciso dizer de qual delas se trata" }
+      resposta_correta: d
       explicacao: "Sem isso o banco responde 'ambiguous column name' — ele não sabe qual nome você quer."
     - id: q6
       tipo: multipla_escolha
@@ -93,20 +93,20 @@ quiz:
       enunciado: "É possível usar WHERE e ORDER BY junto com um INNER JOIN?"
       opcoes:
         - { id: a, texto: "Sim — o JOIN monta o conjunto e as outras cláusulas filtram e ordenam normalmente" }
-        - { id: b, texto: "Não, JOIN não aceita filtro" }
+        - { id: b, texto: "Só em bancos NoSQL" }
         - { id: c, texto: "Só o WHERE é permitido" }
-        - { id: d, texto: "Só em bancos NoSQL" }
+        - { id: d, texto: "Não, JOIN não aceita filtro" }
       resposta_correta: a
       explicacao: "A ordem é: SELECT ... FROM ... JOIN ... ON ... WHERE ... ORDER BY ..."
     - id: q8
       tipo: multipla_escolha
       enunciado: "O que acontece se você esquecer a cláusula ON em um JOIN?"
       opcoes:
-        - { id: a, texto: "O banco combina TODAS as linhas de uma tabela com todas da outra, gerando um resultado gigante e sem sentido" }
+        - { id: a, texto: "O banco escolhe a ligação sozinho" }
         - { id: b, texto: "O resultado fica vazio" }
-        - { id: c, texto: "O banco escolhe a ligação sozinho" }
-        - { id: d, texto: "Nada muda" }
-      resposta_correta: a
+        - { id: c, texto: "Nada muda" }
+        - { id: d, texto: "O banco combina TODAS as linhas de uma tabela com todas da outra, gerando um resultado gigante e sem sentido" }
+      resposta_correta: d
       explicacao: "Isso se chama produto cartesiano: 10 linhas com 10 linhas viram 100."
 ---
 

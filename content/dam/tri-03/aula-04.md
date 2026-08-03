@@ -4,7 +4,7 @@ mes_numero: 3
 numero_sequencial: 18
 duracao_minutos: 25
 tipo_sandbox: none
-publicado: true
+publicado: false
 quiz:
   titulo: "Quiz — Identidade visual"
   nota_minima_aprovacao: 60
@@ -13,81 +13,81 @@ quiz:
       tipo: multipla_escolha
       enunciado: "O que é identidade visual de um aplicativo?"
       opcoes:
-        - { id: a, texto: "O conjunto de cores, ícone, tipografia e estilo que fazem o app ser reconhecível" }
-        - { id: b, texto: "O código-fonte do app" }
-        - { id: c, texto: "O banco de dados usado" }
+        - { id: a, texto: "O banco de dados usado" }
+        - { id: b, texto: "O conjunto de cores, ícone, tipografia e estilo que fazem o app ser reconhecível" }
+        - { id: c, texto: "O código-fonte do app" }
         - { id: d, texto: "A quantidade de telas" }
-      resposta_correta: a
+      resposta_correta: b
       explicacao: "É o que faz alguém reconhecer o app antes mesmo de ler o nome."
     - id: q2
       tipo: multipla_escolha
       enunciado: "Quantas cores principais uma paleta de app costuma ter?"
       opcoes:
-        - { id: a, texto: "Poucas — normalmente uma cor principal, uma de destaque e tons neutros" }
-        - { id: b, texto: "Quanto mais, melhor" }
-        - { id: c, texto: "Exatamente dez" }
+        - { id: a, texto: "Exatamente dez" }
+        - { id: b, texto: "Poucas — normalmente uma cor principal, uma de destaque e tons neutros" }
+        - { id: c, texto: "Quanto mais, melhor" }
         - { id: d, texto: "Apenas preto e branco, sempre" }
-      resposta_correta: a
+      resposta_correta: b
       explicacao: "Excesso de cores confunde e tira o destaque do que importa."
     - id: q3
       tipo: multipla_escolha
       enunciado: "Qual é o papel da cor de destaque (acento) em uma interface?"
       opcoes:
-        - { id: a, texto: "Chamar atenção para a ação mais importante da tela" }
-        - { id: b, texto: "Pintar o fundo inteiro" }
-        - { id: c, texto: "Substituir o texto" }
-        - { id: d, texto: "Nenhum papel específico" }
-      resposta_correta: a
+        - { id: a, texto: "Substituir o texto" }
+        - { id: b, texto: "Chamar atenção para a ação mais importante da tela" }
+        - { id: c, texto: "Nenhum papel específico" }
+        - { id: d, texto: "Pintar o fundo inteiro" }
+      resposta_correta: b
       explicacao: "Se tudo é colorido e chamativo, nada se destaca."
     - id: q4
       tipo: multipla_escolha
       enunciado: "Por que a cor sozinha não deve indicar estados como erro ou sucesso?"
       opcoes:
-        - { id: a, texto: "Porque parte das pessoas não distingue certas cores; é preciso texto ou ícone junto" }
+        - { id: a, texto: "Deve indicar sim, sozinha" }
         - { id: b, texto: "Porque cores gastam bateria" }
         - { id: c, texto: "Porque o Android não suporta cores" }
-        - { id: d, texto: "Deve indicar sim, sozinha" }
-      resposta_correta: a
+        - { id: d, texto: "Porque parte das pessoas não distingue certas cores; é preciso texto ou ícone junto" }
+      resposta_correta: d
       explicacao: "É a mesma regra de acessibilidade da aula anterior."
     - id: q5
       tipo: multipla_escolha
       enunciado: "O que caracteriza um bom ícone de aplicativo?"
       opcoes:
-        - { id: a, texto: "Ser simples e reconhecível mesmo em tamanho pequeno" }
+        - { id: a, texto: "Ser uma foto" }
         - { id: b, texto: "Ter muitos detalhes e textos" }
-        - { id: c, texto: "Ser uma foto" }
-        - { id: d, texto: "Ser igual ao de outro app famoso" }
-      resposta_correta: a
+        - { id: c, texto: "Ser igual ao de outro app famoso" }
+        - { id: d, texto: "Ser simples e reconhecível mesmo em tamanho pequeno" }
+      resposta_correta: d
       explicacao: "O ícone aparece pequeno na tela inicial: detalhes finos viram borrão."
     - id: q6
       tipo: multipla_escolha
       enunciado: "Por que evitar colocar texto dentro do ícone do app?"
       opcoes:
-        - { id: a, texto: "Porque em tamanho pequeno o texto fica ilegível, e o nome já aparece embaixo do ícone" }
-        - { id: b, texto: "Porque é proibido" }
-        - { id: c, texto: "Porque texto não pode ser desenhado" }
-        - { id: d, texto: "Não é preciso evitar" }
-      resposta_correta: a
+        - { id: a, texto: "Porque é proibido" }
+        - { id: b, texto: "Não é preciso evitar" }
+        - { id: c, texto: "Porque em tamanho pequeno o texto fica ilegível, e o nome já aparece embaixo do ícone" }
+        - { id: d, texto: "Porque texto não pode ser desenhado" }
+      resposta_correta: c
       explicacao: "O sistema já mostra o nome do app abaixo do ícone."
     - id: q7
       tipo: multipla_escolha
       enunciado: "Quantas fontes diferentes convém usar em um aplicativo?"
       opcoes:
-        - { id: a, texto: "Uma ou duas, variando tamanho e peso para criar hierarquia" }
-        - { id: b, texto: "Uma fonte diferente por tela" }
-        - { id: c, texto: "Pelo menos cinco" }
-        - { id: d, texto: "Nenhuma, só imagens" }
-      resposta_correta: a
+        - { id: a, texto: "Uma fonte diferente por tela" }
+        - { id: b, texto: "Uma ou duas, variando tamanho e peso para criar hierarquia" }
+        - { id: c, texto: "Nenhuma, só imagens" }
+        - { id: d, texto: "Pelo menos cinco" }
+      resposta_correta: b
       explicacao: "Hierarquia se cria com tamanho e negrito, não com variedade de fontes."
     - id: q8
       tipo: multipla_escolha
       enunciado: "Por que a consistência visual entre telas é importante?"
       opcoes:
-        - { id: a, texto: "Porque o usuário aprende os padrões uma vez e reconhece em todas as telas" }
-        - { id: b, texto: "Porque telas iguais são mais fáceis de programar" }
-        - { id: c, texto: "Porque economiza memória" }
+        - { id: a, texto: "Porque economiza memória" }
+        - { id: b, texto: "Porque o usuário aprende os padrões uma vez e reconhece em todas as telas" }
+        - { id: c, texto: "Porque telas iguais são mais fáceis de programar" }
         - { id: d, texto: "Não é importante" }
-      resposta_correta: a
+      resposta_correta: b
       explicacao: "Se cada tela tem um estilo, o app parece um amontoado de partes soltas."
 ---
 

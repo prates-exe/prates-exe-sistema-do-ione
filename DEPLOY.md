@@ -1,4 +1,4 @@
-# Colocando o Sistema do Ione no ar
+# Colocando o Bitlab no ar
 
 Guia passo a passo para publicar o site na internet, de forma que os alunos acessem de qualquer
 lugar. Todo o processo usa serviços com plano gratuito.
@@ -20,7 +20,7 @@ O código hoje está apenas no seu computador. A Vercel publica a partir do GitH
 
 1. Acesse **github.com** e crie uma conta (ou entre na sua).
 2. Clique em **New repository**.
-3. Nome sugerido: `sistema-do-ione`.
+3. Nome sugerido: `bitlab`.
 4. Marque o repositório como **Private** (particular). Isso é importante: assim o código não fica
    público.
 5. **Não** marque nenhuma opção de inicialização (README, .gitignore, licença).
@@ -31,9 +31,9 @@ tela. Eles serão parecidos com estes:
 
 ```bash
 git add .
-git commit -m "Sistema do Ione - versao inicial"
+git commit -m "Bitlab - versao inicial"
 git branch -M main
-git remote add origin https://github.com/SEU-USUARIO/sistema-do-ione.git
+git remote add origin https://github.com/SEU-USUARIO/bitlab.git
 git push -u origin main
 ```
 
@@ -54,7 +54,7 @@ Se `.env.local` aparecer na lista, **pare** e me avise antes de continuar.
 1. Acesse **vercel.com** e crie a conta usando **Continue with GitHub** (assim as duas já ficam
    conectadas).
 2. Clique em **Add New... → Project**.
-3. Encontre o repositório `sistema-do-ione` e clique em **Import**.
+3. Encontre o repositório `bitlab` e clique em **Import**.
 4. A Vercel reconhece sozinha que é um projeto Next.js — não mude as configurações de build.
 
 ### Configurar as variáveis de ambiente
@@ -89,7 +89,7 @@ visivelmente lenta.
 Ao final, a Vercel mostra o endereço do site, algo como:
 
 ```
-https://sistema-do-ione.vercel.app
+https://bitlab.vercel.app
 ```
 
 **Esse é o endereço que os alunos vão usar.** Me avise qual ficou, que eu gero de novo as listas

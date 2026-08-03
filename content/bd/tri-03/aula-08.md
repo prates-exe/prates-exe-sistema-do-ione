@@ -4,7 +4,7 @@ mes_numero: 3
 numero_sequencial: 20
 duracao_minutos: 25
 tipo_sandbox: sql
-publicado: true
+publicado: false
 exercicio_inicial: |
   -- Projeto Integrador — Parte 1: MODELAGEM
   -- Sistema de uma videolocadora de jogos.
@@ -33,19 +33,19 @@ quiz:
       tipo: multipla_escolha
       enunciado: "Qual é a primeira etapa ao construir um banco de dados?"
       opcoes:
-        - { id: a, texto: "Modelar: identificar as entidades, os atributos e os relacionamentos" }
-        - { id: b, texto: "Escrever os INSERT" }
+        - { id: a, texto: "Fazer o backup" }
+        - { id: b, texto: "Modelar: identificar as entidades, os atributos e os relacionamentos" }
         - { id: c, texto: "Criar as views" }
-        - { id: d, texto: "Fazer o backup" }
-      resposta_correta: a
+        - { id: d, texto: "Escrever os INSERT" }
+      resposta_correta: b
       explicacao: "Consertar um modelo ruim depois que já há dados é muito mais caro que planejar antes."
     - id: q2
       tipo: multipla_escolha
       enunciado: "O que é uma entidade na modelagem?"
       opcoes:
         - { id: a, texto: "Um assunto sobre o qual o sistema precisa guardar informação, que vira uma tabela" }
-        - { id: b, texto: "Uma coluna da tabela" }
-        - { id: c, texto: "Um valor específico" }
+        - { id: b, texto: "Um valor específico" }
+        - { id: c, texto: "Uma coluna da tabela" }
         - { id: d, texto: "Uma consulta salva" }
       resposta_correta: a
       explicacao: "Clientes, jogos e locações são entidades — cada uma vira uma tabela."
@@ -53,41 +53,41 @@ quiz:
       tipo: multipla_escolha
       enunciado: "Como identificar entidades a partir da descrição de um sistema?"
       opcoes:
-        - { id: a, texto: "Procurando os substantivos importantes: cliente, jogo, locação" }
-        - { id: b, texto: "Procurando os verbos" }
-        - { id: c, texto: "Contando as palavras" }
-        - { id: d, texto: "Não há método, é chute" }
-      resposta_correta: a
+        - { id: a, texto: "Não há método, é chute" }
+        - { id: b, texto: "Procurando os substantivos importantes: cliente, jogo, locação" }
+        - { id: c, texto: "Procurando os verbos" }
+        - { id: d, texto: "Contando as palavras" }
+      resposta_correta: b
       explicacao: "Substantivos tendem a virar tabelas; o que os descreve vira coluna."
     - id: q4
       tipo: multipla_escolha
       enunciado: "Um cliente aluga vários jogos e um jogo é alugado por vários clientes. Qual a cardinalidade?"
       opcoes:
         - { id: a, texto: "N:M, exigindo uma tabela associativa de locações" }
-        - { id: b, texto: "1:1" }
-        - { id: c, texto: "1:N com FK em clientes" }
-        - { id: d, texto: "Não há relacionamento" }
+        - { id: b, texto: "Não há relacionamento" }
+        - { id: c, texto: "1:1" }
+        - { id: d, texto: "1:N com FK em clientes" }
       resposta_correta: a
       explicacao: "Muitos dos dois lados sempre pede a terceira tabela."
     - id: q5
       tipo: multipla_escolha
       enunciado: "A data da locação e a data de devolução ficam em qual tabela?"
       opcoes:
-        - { id: a, texto: "Na tabela de locações, porque são dados da relação entre cliente e jogo" }
-        - { id: b, texto: "Na tabela de clientes" }
-        - { id: c, texto: "Na tabela de jogos" }
-        - { id: d, texto: "Em nenhuma" }
-      resposta_correta: a
+        - { id: a, texto: "Na tabela de jogos" }
+        - { id: b, texto: "Na tabela de locações, porque são dados da relação entre cliente e jogo" }
+        - { id: c, texto: "Em nenhuma" }
+        - { id: d, texto: "Na tabela de clientes" }
+      resposta_correta: b
       explicacao: "O cliente não tem 'uma data'; a locação é que tem."
     - id: q6
       tipo: multipla_escolha
       enunciado: "Por que o valor da diária fica na tabela de jogos, e não na de locações?"
       opcoes:
-        - { id: a, texto: "Porque é uma característica do jogo, que vale para todas as locações dele" }
-        - { id: b, texto: "Porque locações não podem ter colunas" }
-        - { id: c, texto: "Por acaso, tanto faz" }
-        - { id: d, texto: "Porque valores só ficam na primeira tabela" }
-      resposta_correta: a
+        - { id: a, texto: "Porque locações não podem ter colunas" }
+        - { id: b, texto: "Porque valores só ficam na primeira tabela" }
+        - { id: c, texto: "Porque é uma característica do jogo, que vale para todas as locações dele" }
+        - { id: d, texto: "Por acaso, tanto faz" }
+      resposta_correta: c
       explicacao: "Colocar na locação repetiria o mesmo valor em toda locação daquele jogo — redundância."
     - id: q7
       tipo: multipla_escolha
@@ -95,19 +95,19 @@ quiz:
       opcoes:
         - { id: a, texto: "Um dado que aceita vários valores, como telefones; resolve-se com uma tabela separada" }
         - { id: b, texto: "Um dado que não pode ser guardado" }
-        - { id: c, texto: "Uma coluna com nome comprido" }
-        - { id: d, texto: "Uma chave primária dupla" }
+        - { id: c, texto: "Uma chave primária dupla" }
+        - { id: d, texto: "Uma coluna com nome comprido" }
       resposta_correta: a
       explicacao: "Cada valor vira uma linha, nunca uma lista dentro de um campo."
     - id: q8
       tipo: multipla_escolha
       enunciado: "Por que vale a pena escrever o modelo antes de sair criando tabelas?"
       opcoes:
-        - { id: a, texto: "Porque mudar o modelo no papel é barato; mudar depois, com dados dentro, é caro" }
-        - { id: b, texto: "Porque é exigência do SQL" }
-        - { id: c, texto: "Porque deixa o banco mais rápido" }
-        - { id: d, texto: "Não vale a pena" }
-      resposta_correta: a
+        - { id: a, texto: "Não vale a pena" }
+        - { id: b, texto: "Porque deixa o banco mais rápido" }
+        - { id: c, texto: "Porque mudar o modelo no papel é barato; mudar depois, com dados dentro, é caro" }
+        - { id: d, texto: "Porque é exigência do SQL" }
+      resposta_correta: c
       explicacao: "Dez minutos de planejamento economizam horas de retrabalho."
 ---
 

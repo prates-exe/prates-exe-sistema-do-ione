@@ -52,20 +52,20 @@ quiz:
       tipo: multipla_escolha
       enunciado: "Qual método é executado uma única vez, no nascimento da Activity, e carrega o layout?"
       opcoes:
-        - { id: a, texto: "onCreate" }
-        - { id: b, texto: "onResume" }
+        - { id: a, texto: "onStop" }
+        - { id: b, texto: "onCreate" }
         - { id: c, texto: "onPause" }
-        - { id: d, texto: "onStop" }
-      resposta_correta: a
+        - { id: d, texto: "onResume" }
+      resposta_correta: b
       explicacao: "É no onCreate que chamamos setContentView para carregar a tela."
     - id: q2
       tipo: multipla_escolha
       enunciado: "Qual método é chamado quando o app volta a ficar visível e em primeiro plano?"
       opcoes:
         - { id: a, texto: "onResume" }
-        - { id: b, texto: "onCreate" }
-        - { id: c, texto: "onPause" }
-        - { id: d, texto: "onStop" }
+        - { id: b, texto: "onStop" }
+        - { id: c, texto: "onCreate" }
+        - { id: d, texto: "onPause" }
       resposta_correta: a
       explicacao: "onResume roda sempre que o app volta ao primeiro plano, inclusive depois de pausado."
     - id: q3
@@ -73,60 +73,60 @@ quiz:
       enunciado: "Qual a diferença entre onPause e onStop?"
       opcoes:
         - { id: a, texto: "onPause é quando a tela sai do primeiro plano mas ainda pode estar parcialmente visível; onStop é quando ela deixa de ser vista por completo" }
-        - { id: b, texto: "Não existe diferença" }
-        - { id: c, texto: "onPause só existe em apps com banco de dados" }
-        - { id: d, texto: "onStop acontece antes de onCreate" }
+        - { id: b, texto: "onStop acontece antes de onCreate" }
+        - { id: c, texto: "Não existe diferença" }
+        - { id: d, texto: "onPause só existe em apps com banco de dados" }
       resposta_correta: a
       explicacao: "Entender essa sequência evita perder informações quando o usuário troca de app e volta."
     - id: q4
       tipo: multipla_escolha
       enunciado: "Qual é a ordem correta quando o usuário abre o app e depois sai dele?"
       opcoes:
-        - { id: a, texto: "onCreate → onResume → onPause → onStop" }
-        - { id: b, texto: "onResume → onCreate → onStop → onPause" }
-        - { id: c, texto: "onStop → onPause → onResume → onCreate" }
-        - { id: d, texto: "onCreate → onStop → onPause → onResume" }
-      resposta_correta: a
+        - { id: a, texto: "onStop → onPause → onResume → onCreate" }
+        - { id: b, texto: "onCreate → onResume → onPause → onStop" }
+        - { id: c, texto: "onCreate → onStop → onPause → onResume" }
+        - { id: d, texto: "onResume → onCreate → onStop → onPause" }
+      resposta_correta: b
       explicacao: "Nasce, aparece, sai da frente, some. Essa ordem cai em prova."
     - id: q5
       tipo: multipla_escolha
       enunciado: "Em qual método é mais indicado SALVAR os dados que o usuário digitou?"
       opcoes:
-        - { id: a, texto: "onPause, porque é o primeiro aviso de que a tela vai sair da frente" }
+        - { id: a, texto: "Nunca é preciso salvar" }
         - { id: b, texto: "onCreate, antes de tudo" }
-        - { id: c, texto: "Nunca é preciso salvar" }
+        - { id: c, texto: "onPause, porque é o primeiro aviso de que a tela vai sair da frente" }
         - { id: d, texto: "onResume" }
-      resposta_correta: a
+      resposta_correta: c
       explicacao: "O onPause é garantido; se esperar o onStop, o sistema pode encerrar o app antes."
     - id: q6
       tipo: multipla_escolha
       enunciado: "O SQLite, no Android, serve para:"
       opcoes:
         - { id: a, texto: "Armazenar dados localmente no próprio aparelho, sem depender de internet" }
-        - { id: b, texto: "Só funciona com conexão à internet" }
+        - { id: b, texto: "Controlar o ciclo de vida da Activity" }
         - { id: c, texto: "Substituir o XML de layout" }
-        - { id: d, texto: "Controlar o ciclo de vida da Activity" }
+        - { id: d, texto: "Só funciona com conexão à internet" }
       resposta_correta: a
       explicacao: "É um banco de dados local, embutido no aparelho."
     - id: q7
       tipo: multipla_escolha
       enunciado: "Qual operação do CRUD altera um registro que já existe?"
       opcoes:
-        - { id: a, texto: "UPDATE" }
-        - { id: b, texto: "INSERT" }
-        - { id: c, texto: "DELETE" }
-        - { id: d, texto: "SELECT" }
-      resposta_correta: a
+        - { id: a, texto: "INSERT" }
+        - { id: b, texto: "SELECT" }
+        - { id: c, texto: "UPDATE" }
+        - { id: d, texto: "DELETE" }
+      resposta_correta: c
       explicacao: "INSERT cadastra, UPDATE altera, DELETE remove, SELECT consulta — o mesmo CRUD de Banco de Dados."
     - id: q8
       tipo: multipla_escolha
       enunciado: "Na prática, o que costuma alimentar a lista (RecyclerView) que aparece na tela?"
       opcoes:
-        - { id: a, texto: "Um SELECT no banco local, trazendo os registros salvos" }
-        - { id: b, texto: "O arquivo de layout XML" }
-        - { id: c, texto: "O método onPause" }
+        - { id: a, texto: "O arquivo de layout XML" }
+        - { id: b, texto: "O método onPause" }
+        - { id: c, texto: "Um SELECT no banco local, trazendo os registros salvos" }
         - { id: d, texto: "O AndroidManifest" }
-      resposta_correta: a
+      resposta_correta: c
       explicacao: "Consulta o banco, entrega os dados ao Adapter, e o Adapter desenha a lista."
 ---
 

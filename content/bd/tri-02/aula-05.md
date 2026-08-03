@@ -27,80 +27,80 @@ quiz:
       enunciado: "Qual comando adiciona um novo registro a uma tabela existente?"
       opcoes:
         - { id: a, texto: "INSERT INTO" }
-        - { id: b, texto: "CREATE TABLE" }
-        - { id: c, texto: "SELECT" }
-        - { id: d, texto: "UPDATE" }
+        - { id: b, texto: "SELECT" }
+        - { id: c, texto: "UPDATE" }
+        - { id: d, texto: "CREATE TABLE" }
       resposta_correta: a
       explicacao: "CREATE TABLE cria a estrutura; INSERT INTO coloca os dados dentro dela."
     - id: q2
       tipo: multipla_escolha
       enunciado: "Na sintaxe INSERT INTO produtos (nome, preco) VALUES ('Caderno', 15), o que é 'Caderno'?"
       opcoes:
-        - { id: a, texto: "O valor que será gravado na coluna nome" }
+        - { id: a, texto: "O nome da coluna" }
         - { id: b, texto: "O nome da tabela" }
-        - { id: c, texto: "O nome da coluna" }
+        - { id: c, texto: "O valor que será gravado na coluna nome" }
         - { id: d, texto: "Um comentário" }
-      resposta_correta: a
+      resposta_correta: c
       explicacao: "A ordem dos VALUES segue exatamente a ordem das colunas listadas antes."
     - id: q3
       tipo: multipla_escolha
       enunciado: "Por que valores de texto ficam entre aspas simples no INSERT?"
       opcoes:
-        - { id: a, texto: "Para o banco saber que é texto, e não o nome de uma coluna" }
-        - { id: b, texto: "Só por questão de estilo" }
-        - { id: c, texto: "Para deixar o texto em negrito" }
-        - { id: d, texto: "Aspas não são necessárias" }
-      resposta_correta: a
+        - { id: a, texto: "Aspas não são necessárias" }
+        - { id: b, texto: "Para deixar o texto em negrito" }
+        - { id: c, texto: "Para o banco saber que é texto, e não o nome de uma coluna" }
+        - { id: d, texto: "Só por questão de estilo" }
+      resposta_correta: c
       explicacao: "Sem aspas, o banco procuraria uma coluna com aquele nome e daria erro."
     - id: q4
       tipo: multipla_escolha
       enunciado: "Números precisam de aspas no INSERT?"
       opcoes:
-        - { id: a, texto: "Não, números vão sem aspas" }
-        - { id: b, texto: "Sim, sempre" }
-        - { id: c, texto: "Só se forem maiores que 100" }
+        - { id: a, texto: "Só se forem maiores que 100" }
+        - { id: b, texto: "Não, números vão sem aspas" }
+        - { id: c, texto: "Sim, sempre" }
         - { id: d, texto: "Só se a coluna for PK" }
-      resposta_correta: a
+      resposta_correta: b
       explicacao: "Texto vai entre aspas simples; números vão direto."
     - id: q5
       tipo: multipla_escolha
       enunciado: "O que acontece se a ordem dos VALUES não bater com a ordem das colunas listadas?"
       opcoes:
-        - { id: a, texto: "Os dados vão para as colunas erradas, ou o banco dá erro de tipo" }
-        - { id: b, texto: "O banco corrige sozinho" }
-        - { id: c, texto: "Nada, a ordem não importa" }
-        - { id: d, texto: "A tabela é apagada" }
-      resposta_correta: a
+        - { id: a, texto: "A tabela é apagada" }
+        - { id: b, texto: "Nada, a ordem não importa" }
+        - { id: c, texto: "O banco corrige sozinho" }
+        - { id: d, texto: "Os dados vão para as colunas erradas, ou o banco dá erro de tipo" }
+      resposta_correta: d
       explicacao: "A correspondência é pela posição: a primeira coluna recebe o primeiro valor, e assim por diante."
     - id: q6
       tipo: multipla_escolha
       enunciado: "É possível inserir várias linhas com um único comando INSERT?"
       opcoes:
-        - { id: a, texto: "Sim, separando cada conjunto de valores por vírgula depois do VALUES" }
-        - { id: b, texto: "Não, sempre é um INSERT por linha" }
+        - { id: a, texto: "Não, sempre é um INSERT por linha" }
+        - { id: b, texto: "Sim, separando cada conjunto de valores por vírgula depois do VALUES" }
         - { id: c, texto: "Só em bancos NoSQL" }
         - { id: d, texto: "Só se a tabela estiver vazia" }
-      resposta_correta: a
+      resposta_correta: b
       explicacao: "VALUES (1,'A'), (2,'B'), (3,'C'); insere três linhas de uma vez."
     - id: q7
       tipo: multipla_escolha
       enunciado: "Se você tentar inserir um registro com uma PK que já existe, o que acontece?"
       opcoes:
-        - { id: a, texto: "O banco recusa e mostra erro de violação de unicidade" }
-        - { id: b, texto: "O registro antigo é substituído" }
+        - { id: a, texto: "O registro antigo é substituído" }
+        - { id: b, texto: "A tabela é duplicada" }
         - { id: c, texto: "O banco aceita normalmente" }
-        - { id: d, texto: "A tabela é duplicada" }
-      resposta_correta: a
+        - { id: d, texto: "O banco recusa e mostra erro de violação de unicidade" }
+      resposta_correta: d
       explicacao: "É a regra da chave primária protegendo a integridade dos dados."
     - id: q8
       tipo: multipla_escolha
       enunciado: "Ao inserir um pedido que tem chave estrangeira para clientes, o que precisa ser feito antes?"
       opcoes:
-        - { id: a, texto: "Cadastrar o cliente, porque a FK precisa apontar para um registro existente" }
+        - { id: a, texto: "Nada, a ordem não importa" }
         - { id: b, texto: "Apagar a tabela clientes" }
-        - { id: c, texto: "Nada, a ordem não importa" }
+        - { id: c, texto: "Cadastrar o cliente, porque a FK precisa apontar para um registro existente" }
         - { id: d, texto: "Inserir o pedido duas vezes" }
-      resposta_correta: a
+      resposta_correta: c
       explicacao: "A FK aponta para um registro que precisa existir de verdade."
 ---
 

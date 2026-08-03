@@ -4,7 +4,7 @@ mes_numero: 3
 numero_sequencial: 25
 duracao_minutos: 25
 tipo_sandbox: sql
-publicado: true
+publicado: false
 exercicio_inicial: |
   -- Projeto Integrador — Parte 5: DOCUMENTACAO
   -- Escreva aqui o script final do projeto, documentado do inicio ao fim.
@@ -33,31 +33,31 @@ quiz:
       tipo: multipla_escolha
       enunciado: "Por que documentar um projeto de banco de dados?"
       opcoes:
-        - { id: a, texto: "Para que outra pessoa (ou você no futuro) entenda as decisões sem precisar adivinhar" }
-        - { id: b, texto: "Só para cumprir exigência da escola" }
-        - { id: c, texto: "Para deixar o arquivo maior" }
+        - { id: a, texto: "Para deixar o arquivo maior" }
+        - { id: b, texto: "Para que outra pessoa (ou você no futuro) entenda as decisões sem precisar adivinhar" }
+        - { id: c, texto: "Só para cumprir exigência da escola" }
         - { id: d, texto: "Não é necessário documentar" }
-      resposta_correta: a
+      resposta_correta: b
       explicacao: "Um projeto sem documentação vira um enigma poucas semanas depois."
     - id: q2
       tipo: multipla_escolha
       enunciado: "O que um bom cabeçalho de script deve conter?"
       opcoes:
-        - { id: a, texto: "Nome do projeto, autor, data e uma descrição breve do que ele faz" }
-        - { id: b, texto: "Apenas o nome do arquivo" }
+        - { id: a, texto: "Nada, cabeçalhos são desnecessários" }
+        - { id: b, texto: "Nome do projeto, autor, data e uma descrição breve do que ele faz" }
         - { id: c, texto: "A senha do banco" }
-        - { id: d, texto: "Nada, cabeçalhos são desnecessários" }
-      resposta_correta: a
+        - { id: d, texto: "Apenas o nome do arquivo" }
+      resposta_correta: b
       explicacao: "Quem abre o arquivo entende em cinco segundos do que se trata."
     - id: q3
       tipo: multipla_escolha
       enunciado: "Por que documentar as DECISÕES de modelagem, e não só o resultado?"
       opcoes:
-        - { id: a, texto: "Porque quem lê precisa entender por que o modelo ficou assim, para poder evoluí-lo" }
+        - { id: a, texto: "Não é preciso" }
         - { id: b, texto: "Para ocupar mais linhas" }
-        - { id: c, texto: "Não é preciso" }
-        - { id: d, texto: "Porque o SQL exige" }
-      resposta_correta: a
+        - { id: c, texto: "Porque o SQL exige" }
+        - { id: d, texto: "Porque quem lê precisa entender por que o modelo ficou assim, para poder evoluí-lo" }
+      resposta_correta: d
       explicacao: "Explicar por que a data ficou na locação evita que alguém 'conserte' errado depois."
     - id: q4
       tipo: multipla_escolha
@@ -73,19 +73,19 @@ quiz:
       tipo: multipla_escolha
       enunciado: "O que é o dicionário de dados de um projeto?"
       opcoes:
-        - { id: a, texto: "A lista das tabelas e colunas, explicando o que cada uma guarda" }
-        - { id: b, texto: "Um glossário de comandos SQL" }
-        - { id: c, texto: "A lista de usuários do banco" }
-        - { id: d, texto: "O backup do banco" }
-      resposta_correta: a
+        - { id: a, texto: "A lista de usuários do banco" }
+        - { id: b, texto: "O backup do banco" }
+        - { id: c, texto: "Um glossário de comandos SQL" }
+        - { id: d, texto: "A lista das tabelas e colunas, explicando o que cada uma guarda" }
+      resposta_correta: d
       explicacao: "É o que permite entender o banco sem precisar abrir cada tabela."
     - id: q6
       tipo: multipla_escolha
       enunciado: "Ao apresentar o projeto, o que é mais importante mostrar?"
       opcoes:
         - { id: a, texto: "As perguntas de negócio que o banco responde, com os relatórios funcionando" }
-        - { id: b, texto: "A quantidade de linhas de código" }
-        - { id: c, texto: "O tempo que levou para fazer" }
+        - { id: b, texto: "O tempo que levou para fazer" }
+        - { id: c, texto: "A quantidade de linhas de código" }
         - { id: d, texto: "Apenas as tabelas vazias" }
       resposta_correta: a
       explicacao: "Ninguém se impressiona com tabelas; as pessoas se impressionam com respostas úteis."
@@ -93,20 +93,20 @@ quiz:
       tipo: multipla_escolha
       enunciado: "Por que vale a pena registrar as limitações e melhorias futuras do projeto?"
       opcoes:
-        - { id: a, texto: "Mostra consciência técnica e indica o caminho para a próxima versão" }
+        - { id: a, texto: "É proibido admitir limitações" }
         - { id: b, texto: "Enfraquece o trabalho" }
-        - { id: c, texto: "É proibido admitir limitações" }
+        - { id: c, texto: "Mostra consciência técnica e indica o caminho para a próxima versão" }
         - { id: d, texto: "Não tem utilidade" }
-      resposta_correta: a
+      resposta_correta: c
       explicacao: "Reconhecer o que ficou de fora é sinal de maturidade profissional, não de fraqueza."
     - id: q8
       tipo: multipla_escolha
       enunciado: "O que você aprendeu neste projeto, em resumo?"
       opcoes:
         - { id: a, texto: "O ciclo completo: modelar, criar, popular, manter, consultar e documentar" }
-        - { id: b, texto: "Apenas a escrever CREATE TABLE" }
-        - { id: c, texto: "Apenas a fazer consultas" }
-        - { id: d, texto: "Que bancos de dados são desnecessários" }
+        - { id: b, texto: "Que bancos de dados são desnecessários" }
+        - { id: c, texto: "Apenas a escrever CREATE TABLE" }
+        - { id: d, texto: "Apenas a fazer consultas" }
       resposta_correta: a
       explicacao: "É exatamente esse ciclo que se repete em qualquer projeto profissional."
 ---

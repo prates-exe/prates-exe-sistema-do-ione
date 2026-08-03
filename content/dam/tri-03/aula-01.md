@@ -4,7 +4,7 @@ mes_numero: 3
 numero_sequencial: 15
 duracao_minutos: 25
 tipo_sandbox: android
-publicado: true
+publicado: false
 layout_inicial: |
   <LinearLayout
       xmlns:android="http://schemas.android.com/apk/res/android"
@@ -57,81 +57,81 @@ quiz:
       tipo: multipla_escolha
       enunciado: "O que é o Material Design?"
       opcoes:
-        - { id: a, texto: "Um conjunto de diretrizes de design da Google para criar interfaces consistentes" }
-        - { id: b, texto: "Uma linguagem de programação" }
-        - { id: c, texto: "Um tipo de banco de dados" }
-        - { id: d, texto: "Um emulador de Android" }
-      resposta_correta: a
+        - { id: a, texto: "Um emulador de Android" }
+        - { id: b, texto: "Um tipo de banco de dados" }
+        - { id: c, texto: "Uma linguagem de programação" }
+        - { id: d, texto: "Um conjunto de diretrizes de design da Google para criar interfaces consistentes" }
+      resposta_correta: d
       explicacao: "São recomendações sobre espaçamento, cores, tipografia e comportamento dos componentes."
     - id: q2
       tipo: multipla_escolha
       enunciado: "Por que seguir diretrizes de design em vez de inventar tudo do zero?"
       opcoes:
-        - { id: a, texto: "Porque o usuário já conhece esses padrões e aprende a usar o app mais rápido" }
-        - { id: b, texto: "Porque é obrigatório para compilar" }
-        - { id: c, texto: "Porque deixa o app menor" }
-        - { id: d, texto: "Não há motivo real" }
-      resposta_correta: a
+        - { id: a, texto: "Não há motivo real" }
+        - { id: b, texto: "Porque deixa o app menor" }
+        - { id: c, texto: "Porque o usuário já conhece esses padrões e aprende a usar o app mais rápido" }
+        - { id: d, texto: "Porque é obrigatório para compilar" }
+      resposta_correta: c
       explicacao: "Consistência reduz o esforço de aprendizado: o usuário reconhece o que cada coisa faz."
     - id: q3
       tipo: multipla_escolha
       enunciado: "O que é hierarquia visual?"
       opcoes:
-        - { id: a, texto: "Organizar os elementos para que o mais importante seja percebido primeiro" }
-        - { id: b, texto: "Colocar tudo do mesmo tamanho" }
-        - { id: c, texto: "Ordenar os arquivos do projeto" }
-        - { id: d, texto: "Usar apenas uma cor" }
-      resposta_correta: a
+        - { id: a, texto: "Ordenar os arquivos do projeto" }
+        - { id: b, texto: "Organizar os elementos para que o mais importante seja percebido primeiro" }
+        - { id: c, texto: "Usar apenas uma cor" }
+        - { id: d, texto: "Colocar tudo do mesmo tamanho" }
+      resposta_correta: b
       explicacao: "Título maior, ação principal em destaque, informação secundária menor."
     - id: q4
       tipo: multipla_escolha
       enunciado: "Qual é o problema de um botão escrito apenas 'OK'?"
       opcoes:
-        - { id: a, texto: "Não diz o que vai acontecer ao ser tocado" }
-        - { id: b, texto: "É muito comprido" }
-        - { id: c, texto: "Não pode ser usado em Android" }
-        - { id: d, texto: "Nenhum problema" }
-      resposta_correta: a
+        - { id: a, texto: "É muito comprido" }
+        - { id: b, texto: "Nenhum problema" }
+        - { id: c, texto: "Não diz o que vai acontecer ao ser tocado" }
+        - { id: d, texto: "Não pode ser usado em Android" }
+      resposta_correta: c
       explicacao: "Rótulos devem descrever a ação: 'Salvar cadastro', 'Enviar', 'Excluir conta'."
     - id: q5
       tipo: multipla_escolha
       enunciado: "Para que serve o android:hint em um EditText?"
       opcoes:
-        - { id: a, texto: "Mostrar uma dica do que preencher, que some quando o usuário digita" }
-        - { id: b, texto: "Definir o valor final do campo" }
-        - { id: c, texto: "Bloquear a digitação" }
-        - { id: d, texto: "Mudar a cor do texto" }
-      resposta_correta: a
+        - { id: a, texto: "Mudar a cor do texto" }
+        - { id: b, texto: "Bloquear a digitação" }
+        - { id: c, texto: "Definir o valor final do campo" }
+        - { id: d, texto: "Mostrar uma dica do que preencher, que some quando o usuário digita" }
+      resposta_correta: d
       explicacao: "É a forma mais simples de orientar o usuário sem poluir a tela."
     - id: q6
       tipo: multipla_escolha
       enunciado: "Por que dar retorno (feedback) depois de uma ação do usuário?"
       opcoes:
-        - { id: a, texto: "Porque sem confirmação a pessoa não sabe se deu certo e tende a repetir a ação" }
-        - { id: b, texto: "Para deixar o app mais lento" }
-        - { id: c, texto: "Por exigência do Android" }
+        - { id: a, texto: "Para deixar o app mais lento" }
+        - { id: b, texto: "Por exigência do Android" }
+        - { id: c, texto: "Porque sem confirmação a pessoa não sabe se deu certo e tende a repetir a ação" }
         - { id: d, texto: "Não é necessário" }
-      resposta_correta: a
+      resposta_correta: c
       explicacao: "Um simples 'Cadastro salvo' evita cliques repetidos e insegurança."
     - id: q7
       tipo: multipla_escolha
       enunciado: "O que o Material Design recomenda sobre espaçamento entre elementos?"
       opcoes:
-        - { id: a, texto: "Usar espaçamentos consistentes, criando respiro entre os blocos de conteúdo" }
-        - { id: b, texto: "Colar todos os elementos, sem espaço" }
-        - { id: c, texto: "Espaçamentos aleatórios em cada tela" }
-        - { id: d, texto: "Não trata de espaçamento" }
-      resposta_correta: a
+        - { id: a, texto: "Não trata de espaçamento" }
+        - { id: b, texto: "Usar espaçamentos consistentes, criando respiro entre os blocos de conteúdo" }
+        - { id: c, texto: "Colar todos os elementos, sem espaço" }
+        - { id: d, texto: "Espaçamentos aleatórios em cada tela" }
+      resposta_correta: b
       explicacao: "Espaço em branco não é desperdício: é o que separa e organiza a informação."
     - id: q8
       tipo: multipla_escolha
       enunciado: "Qual dessas mudanças MAIS melhora a usabilidade de uma tela de cadastro?"
       opcoes:
-        - { id: a, texto: "Rótulos claros, dicas nos campos e confirmação após salvar" }
-        - { id: b, texto: "Aumentar o número de cores" }
-        - { id: c, texto: "Diminuir a fonte para caber mais coisa" }
-        - { id: d, texto: "Remover todos os textos" }
-      resposta_correta: a
+        - { id: a, texto: "Aumentar o número de cores" }
+        - { id: b, texto: "Diminuir a fonte para caber mais coisa" }
+        - { id: c, texto: "Remover todos os textos" }
+        - { id: d, texto: "Rótulos claros, dicas nos campos e confirmação após salvar" }
+      resposta_correta: d
       explicacao: "Clareza vence enfeite: o usuário precisa saber o que fazer e o que aconteceu."
 ---
 

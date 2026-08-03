@@ -121,7 +121,7 @@ export function SqlTerminal({
 
   function aoMudarValor(novoValor: string) {
     setValor(novoValor);
-    agendarSalvarRascunho(novoValor, 1500);
+    agendarSalvarRascunho(novoValor, 800);
   }
 
   useEffect(() => {
@@ -164,7 +164,6 @@ export function SqlTerminal({
               {
                 aluno_id: alunoId,
                 aula_id: aulaId,
-                status: "em_andamento",
                 exercicio_completo: atividadeCompleta,
               },
               { onConflict: "aluno_id,aula_id" }

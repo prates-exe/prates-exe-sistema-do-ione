@@ -4,7 +4,7 @@ mes_numero: 3
 numero_sequencial: 26
 duracao_minutos: 25
 tipo_sandbox: none
-publicado: true
+publicado: false
 quiz:
   titulo: "Quiz — Versionamento e documentação"
   nota_minima_aprovacao: 60
@@ -13,81 +13,81 @@ quiz:
       tipo: multipla_escolha
       enunciado: "O que é o Git?"
       opcoes:
-        - { id: a, texto: "Um sistema de controle de versão, que guarda o histórico das alterações do projeto" }
-        - { id: b, texto: "Uma linguagem de programação" }
-        - { id: c, texto: "Um editor de código" }
+        - { id: a, texto: "Uma linguagem de programação" }
+        - { id: b, texto: "Um editor de código" }
+        - { id: c, texto: "Um sistema de controle de versão, que guarda o histórico das alterações do projeto" }
         - { id: d, texto: "Um tipo de banco de dados" }
-      resposta_correta: a
+      resposta_correta: c
       explicacao: "O GitHub é o site que hospeda repositórios Git."
     - id: q2
       tipo: multipla_escolha
       enunciado: "O que é um commit?"
       opcoes:
-        - { id: a, texto: "Um ponto salvo no histórico, com as alterações feitas e uma mensagem explicando" }
+        - { id: a, texto: "Uma cópia do projeto na nuvem" }
         - { id: b, texto: "Um erro no código" }
-        - { id: c, texto: "Uma cópia do projeto na nuvem" }
+        - { id: c, texto: "Um ponto salvo no histórico, com as alterações feitas e uma mensagem explicando" }
         - { id: d, texto: "Um tipo de teste" }
-      resposta_correta: a
+      resposta_correta: c
       explicacao: "É como um ponto de salvamento ao qual você pode voltar."
     - id: q3
       tipo: multipla_escolha
       enunciado: "Qual é uma boa mensagem de commit?"
       opcoes:
         - { id: a, texto: "\"Corrige calculo do IMC com altura zero\"" }
-        - { id: b, texto: "\"alteracoes\"" }
-        - { id: c, texto: "\"asdasd\"" }
-        - { id: d, texto: "\"aaa\"" }
+        - { id: b, texto: "\"aaa\"" }
+        - { id: c, texto: "\"alteracoes\"" }
+        - { id: d, texto: "\"asdasd\"" }
       resposta_correta: a
       explicacao: "Ela diz o que mudou e por quê — quem lê o histórico entende sem abrir o código."
     - id: q4
       tipo: multipla_escolha
       enunciado: "Por que usar controle de versão em vez de copiar pastas como 'projeto_final_v2'?"
       opcoes:
-        - { id: a, texto: "Porque o histórico fica organizado, dá para voltar atrás e ver exatamente o que mudou em cada etapa" }
-        - { id: b, texto: "Porque ocupa menos espaço" }
-        - { id: c, texto: "Porque é obrigatório" }
-        - { id: d, texto: "Não há vantagem real" }
-      resposta_correta: a
+        - { id: a, texto: "Não há vantagem real" }
+        - { id: b, texto: "Porque o histórico fica organizado, dá para voltar atrás e ver exatamente o que mudou em cada etapa" }
+        - { id: c, texto: "Porque ocupa menos espaço" }
+        - { id: d, texto: "Porque é obrigatório" }
+      resposta_correta: b
       explicacao: "Quem já teve 'v2_final_agora_vai' sabe por que isso não funciona."
     - id: q5
       tipo: multipla_escolha
       enunciado: "O que NUNCA deve ser enviado para um repositório público?"
       opcoes:
-        - { id: a, texto: "Senhas, chaves de API e dados pessoais" }
-        - { id: b, texto: "O código-fonte" }
-        - { id: c, texto: "O arquivo README" }
-        - { id: d, texto: "As imagens do app" }
-      resposta_correta: a
+        - { id: a, texto: "O código-fonte" }
+        - { id: b, texto: "Senhas, chaves de API e dados pessoais" }
+        - { id: c, texto: "As imagens do app" }
+        - { id: d, texto: "O arquivo README" }
+      resposta_correta: b
       explicacao: "Uma chave enviada por engano fica no histórico mesmo depois de apagada."
     - id: q6
       tipo: multipla_escolha
       enunciado: "Para que serve o arquivo .gitignore?"
       opcoes:
-        - { id: a, texto: "Listar arquivos que não devem ser enviados ao repositório" }
-        - { id: b, texto: "Ignorar erros de compilação" }
+        - { id: a, texto: "Ignorar erros de compilação" }
+        - { id: b, texto: "Listar arquivos que não devem ser enviados ao repositório" }
         - { id: c, texto: "Listar os autores do projeto" }
         - { id: d, texto: "Documentar o projeto" }
-      resposta_correta: a
+      resposta_correta: b
       explicacao: "Arquivos gerados, configurações locais e segredos ficam de fora por ele."
     - id: q7
       tipo: multipla_escolha
       enunciado: "O que é o README de um projeto?"
       opcoes:
         - { id: a, texto: "O documento inicial que explica o que é o projeto, como rodar e como usar" }
-        - { id: b, texto: "O código principal" }
+        - { id: b, texto: "Um arquivo opcional sem importância" }
         - { id: c, texto: "A lista de erros conhecidos apenas" }
-        - { id: d, texto: "Um arquivo opcional sem importância" }
+        - { id: d, texto: "O código principal" }
       resposta_correta: a
       explicacao: "É a primeira coisa que alguém lê ao abrir o repositório."
     - id: q8
       tipo: multipla_escolha
       enunciado: "Por que um bom README importa para o seu portfólio?"
       opcoes:
-        - { id: a, texto: "Porque quem avalia bate o olho nele primeiro; sem explicação, o projeto parece incompleto" }
-        - { id: b, texto: "Porque aumenta o número de commits" }
-        - { id: c, texto: "Porque deixa o app mais rápido" }
+        - { id: a, texto: "Porque aumenta o número de commits" }
+        - { id: b, texto: "Porque deixa o app mais rápido" }
+        - { id: c, texto: "Porque quem avalia bate o olho nele primeiro; sem explicação, o projeto parece incompleto" }
         - { id: d, texto: "Não importa" }
-      resposta_correta: a
+      resposta_correta: c
       explicacao: "Um projeto bom sem README parece um projeto inacabado."
 ---
 

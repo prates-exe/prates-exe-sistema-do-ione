@@ -32,21 +32,21 @@ quiz:
       tipo: multipla_escolha
       enunciado: "O que é redundância de dados?"
       opcoes:
-        - { id: a, texto: "A mesma informação repetida em vários lugares do banco" }
-        - { id: b, texto: "Um dado que falta na tabela" }
-        - { id: c, texto: "Uma tabela sem chave primária" }
-        - { id: d, texto: "Um erro de digitação" }
-      resposta_correta: a
+        - { id: a, texto: "Um erro de digitação" }
+        - { id: b, texto: "Uma tabela sem chave primária" }
+        - { id: c, texto: "A mesma informação repetida em vários lugares do banco" }
+        - { id: d, texto: "Um dado que falta na tabela" }
+      resposta_correta: c
       explicacao: "O telefone do cliente repetido em cada venda dele é redundância."
     - id: q2
       tipo: multipla_escolha
       enunciado: "Qual é o principal objetivo da normalização?"
       opcoes:
-        - { id: a, texto: "Organizar as tabelas para eliminar redundância e evitar inconsistências" }
-        - { id: b, texto: "Deixar o banco com menos tabelas" }
-        - { id: c, texto: "Aumentar o número de colunas" }
-        - { id: d, texto: "Apagar dados antigos" }
-      resposta_correta: a
+        - { id: a, texto: "Deixar o banco com menos tabelas" }
+        - { id: b, texto: "Organizar as tabelas para eliminar redundância e evitar inconsistências" }
+        - { id: c, texto: "Apagar dados antigos" }
+        - { id: d, texto: "Aumentar o número de colunas" }
+      resposta_correta: b
       explicacao: "Normalizar geralmente AUMENTA o número de tabelas, mas elimina repetição."
     - id: q3
       tipo: multipla_escolha
@@ -62,41 +62,41 @@ quiz:
       tipo: multipla_escolha
       enunciado: "O que é uma anomalia de exclusão?"
       opcoes:
-        - { id: a, texto: "Ao apagar um registro, você perde sem querer outra informação que só existia ali" }
-        - { id: b, texto: "Um registro que não pode ser apagado" }
+        - { id: a, texto: "Um registro que não pode ser apagado" }
+        - { id: b, texto: "Ao apagar um registro, você perde sem querer outra informação que só existia ali" }
         - { id: c, texto: "Um erro de sintaxe no DELETE" }
         - { id: d, texto: "Um registro duplicado" }
-      resposta_correta: a
+      resposta_correta: b
       explicacao: "Apagar a última venda de um cliente apagaria também os dados de contato dele."
     - id: q5
       tipo: multipla_escolha
       enunciado: "Na 1ª Forma Normal, o que uma coluna NÃO pode conter?"
       opcoes:
-        - { id: a, texto: "Vários valores no mesmo campo, como \"11111, 22222\" em um campo telefone" }
-        - { id: b, texto: "Números inteiros" }
-        - { id: c, texto: "Texto" }
-        - { id: d, texto: "Chave primária" }
-      resposta_correta: a
+        - { id: a, texto: "Texto" }
+        - { id: b, texto: "Vários valores no mesmo campo, como \"11111, 22222\" em um campo telefone" }
+        - { id: c, texto: "Chave primária" }
+        - { id: d, texto: "Números inteiros" }
+      resposta_correta: b
       explicacao: "Cada campo deve guardar um valor atômico — é a regra dos atributos que vocês viram no 1º trimestre."
     - id: q6
       tipo: multipla_escolha
       enunciado: "Como se resolve o caso de um cliente com vários telefones (atributo multivalorado)?"
       opcoes:
-        - { id: a, texto: "Criando uma tabela separada de telefones, ligada ao cliente por FK" }
+        - { id: a, texto: "Guardando só o primeiro telefone" }
         - { id: b, texto: "Colocando todos separados por vírgula no mesmo campo" }
         - { id: c, texto: "Criando as colunas telefone1, telefone2, telefone3" }
-        - { id: d, texto: "Guardando só o primeiro telefone" }
-      resposta_correta: a
+        - { id: d, texto: "Criando uma tabela separada de telefones, ligada ao cliente por FK" }
+      resposta_correta: d
       explicacao: "É o mesmo raciocínio da tabela associativa: cada valor vira uma linha."
     - id: q7
       tipo: multipla_escolha
       enunciado: "Depois de normalizar, como voltamos a ver os dados juntos em um relatório?"
       opcoes:
-        - { id: a, texto: "Usando INNER JOIN na hora da consulta" }
-        - { id: b, texto: "Copiando os dados de volta para uma tabela só" }
-        - { id: c, texto: "Não é mais possível ver juntos" }
-        - { id: d, texto: "Usando DROP TABLE" }
-      resposta_correta: a
+        - { id: a, texto: "Não é mais possível ver juntos" }
+        - { id: b, texto: "Usando DROP TABLE" }
+        - { id: c, texto: "Usando INNER JOIN na hora da consulta" }
+        - { id: d, texto: "Copiando os dados de volta para uma tabela só" }
+      resposta_correta: c
       explicacao: "Separado para guardar, junto para consultar — é essa a lógica do modelo relacional."
     - id: q8
       tipo: multipla_escolha
